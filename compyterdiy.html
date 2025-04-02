@@ -16,11 +16,12 @@
             <ul>
                 <li><a href="#">購買說明</a></li>
                 <li><a href="#">登入 / 註冊</a></li>
-                <li><a href="#"><img src="./Image/ICON/shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>       <!-- -->
+                <li><a href="#"><img src="./Image/ICON/shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
+                <!-- -->
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="area">
         <div>
             <table>
                 <tr>
@@ -32,26 +33,42 @@
                 </tr>
                 <tr>
                     <td class="numero">1.</td>
-                    <td>品牌主機</td>
-                    <td></td>
+                    <td class="item"><label for="setpc">套裝主機</label></td>
+                    <td>
+                        <select id="setpc" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">2.</td>
-                    <td>筆記型電腦</td>
-                    <td></td>
+                    <td class="item"><label for="notebook">筆記型電腦</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">3.</td>
-                    <td><label for="cpu">中央處理器</label></td>
+                    <td class="item"><label for="cpu">中央處理器 CPU</label></td>
                     <td>
-                        <select id="cpu">           
+                        <select id="cpu" class="select_css">
                             <option value="" disabled selected>總共幾個</option>
-                            <option value="8500">Intel i5-13600K - $8500</option>
-                            <option value="12000">Intel i7-13700K - $12000</option>
+                            <optgroup label="Intel 12代 1700腳位">
+                                <option value="3450">Intel i5-12400F &lt;$3450&gt;</option>
+                                <option value="8450">Intel i7-12700KF &lt;$8450&gt;</option>
+                            </optgroup>
+                            <optgroup label="Intel 14代 1700腳位"></optgroup>
+                            <optgroup label="Intel Core Ultra 200S 1851腳位"></optgroup>
+                            <optgroup label="AMD AM4腳位"></optgroup>
+                            <optgroup label="AMD AM5腳位 Ryzen 7000"></optgroup>
+                            <optgroup label="AMD AM5腳位 Ryzen 8000"></optgroup>
+                            <optgroup label="AMD AM5腳位 Ryzen 9000"></optgroup>
                         </select>
                     </td>
                     <td></td>
@@ -59,32 +76,43 @@
                 </tr>
                 <tr>
                     <td class="numero">4.</td>
-                    <td>主機板</td>
-                    <td></td>
+                    <td class="item"><label for="mb">主機板</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">5.</td>
-                    <td>記憶體</td>
-                    <td></td>
+                    <td class="item"><label for="ram">記憶體 RAM</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">6.</td>
-                    <td>硬碟</td>
-                    <td></td>
+                    <td class="item"><label for="ssd">固態硬碟 SSD</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">7.</td>
-                    <td><label for="gpu">顯示卡</label></td>
+                    <td class="item"><label for="hdd">傳統硬碟 HDD</label></td>
                     <td>
-                        <select id="gpu">
-                            <option value="9000">RTX 3060 - $9000</option>
-                            <option value="18000">RTX 4070 - $18000</option>
+                        <select id="" class="select_css">
+                            <option value=""></option>
                         </select>
                     </td>
                     <td></td>
@@ -92,82 +120,157 @@
                 </tr>
                 <tr>
                     <td class="numero">8.</td>
-                    <td>電源供應器</td>
-                    <td></td>
+                    <td class="item"><label for="gpu">顯示卡</label></td>
+                    <td>
+                        <select id="gpu" class="select_css">
+                            <optgroup label="GeForce RTX 3060 12G">
+                                <option value="8990">華碩DUAL-RTX3060/1837MHz/20cm/雙風扇 &lt;$8990&gt;</option>
+                                <option value="8990">微星RTX3060 VENTUS 2X OC/1807MHz/23.5cm/雙風扇 &lt;$8990&gt;</option>
+                            </optgroup>
+                            <optgroup label="GeForce RTX 4060ti 2G"></optgroup>
+                            <optgroup label="GeForce RTX 4070s 12G"></optgroup>
+                            <optgroup label="GeForce RTX 4070tis 16G"></optgroup>
+                            <optgroup label="GeForce RTX 4080s 16G"></optgroup>
+                            <optgroup label="GeForce RTX 5070 12G"></optgroup>
+                            <optgroup label="GeForce RTX 5070ti 16G"></optgroup>
+                            <optgroup label="GeForce RTX 5080 16G">
+                            <optgroup label="GeForce RTX 5090 32G">
+                            </optgroup>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">9.</td>
-                    <td>空冷散熱器</td>
-                    <td></td>
+                    <td class="item"><label for="psu">電源供應器</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">10.</td>
-                    <td>水冷散熱器</td>
-                    <td></td>
+                    <td class="item"><label for="radiator">空冷散熱器</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">11.</td>
-                    <td>機殼</td>
-                    <td></td>
+                    <td class="item"><label for="cold_radiator">水冷散熱器</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">12.</td>
-                    <td>鍵盤</td>
-                    <td></td>
+                    <td class="item"><label for="case">機殼 CASE</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">13.</td>
-                    <td>滑鼠</td>
-                    <td></td>
+                    <td class="item"><label for="keyboard">鍵盤</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">14.</td>
-                    <td>顯示器</td>
-                    <td></td>
+                    <td class="item"><label for="mouse">滑鼠</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">15.</td>
-                    <td>音響/喇叭</td>
-                    <td></td>
+                    <td class="item"><label for="vga" class="">顯示器/螢幕</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">16.</td>
-                    <td>作業系統</td>
-                    <td></td>
+                    <td class="item"><label for="speaker">音響/喇叭</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td class="numero">17.</td>
-                    <td>機殼配件</td>
+                    <td class="item"><label for="software">作業系統&軟體</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">18.</td>
+                    <td class="item"><label for="accessories">機殼配件</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
             </table>
         </div>
-        <div></div>
-        <p>總價：<span id="total-price">0</span> 元</p>
+        <div class="menu">
+            <p>123</p>
+            <p>123</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
     </main>
+    <p>總價：<span id="total-price">0</span> 元</p>
     <footer>
-
+        Copyright © 2025 LaoG. All rights reserved.
     </footer>
     <script>
         function updateTotalPrice() {
