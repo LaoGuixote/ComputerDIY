@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="電腦估價">
+    <title>線上電腦估價</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h2>線上電腦估價</h2>
+        <nav>
+            <ul>
+                <li><a href="#">購買說明</a></li>
+                <li><a href="#">登入 / 註冊</a></li>
+                <li><a href="#"><img src="./Image/ICON/shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>       <!-- -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>品名</th>
+                    <th>產品</th>
+                    <th>數量</th>
+                    <th>小計</th>
+                </tr>
+                <tr>
+                    <td class="numero">1.</td>
+                    <td>品牌主機</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">2.</td>
+                    <td>筆記型電腦</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">3.</td>
+                    <td><label for="cpu">中央處理器</label></td>
+                    <td>
+                        <select id="cpu">           
+                            <option value="" disabled selected>總共幾個</option>
+                            <option value="8500">Intel i5-13600K - $8500</option>
+                            <option value="12000">Intel i7-13700K - $12000</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">4.</td>
+                    <td>主機板</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">5.</td>
+                    <td>記憶體</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">6.</td>
+                    <td>硬碟</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">7.</td>
+                    <td><label for="gpu">顯示卡</label></td>
+                    <td>
+                        <select id="gpu">
+                            <option value="9000">RTX 3060 - $9000</option>
+                            <option value="18000">RTX 4070 - $18000</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">8.</td>
+                    <td>電源供應器</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">9.</td>
+                    <td>空冷散熱器</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">10.</td>
+                    <td>水冷散熱器</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">11.</td>
+                    <td>機殼</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">12.</td>
+                    <td>鍵盤</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">13.</td>
+                    <td>滑鼠</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">14.</td>
+                    <td>顯示器</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">15.</td>
+                    <td>音響/喇叭</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">16.</td>
+                    <td>作業系統</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">17.</td>
+                    <td>機殼配件</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+            </table>
+        </div>
+        <div></div>
+        <p>總價：<span id="total-price">0</span> 元</p>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        function updateTotalPrice() {
+            let cpuPrice = parseInt(document.getElementById("cpu").value);
+            let gpuPrice = parseInt(document.getElementById("gpu").value);
+            document.getElementById("total-price").textContent = cpuPrice + gpuPrice;
+        }
+
+        document.getElementById("cpu").addEventListener("change", updateTotalPrice);
+        document.getElementById("gpu").addEventListener("change", updateTotalPrice);
+
+        updateTotalPrice();
+    </script>
+</body>
+
+</html>
