@@ -16,7 +16,7 @@
         <h2>線上電腦估價</h2>
         <nav>
             <ul>
-                <li><a href="#">購買說明</a></li>
+                <li><a href="#">零件市集</a></li>
                 <li><a href="#">登入 / 註冊</a></li>
                 <li><a href="#"><img src="./Image/ICON/shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
                 <!-- -->
@@ -37,7 +37,30 @@
                     <td class="item"><label for="setpc">套裝主機</label></td>
                     <td>
                         <select id="setpc" class="select_css">
-                            <option value=""></option>
+                            <optgroup label="華碩ASUS主機">
+                                <option value="15990">ASUS【H-S500TE-313100032W】i3-13100/8G/512G/WIN11/300W電供
+                                    &lt;$15990&gt;</option>
+                                <option value="28990">ASUS ROG【G16CHR-7147000130】i7-14700/16G DDR5/512G/700W電供/水冷
+                                    &lt;$28990&gt;</option>
+                            </optgroup>
+                            <optgroup label="微星MSI主機">
+                                <option value="25900">MSI Infinite S3 12B【1615TW】i5-12400F/16G/1T/WIN11/RTX 3050
+                                    &lt;$25900&gt;</option>
+                                <option value="64900">MSI Infinite S3 14NUE7【2407TW】i7-14700F/32G/2T/WIN11/RTX 4070
+                                    Super &lt;$64900&gt;</option>
+                            </optgroup>
+                            <optgroup label="戴爾DELL主機">
+                                <option value="18800">DELL Inspiron【3030S-R1308BTW】i3-14100/8G/512G/180W/WIN11
+                                    &lt;$18800&gt;</option>
+                                <option value="21600">DELL Inspiron【3030S-R1508BTW】i5-14400/8G/512G/180W/WIN11
+                                    &lt;$21600&gt;</option>
+                            </optgroup>
+                            <optgroup label="HP惠普主機">
+                                <option value="33900">HP-Z2G9TWR i7-13700K/8G/512G SSD/DVDRW/700W/WIN11 PRO
+                                    &lt;$33900&gt;</option>
+                                <option value="45900">HP-Z2G9TWR i9-13900K/16G/1TB SSD/700W/WIN11 PRO &lt;$45900&gt;
+                                </option>
+                            </optgroup>
                         </select>
                     </td>
                     <td></td>
@@ -47,8 +70,17 @@
                     <td class="numero">2.</td>
                     <td class="item"><label for="notebook">筆記型電腦</label></td>
                     <td>
-                        <select id="" class="select_css">
-                            <option value=""></option>
+                        <select id="notebook" class="select_css">
+                            <optgroup label="14吋">
+                                <option value="21990">DELL Inspiron i5-1334U/8G/512G/14吋 藍 14-5440-R1508LTW &lt;$21990&gt;</option>
+                                <option value="74900">HP OMEN Transcend Ultra 9/RTX4070/32G/1T/14吋 幻影白 14-fb0096TX輕盈專業 &lt;$74900&gt;</option>
+                            </optgroup>
+                            <optgroup label="16吋">
+                                <option value="93900">HP OMEN Gaming i9-14900HX/RTX4080/32G/2T/16吋 秘影黑 16-wf1176TX &lt;$93990&gt;</option>
+                            </optgroup>
+                            <optgroup label="17吋">
+                                <option value="23900">HP Laptop i5-1334U/16G/512G/17吋 星河銀 17-cn3010TU &lt;$23900&gt;</option>
+                            </optgroup>
                         </select>
                     </td>
                     <td></td>
@@ -101,47 +133,70 @@
                     <td>
                         <select id="mb" class="select_css">
                             <optgroup label="Intel B760 1700腳位(DDR4) 12~14代皆支援">
-                                <option value="4090">華碩PRIME B760M-A WIFI D4-CSM(M-ATX/LAN 2.5Gb+無線)10相 &lt;$4090&gt;</option>
-                                <option value="4990">華碩TUF GAMING B760-PLUS WIFI D4(ATX/LAN 2.5Gb+無線)12+1相 &lt;$4990&gt;</option>
-                                <option value="3290">微星PRO B760-P DDR4 Ⅱ(ATX/LAN 2.5Gb+無線)12+1+1相供電 &lt;$3290&gt;</option>
+                                <option value="4090">華碩PRIME B760M-A WIFI D4-CSM(M-ATX/LAN 2.5Gb+無線)10相 &lt;$4090&gt;
+                                </option>
+                                <option value="4990">華碩TUF GAMING B760-PLUS WIFI D4(ATX/LAN 2.5Gb+無線)12+1相 &lt;$4990&gt;
+                                </option>
+                                <option value="3290">微星PRO B760-P DDR4 Ⅱ(ATX/LAN 2.5Gb+無線)12+1+1相供電 &lt;$3290&gt;
+                                </option>
                             </optgroup>
                             <optgroup label="Intel B760 1700腳位(DDR5) 12~14代皆支援">
-                                <option value="4990">華碩TUF GAMING B760M-BTF WIFI 背插(M-ATX/R2.5Gb+無線)12+1相 &lt;$4990&gt;</option>
-                                <option value="4690">微星 B760M PROJECT ZERO 背插(M-ATX/LAN2.5Gb+無線)12+1+1相 &lt;$4690&gt;</option>
+                                <option value="4990">華碩TUF GAMING B760M-BTF WIFI 背插(M-ATX/R2.5Gb+無線)12+1相 &lt;$4990&gt;
+                                </option>
+                                <option value="4690">微星 B760M PROJECT ZERO 背插(M-ATX/LAN2.5Gb+無線)12+1+1相 &lt;$4690&gt;
+                                </option>
                             </optgroup>
                             <optgroup label="Intel Z790 1700腳位(DDR5) 12~14代皆支援">
-                                <option value="11990">華碩ROG STRIX Z790-A GAMING WIFI Ⅱ(ATX/Intel 2.5Gb+Wi-Fi 7)16+1+2相 &lt;$11990&gt;</option>
-                                <option value="19990">技嘉Z790 AORUS MASTER X(E-ATX/Marvell 10G+Wi-Fi 7)20+1+2相 &lt;$19990&gt;</option>
-                                <option value="15890">微星MPG Z790 CARBON WIFI Ⅱ(ATX/Intel 2.5Gb+Wi-Fi 7)19+1+1相 &lt;$15890&gt;</option>
+                                <option value="11990">華碩ROG STRIX Z790-A GAMING WIFI Ⅱ(ATX/Intel 2.5Gb+Wi-Fi 7)16+1+2相
+                                    &lt;$11990&gt;</option>
+                                <option value="19990">技嘉Z790 AORUS MASTER X(E-ATX/Marvell 10G+Wi-Fi 7)20+1+2相
+                                    &lt;$19990&gt;</option>
+                                <option value="15890">微星MPG Z790 CARBON WIFI Ⅱ(ATX/Intel 2.5Gb+Wi-Fi 7)19+1+1相
+                                    &lt;$15890&gt;</option>
                             </optgroup>
                             <optgroup label="Intel B860 1851腳位(DDR5)">
-                                <option value="4990">華碩PRIME B860-PLUS WIFI-CSM(ATX/LAN 2.5Gb+無線)8+1+1+1相 &lt;$4990&gt;</option>
+                                <option value="4990">華碩PRIME B860-PLUS WIFI-CSM(ATX/LAN 2.5Gb+無線)8+1+1+1相 &lt;$4990&gt;
+                                </option>
                                 <option value="5990">技嘉B860 WIFI6E(ATX/LAN 2.5Gb+無線)12+1+2相 &lt;$5990&gt;</option>
-                                <option value="6890">微星MAG B860 TOMAHAWK WIFI(ATX/Intel 5Gb+Wi-Fi 7)12+1+1+1相 &lt;$6890&gt;</option>
+                                <option value="6890">微星MAG B860 TOMAHAWK WIFI(ATX/Intel 5Gb+Wi-Fi 7)12+1+1+1相
+                                    &lt;$6890&gt;</option>
                             </optgroup>
                             <optgroup label="Intel Z890 1851腳位(DDR5)">
-                                <option value="16990">華碩ROG STRIX Z890-E GAMING WIFI(ATX/LAN 5Gb+Wi-Fi 7)18+1+2相 &lt;$16990&gt;</option>
-                                <option value="17990">技嘉Z890 AORUS MASTER(E-ATX/Marvell 10Gb+Wi-Fi 7)18+1+2相 &lt;$17990&gt;</option>
-                                <option value="19490">微星MEG Z890 ACE(ATX/Marvell 10Gb+Wi-Fi 7)24+2+1+1相 &lt;$19490&gt;</option>
+                                <option value="16990">華碩ROG STRIX Z890-E GAMING WIFI(ATX/LAN 5Gb+Wi-Fi 7)18+1+2相
+                                    &lt;$16990&gt;</option>
+                                <option value="17990">技嘉Z890 AORUS MASTER(E-ATX/Marvell 10Gb+Wi-Fi 7)18+1+2相
+                                    &lt;$17990&gt;</option>
+                                <option value="19490">微星MEG Z890 ACE(ATX/Marvell 10Gb+Wi-Fi 7)24+2+1+1相 &lt;$19490&gt;
+                                </option>
                             </optgroup>
                             <optgroup label="AMD B550 AM4腳位(DDR4)">
                                 <option value="2490">技嘉B550M K(M-ATX/1H1P/LAN 1Gb/4dimm)4+2相供電 &lt;$2490&gt;</option>
-                                <option value="3290">華碩TUF GAMING B550M-PLUS(M-ATX/1H1P/LAN 2.5Gb)8+2相供電 &lt;$3290&gt;</option>
+                                <option value="3290">華碩TUF GAMING B550M-PLUS(M-ATX/1H1P/LAN 2.5Gb)8+2相供電 &lt;$3290&gt;
+                                </option>
                             </optgroup>
                             <optgroup label="AMD B650 AM5腳位(DDR5)">
-                                <option value="4990">華碩TUF GAMING B650-E WIFI(ATX/LAN 2.5Gb+無線)8+2+2相電源 &lt;$4990&gt;</option>
-                                <option value="5490">技嘉B650 AORUS ELITE AX V2(ATX/LAN 2.5Gb+無線)12+2+2相電源 &lt;$5490&gt;</option>
-                                <option value="6790">微星MAG B650 TOMAHAWK WIFI(ATX/LAN 2.5G+AMD無線)14+2+1相 &lt;$6790&gt;</option>
+                                <option value="4990">華碩TUF GAMING B650-E WIFI(ATX/LAN 2.5Gb+無線)8+2+2相電源 &lt;$4990&gt;
+                                </option>
+                                <option value="5490">技嘉B650 AORUS ELITE AX V2(ATX/LAN 2.5Gb+無線)12+2+2相電源 &lt;$5490&gt;
+                                </option>
+                                <option value="6790">微星MAG B650 TOMAHAWK WIFI(ATX/LAN 2.5G+AMD無線)14+2+1相 &lt;$6790&gt;
+                                </option>
                             </optgroup>
                             <optgroup label="AMD B850 AM5腳位(DDR5)">
-                                <option value="5990">華碩TUF GAMING B850M-PLUS WIFI(M-ATX/LAN 2.5Gb+無線)14+2+1相電源 &lt;$5990&gt;</option>
-                                <option value="7990">技嘉B850 AORUS ELITE(ATX/LAN 2.5Gb+WiFi 7)14+2+2相電源 &lt;$7990&gt;</option>
-                                <option value="7990">微星MAG B850 TOMAHAWK MAX WIFI(ATX/LAN 5G+Wi-Fi 7)14+2+1相 &lt;$7990&gt;</option>
+                                <option value="5990">華碩TUF GAMING B850M-PLUS WIFI(M-ATX/LAN 2.5Gb+無線)14+2+1相電源
+                                    &lt;$5990&gt;</option>
+                                <option value="7990">技嘉B850 AORUS ELITE(ATX/LAN 2.5Gb+WiFi 7)14+2+2相電源 &lt;$7990&gt;
+                                </option>
+                                <option value="7990">微星MAG B850 TOMAHAWK MAX WIFI(ATX/LAN 5G+Wi-Fi 7)14+2+1相
+                                    &lt;$7990&gt;</option>
                             </optgroup>
                             <optgroup label="AMD X870 AM5腳位(DDR5)">
-                                <option value="16990">華碩ROG STRIX X870-E GAMING WIFI(ATX/LAN 5Gb+Wi-Fi 7)18+2+2相 &lt;$16990&gt;</option>
-                                <option value="20490">技嘉X870E AORUS MASTER(ATX/LAN5G+Wi-Fi 7)16+2+2相 &lt;$20490&gt;</option>
-                                <option value="31990">微星MEG X870E GODLIKE(E-ATX/Marvell 10G+LAN 5G+WiFi 7)24+2+1相 &lt;$31990&gt;</option>
+                                <option value="16990">華碩ROG STRIX X870-E GAMING WIFI(ATX/LAN 5Gb+Wi-Fi 7)18+2+2相
+                                    &lt;$16990&gt;</option>
+                                <option value="20490">技嘉X870E AORUS MASTER(ATX/LAN5G+Wi-Fi 7)16+2+2相 &lt;$20490&gt;
+                                </option>
+                                <option value="31990">微星MEG X870E GODLIKE(E-ATX/Marvell 10G+LAN 5G+WiFi 7)24+2+1相
+                                    &lt;$31990&gt;</option>
                             </optgroup>
                         </select>
                     </td>
@@ -363,7 +418,9 @@
             <p></p>
         </div>
     </main>
-    <p>總價：<span id="total-price">0</span> 元</p>
+    <div class="total">
+        <p>總價：<span id="total-price">0</span> 元</p>
+    </div>
     <footer>
         Copyright © 2025 LaoG. All rights reserved.
     </footer>
