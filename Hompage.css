@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    /* 導覽列 */
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(230, 233, 230);
+    line-height: 30px;
+    align-items: center;
+    flex: ;
+}
+
+h1 {
+    /* LOGO的圖片 */
+    padding-left: 200px;
+}
+
+header a {
+    /* 導覽列的連結 */
+    color: rgb(134, 111, 111);
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+header li {
+    display: flex;
+    align-items: center;
+}
+
+.shopcart {
+    /* 導覽列購物車的圖案 */
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+    max-height: 30px;
+    padding: 0 0 9px 0;
+}
+
+.homepage_nav{
+    color: blue;
+}
+
+.diy_nav{
+    /* 配單網站的導覽列連結 */
+    color: blue;
+}
+
+.main1 {
+    /* 主頁第一張照片的區塊 */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-height: px;
+    background-color: rgb(248, 248, 248);
+}
+
+blockquote {
+    /* 標語 */
+    font-size: 50px;
+    line-height: 2;
+}
+
+.main1 p {
+    border: 5px groove rgb(66, 120, 226);
+    border-radius: 10px;
+    background-color: rgb(66, 120, 226);
+    width: 180px;
+    padding: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.mai1 p:hover{
+    background-color: gray;
+}
+
+.main3 {
+    /* 主頁第三部分的區塊 */
+display: flex;
+justify-content: space-around;
+}
+
+.main3 div{
+    width: 400px;
+    text-align: center;
+    line-height: 2vw;
+}
+
+
+.main3 img{
+    width: 80%;
+    border: 5px ridge white;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+footer {
+    display: flex;
+    line-height: 5vw;
+    background-color: rgb(60, 56, 56);
+    color: aliceblue;
+    justify-content: center;
+}
