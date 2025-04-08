@@ -54,12 +54,18 @@ header li {
 }
 
 .homepage_nav{
-    color: blue;
+    /* 首頁的導覽列連結 */
+    color: rgb(119, 162, 213);
 }
 
 .diy_nav{
     /* 配單網站的導覽列連結 */
-    color: blue;
+    color: rgb(119, 162, 213);
+}
+
+.shop_nav{
+    /* 商品網站的導覽列連結 */
+    color: rgb(119, 162, 213);
 }
 
 .main1 {
@@ -81,7 +87,7 @@ blockquote {
     border: 5px groove rgb(66, 120, 226);
     border-radius: 10px;
     background-color: rgb(66, 120, 226);
-    width: 180px;
+    width: 240px;
     padding: 10px;
     color: white;
     font-size: 30px;
@@ -117,4 +123,54 @@ footer {
     background-color: rgb(60, 56, 56);
     color: aliceblue;
     justify-content: center;
+}
+
+table {
+    border: solid 1px black;
+    border-collapse: collapse;
+    font-size: 25px;
+}
+
+th,
+td {
+    border: solid 1px black;
+    text-align: center;
+}
+
+.select_css {
+    font-size: 20px;
+    width: 650px;
+    margin: 4px;
+}
+
+.item {
+    width: 190px;
+}
+
+.numero {
+    width: 30px;
+}
+
+.area {
+    /* 配單頁主要main的布局 */
+    display: flex;
+    margin: 70px 0px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.total{
+    /* 配單頁下方統計列 */
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    background-color: rgb(221, 214, 214);
+    border-radius: 10px 10px 0 0 ;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    padding-right: 50px;
+    line-height: 40px;
 }

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GigaRoost-線上配單</title>
+    <title>GigaRoost 線上配單</title>
     <link rel="ICON" href="./Logo/gigaroost_logo_onlyhead.png">
-    <link rel="stylesheet" href="./Hompage.css">
+    <link rel="stylesheet" href="./GigaRoost.css">
 </head>
 
 <body>
@@ -15,22 +15,742 @@
         <nav>
             <ul>
                 <li><a href="./homepage.html"><b>首頁</b></a></li>
-                <li><a href="#"  class="diy_nav"><b>線上配單</b></a></li>
-                <li><a href="#"><b>零件市集</b></a></li>
+                <li><a href="#" class="diy_nav"><b>線上配單</b></a></li>
+                <li><a href="./shop.html"><b>零件市集</b></a></li>
                 <li><a href="#"><b>登入 / 註冊</b></a></li>
                 <li><a href="#"><img src="./Image/ICON/shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
             </ul>
         </nav>
     </header>
     <br><br><br>
-    <main>
-        
+    <main class="area">
+        <div>
+            <table>
+                <tr>
+                    <th colspan="2">品名</th>
+                    <th>產品</th>
+                    <th>數量</th>
+                    <th>小計</th>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="setpc">套裝主機</label></td>
+                    <td>
+                        <select id="setpc" class="select_css">
+                            <optgroup label="華碩ASUS主機">
+                                <option value="15990">ASUS【H-S500TE-313100032W】i3-13100/8G/512G/WIN11/300W電供
+                                    &lt;$15990&gt;</option>
+                                <option value="28990">ASUS ROG【G16CHR-7147000130】i7-14700/16G DDR5/512G/700W電供/水冷
+                                    &lt;$28990&gt;</option>
+                            </optgroup>
+                            <optgroup label="微星MSI主機">
+                                <option value="25900">MSI Infinite S3 12B【1615TW】i5-12400F/16G/1T/WIN11/RTX 3050
+                                    &lt;$25900&gt;</option>
+                                <option value="64900">MSI Infinite S3 14NUE7【2407TW】i7-14700F/32G/2T/WIN11/RTX 4070
+                                    Super &lt;$64900&gt;</option>
+                            </optgroup>
+                            <optgroup label="戴爾DELL主機">
+                                <option value="18800">DELL Inspiron【3030S-R1308BTW】i3-14100/8G/512G/180W/WIN11
+                                    &lt;$18800&gt;</option>
+                                <option value="21600">DELL Inspiron【3030S-R1508BTW】i5-14400/8G/512G/180W/WIN11
+                                    &lt;$21600&gt;</option>
+                            </optgroup>
+                            <optgroup label="HP惠普主機">
+                                <option value="33900">HP-Z2G9TWR i7-13700K/8G/512G SSD/DVDRW/700W/WIN11 PRO
+                                    &lt;$33900&gt;</option>
+                                <option value="45900">HP-Z2G9TWR i9-13900K/16G/1TB SSD/700W/WIN11 PRO &lt;$45900&gt;
+                                </option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="notebook">筆記型電腦</label></td>
+                    <td>
+                        <select id="notebook" class="select_css">
+                            <optgroup label="14吋">
+                                <option value="21990">DELL Inspiron i5-1334U/8G/512G/14吋 藍 14-5440-R1508LTW
+                                    &lt;$21990&gt;</option>
+                                <option value="45900">ACER Swift 14/Qualcomm X1E-78-100/16G/1T/14吋 灰 SF14-11T-X5F7 (觸控)
+                                    &lt;$45900&gt;</option>
+                                <option value="74900">HP OMEN Transcend Ultra 9/RTX4070/32G/1T/14吋 幻影白 14-fb0096TX輕盈專業
+                                    &lt;$74900&gt;</option>
+                            </optgroup>
+                            <optgroup label="15.6吋">
+                                <option value="30990">Lenovo LOQ/i5-13450HX/RTX4060/16G/512G/15吋 灰 83DV00FDTW
+                                    &lt;$30990&gt;</option>
+                                <option value="31999">華碩TUF R5-7535HS/RTX4060/16G/512G/15吋 灰 FA507NV-0042B7535HS
+                                    &lt;$31999&gt;</option>
+                                <option value="34500">微星Katana R7-8845HS/RTX4060/16G/512G/15吋 黑 A15 AI B8VF-433TW
+                                    &lt;$34500&gt;</option>
+                            </optgroup>
+                            <optgroup label="16吋">
+                                <option value="36990">DELL Inspiron i7-13620H/16G/1T/16吋 藍 16-7640R-R2608LTW
+                                    &lt;$36990&gt;</option>
+                                <option value="45900">ACER Helios Neo i7-14700HX/RTX4060/16G/512G/16吋 黑 PHN16-72-76MR
+                                    &lt;$45900&gt;</option>
+                                <option value="93900">HP OMEN Gaming i9-14900HX/RTX4080/32G/2T/16吋 秘影黑 16-wf1176TX
+                                    &lt;$93990&gt;</option>
+                            </optgroup>
+                            <optgroup label="17吋">
+                                <option value="23900">HP Laptop i5-1334U/16G/512G/17吋 星河銀 17-cn3010TU &lt;$23900&gt;
+                                </option>
+                                <option value="33999">華碩TUF R7-7435HS/RTX4060/16G/512G/17吋 御鐵灰 FA707NVR-0022B7435HS
+                                    &lt;$33999&gt;</option>
+                                <option value="49900">LG Gram Ultra 7-155H/32G/1T/17吋 灰 17Z90S-G AD79C2 &lt;$49900&gt;
+                                </option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="cpu">中央處理器 CPU</label></td>
+                    <td>
+                        <select id="cpu" class="select_css">
+                            <option value="" disabled selected>總共幾個</option>
+                            <optgroup label="Intel 12代 1700腳位">
+                                <option value="3450">Intel i5-12400F &lt;$3450&gt;</option>
+                                <option value="8450">Intel i7-12700KF &lt;$8450&gt;</option>
+                            </optgroup>
+                            <optgroup label="Intel 14代 1700腳位">
+                                <option value="5850">Intel i5-14400 &lt;$5850&gt;</option>
+                                <option value="12300">Intel i7-14700K &lt;$12300&gt;</option>
+                                <option value="16400">Intel i9-14900K &lt;$16400&gt;</option>
+                            </optgroup>
+                            <optgroup label="Intel Core Ultra 200S 1851腳位">
+                                <option value="9300">Intel Core Ultra 5 235 &lt;$9300&gt;</option>
+                                <option value="9999">Intel Core Ultra 5 245K &lt;$9999&gt;</option>
+                                <option value="13500">Intel Core Ultra 7 265K &lt;$13500&gt;</option>
+                                <option value="19600">Intel Core Ultra 9 285K &lt;$19600&gt;</option>
+                            </optgroup>
+                            <optgroup label="AMD AM4腳位">
+                                <option value="2450">AMD R5 3400G &lt;$2450&gt;</option>
+                                <option value="5690">AMD R5 5600X &lt;$5690&gt;</option>
+                            </optgroup>
+                            <optgroup label="AMD AM5腳位">
+                                <option value="5250">AMD R5 7500F &lt;$5250&gt;</option>
+                                <option value="7390">AMD R7 7700 &lt;$7390&gt;</option>
+                                <option value="14550">AMD R7 7800X3D &lt;$14550&gt;</option>
+                                <option value="22950">AMD R7 7950X3D &lt;$22950&gt;</option>
+                                <option value="8850">AMD R9 9600X &lt;$8850&gt;</option>
+                                <option value="11950">AMD R9 9700X &lt;11950&gt;</option>
+                                <option value="16950">AMD R9 9800X3D &lt;$16950&gt;</option>
+                                <option value="25250">AMD R9 9950X3D &lt;$25250&gt;</option>
+                            </optgroup>
+
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="mb">主機板</label></td>
+                    <td>
+                        <select id="mb" class="select_css">
+                            <optgroup label="Intel B760 1700腳位(DDR4) 12~14代皆支援">
+                                <option value="4090">華碩PRIME B760M-A WIFI D4-CSM(M-ATX/LAN 2.5Gb+無線)10相 &lt;$4090&gt;
+                                </option>
+                                <option value="4990">華碩TUF GAMING B760-PLUS WIFI D4(ATX/LAN 2.5Gb+無線)12+1相 &lt;$4990&gt;
+                                </option>
+                                <option value="3290">微星PRO B760-P DDR4 Ⅱ(ATX/LAN 2.5Gb+無線)12+1+1相供電 &lt;$3290&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="Intel B760 1700腳位(DDR5) 12~14代皆支援">
+                                <option value="4990">華碩TUF GAMING B760M-BTF WIFI 背插(M-ATX/R2.5Gb+無線)12+1相 &lt;$4990&gt;
+                                </option>
+                                <option value="4690">微星 B760M PROJECT ZERO 背插(M-ATX/LAN2.5Gb+無線)12+1+1相 &lt;$4690&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="Intel Z790 1700腳位(DDR5) 12~14代皆支援">
+                                <option value="11990">華碩ROG STRIX Z790-A GAMING WIFI Ⅱ(ATX/Intel 2.5Gb+Wi-Fi 7)16+1+2相
+                                    &lt;$11990&gt;</option>
+                                <option value="19990">技嘉Z790 AORUS MASTER X(E-ATX/Marvell 10G+Wi-Fi 7)20+1+2相
+                                    &lt;$19990&gt;</option>
+                                <option value="15890">微星MPG Z790 CARBON WIFI Ⅱ(ATX/Intel 2.5Gb+Wi-Fi 7)19+1+1相
+                                    &lt;$15890&gt;</option>
+                            </optgroup>
+                            <optgroup label="Intel B860 1851腳位(DDR5)">
+                                <option value="4990">華碩PRIME B860-PLUS WIFI-CSM(ATX/LAN 2.5Gb+無線)8+1+1+1相 &lt;$4990&gt;
+                                </option>
+                                <option value="5990">技嘉B860 WIFI6E(ATX/LAN 2.5Gb+無線)12+1+2相 &lt;$5990&gt;</option>
+                                <option value="6890">微星MAG B860 TOMAHAWK WIFI(ATX/Intel 5Gb+Wi-Fi 7)12+1+1+1相
+                                    &lt;$6890&gt;</option>
+                            </optgroup>
+                            <optgroup label="Intel Z890 1851腳位(DDR5)">
+                                <option value="16990">華碩ROG STRIX Z890-E GAMING WIFI(ATX/LAN 5Gb+Wi-Fi 7)18+1+2相
+                                    &lt;$16990&gt;</option>
+                                <option value="17990">技嘉Z890 AORUS MASTER(E-ATX/Marvell 10Gb+Wi-Fi 7)18+1+2相
+                                    &lt;$17990&gt;</option>
+                                <option value="19490">微星MEG Z890 ACE(ATX/Marvell 10Gb+Wi-Fi 7)24+2+1+1相 &lt;$19490&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="AMD B550 AM4腳位(DDR4)">
+                                <option value="2490">技嘉B550M K(M-ATX/1H1P/LAN 1Gb/4dimm)4+2相供電 &lt;$2490&gt;</option>
+                                <option value="3290">華碩TUF GAMING B550M-PLUS(M-ATX/1H1P/LAN 2.5Gb)8+2相供電 &lt;$3290&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="AMD B650 AM5腳位(DDR5)">
+                                <option value="4990">華碩TUF GAMING B650-E WIFI(ATX/LAN 2.5Gb+無線)8+2+2相電源 &lt;$4990&gt;
+                                </option>
+                                <option value="5490">技嘉B650 AORUS ELITE AX V2(ATX/LAN 2.5Gb+無線)12+2+2相電源 &lt;$5490&gt;
+                                </option>
+                                <option value="6790">微星MAG B650 TOMAHAWK WIFI(ATX/LAN 2.5G+AMD無線)14+2+1相 &lt;$6790&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="AMD B850 AM5腳位(DDR5)">
+                                <option value="5990">華碩TUF GAMING B850M-PLUS WIFI(M-ATX/LAN 2.5Gb+無線)14+2+1相電源
+                                    &lt;$5990&gt;</option>
+                                <option value="7990">技嘉B850 AORUS ELITE(ATX/LAN 2.5Gb+WiFi 7)14+2+2相電源 &lt;$7990&gt;
+                                </option>
+                                <option value="7990">微星MAG B850 TOMAHAWK MAX WIFI(ATX/LAN 5G+Wi-Fi 7)14+2+1相
+                                    &lt;$7990&gt;</option>
+                            </optgroup>
+                            <optgroup label="AMD X870 AM5腳位(DDR5)">
+                                <option value="16990">華碩ROG STRIX X870-E GAMING WIFI(ATX/LAN 5Gb+Wi-Fi 7)18+2+2相
+                                    &lt;$16990&gt;</option>
+                                <option value="20490">技嘉X870E AORUS MASTER(ATX/LAN5G+Wi-Fi 7)16+2+2相 &lt;$20490&gt;
+                                </option>
+                                <option value="31990">微星MEG X870E GODLIKE(E-ATX/Marvell 10G+LAN 5G+WiFi 7)24+2+1相
+                                    &lt;$31990&gt;</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="ram">記憶體 RAM</label></td>
+                    <td>
+                        <select id="ram" class="select_css">
+                            <optgroup label="桌上型記憶體DDR4">
+                                <option value="499">美光Crucial DDR4-3200 8G(CL22) &lt;$499&gt;</option>
+                                <option value="899">美光Crucial DDR4-3200 16G(CL22) &lt;$899&gt;</option>
+                                <option value="890">金士頓 16GB DDR4-3200 16G(CL16) &lt;$890&gt;</option>
+                                <option value="949">威剛ADATA XPG D10 DDR4-3200 16G-黑(CL16) &lt;$949&gt;</option>
+                            </optgroup>
+                            <optgroup label="桌上型記憶體DDR4 多通道">
+                                <option value="1799">科賦KLEVV BOLT X DDR4-3200 32G(16G*2)(CL16) &lt;$1799&gt;</option>
+                                <option value="1799">十銓TEAM T-CREATE EXPERT DDR4-3600 32G(16G*2)(CL18) &lt;$1799&gt;
+                                </option>
+                                <option value="1899">十銓TEAM T-FORCE VULCAN Z DDR4-3600 32G(16G*2)(CL18) &lt;$1899&gt;
+                                </option>
+                                <option value="1299">威剛ADATA XPG D50 RGB DDR4-3200 16G(8G*2)-銀灰(CL16) &lt;$1299&gt;
+                                </option>
+                                <option value="2249">威剛ADATA XPG D50 RGB DDR4-3200 32G(16G*2)-銀灰(CL16) &lt;$2249&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="桌上型記憶體DDR5">
+                                <option value="1299">威剛ADATA XPG LANCER BLADE DDR5-5600 16G-黑(CL46/支援XMP&EXPO)
+                                    &lt;$1299&gt;</option>
+                                <option value="1349">威剛ADATA XPG LANCER BLADE DDR5-6000 16G-黑(CL48/支援XMP&EXPO)
+                                    &lt;$1349&gt;</option>
+                                <option value="3299">必恩威PNY 16GB DDR5-6000(CL36/支援XMP&EXPO) &lt;$3299&gt;</option>
+                                <option value="6399">必恩威PNY 32GB DDR5-6000(CL36/支援XMP&EXPO) &lt;$6399&gt;</option>
+                            </optgroup>
+                            <optgroup label="桌上型記憶體DDR5 多通道">
+                                <option value="2990"> Acer HT200 DDR5-6000 32G(16G*2)-銀(CL30/支援XMP&EXPO) &lt;$2990&gt;
+                                </option>
+                                <option value="5880"> Acer HT200 DDR5-6000 64G(32G*2)-黑(CL30/支援XMP&EXPO) &lt;$5880&gt;
+                                </option>
+                                <option value="2999">十銓TEAM T-CREATE EXPERT DDR5-6000 32G(16G*2)-黑(CL30/支援XMP&EXPO)
+                                    &lt;$2999&gt;</option>
+                                <option value="3199">十銓TEAM T-FORCE DELTA DDR5-6000 32G(16G*2)-黑(CL30/支援XMP&EXPO)
+                                    &lt;$3199&gt;</option>
+                                <option value="3199">科賦KLEVV BOLT V DDR5-6400 32G(16G*2)(CL32) &lt;$3199&gt;</option>
+                                <option value="2999">必恩威 PNY XLR8 Gaming DDR5-6000 32G(16G*2)(CL30) &lt;$2999&gt;
+                                </option>
+                                <option value="2399">美光Crucial DDR5-5600 32G(16G*2)(CL46/支援XMP&EXPO) &lt;$2399&gt;
+                                </option>
+                                <option value="2499">美光Crucial PRO DDR5-6000 32G(16G*2)(白散熱片)(CL36/支援XMP&EXPO)
+                                    &lt;$2499&gt;</option>
+                                <option value="7199">美光Crucial PRO DDR5-5600 96G(48G*2)(黑散熱片)(CL46/支援XMP&EXPO)
+                                    &lt;$7199&gt;</option>
+                            </optgroup>
+                            <optgroup label="筆電型記憶體DDR4">
+                                <option value="499">Micron Crucial NB DDR4-3200 8G 美光筆電記憶體/適用第9代以上CPU/原生顆粒/終身保固
+                                    &lt;$499&gt;</option>
+                                <option value="888">Micron Crucial NB DDR4-3200 16G 美光筆電記憶體/適用第9代以上CPU/原生顆粒/終身保固
+                                    &lt;$888&gt;</option>
+                                <option value="499">TEAM ELITE NB DDR4-3200 8G 十銓筆電記憶體/終身保固 &lt;$499&gt;</option>
+                                <option value="888">TEAM ELITE NB DDR4-3200 16G 十銓筆電記憶體/終身保固 &lt;$888&gt;</option>
+                            </optgroup>
+                            <optgroup label="筆電型記憶體DDR5">
+                                <option value="1199">acer NB DDR5-5600 16G 筆電記憶體/終身保固/原廠認證 &lt;$1199&gt;</option>
+                                <option value="699">Micron Crucial NB DDR5-4800 8G 美光筆電記憶體/內建PMIC電源管理晶片/終身保固
+                                    &lt;$699&gt;</option>
+                                <option value="729">Micron Crucial NB DDR5-5600 8G 美光筆電記憶體/內建PMIC電源管理晶片/終身保固
+                                    &lt;$729&gt;</option>
+                                <option value="699">TEAM ELITE NB DDR5-4800 8G 十銓筆電記憶體/終身保固/原廠認證 &lt;$699&gt;</option>
+                                <option value="1199">TEAM ELITE NB DDR5-4800 16G 十銓筆電記憶體/終身保固/原廠認證 &lt;$1199&gt;
+                                </option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="ssd">固態硬碟 SSD</label></td>
+                    <td>
+                        <select id="ssd" class="select_css">
+                            <optgroup label="SSD SATA 固態硬碟">
+                                <option value="999">宏碁acer RE100 512GB/2.5吋 SATA/讀：562M/寫：529M/TLC &lt;$999&gt;</option>
+                                <option value="1690">宏碁acer RE100 1TB/2.5吋 SATA/讀：562M/寫：529M/TLC &lt;$1690&gt;</option>
+                                <option value="899">十銓TEAM T-Force Vulcan Z 512TB/2.5吋 SATA/讀：550M/寫：500M/TLC
+                                    &lt;$899&gt;</option>
+                                <option value="1599">十銓TEAM T-Force Vulcan Z 1TB/2.5吋 SATA/讀：550M/寫：500M/TLC
+                                    &lt;$1599&gt;</option>
+                                <option value="999">美光Crucial BX500 500GB/2.5吋 SATA/讀：540M/寫：500M/TLC &lt;$999&gt;
+                                </option>
+                                <option value="899">鎧俠KIOXIA EXCERIA SATA 480GB/2.5吋 SATA/讀：555M/寫：540M &lt;$899&gt;
+                                </option>
+                                <option value="1590">鎧俠KIOXIA EXCERIA SATA 960GB/2.5吋 SATA/讀：555M/寫：540M &lt;$1590&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="SSD M.2 Gen3 PCIe 固態硬碟">
+                                <option value="3399">宏碁acer Predator GM3500 2TB/M.2 PCIe Gen3/讀：3400M/寫：3000M/TLC
+                                    &lt;$3399&gt;</option>
+                                <option value="1890">鎧俠KIOXIA Exceria G2 1TB/M.2 PCIe Gen3/讀：2100M/寫：1700M/TLC
+                                    &lt;$1890&gt;</option>
+                                <option value="3690">鎧俠KIOXIA Exceria G2 2TB/M.2 PCIe Gen3/讀：2100M/寫：1700M/TLC
+                                    &lt;$3690&gt;</option>
+                                <option value="2799">海力士P31 1T/M.2 PCIe Gen3/讀：3500M/寫：3200M &lt;$2799&gt;</option>
+                            </optgroup>
+                            <optgroup label="SSD M.2 Gen4 PCIe 固態硬碟">
+                                <option value="2690">鎧俠KIOXIA Exceria PRO 1TB/M.2 PCIe Gen4/讀：7300M/寫：6400M/TLC
+                                    &lt;$2690&gt;</option>
+                                <option value="4690">鎧俠KIOXIA Exceria PRO 2TB/M.2 PCIe Gen4/讀：7300M/寫：6400M/TLC
+                                    &lt;$4690&gt;</option>
+                                <option value="4690">美光T500 1TB/M.2 PCIe Gen4/讀：7400M/寫：7000M/無散熱片 &lt;$2899&gt;
+                                </option>
+                                <option value="4690">美光T500 2TB/M.2 PCIe Gen4/讀：7400M/寫：7000M/無散熱片 &lt;$4699&gt;
+                                </option>
+                                <option value="2799">海力士P41 1TB/M.2 PCIe Gen4/讀：7000M/寫：6500M &lt;$3190&gt;</option>
+                                <option value="2799">海力士P41 2TB/M.2 PCIe Gen4/讀：7000M/寫：6500M &lt;$5350&gt;</option>
+                            </optgroup>
+                            <optgroup label="SSD M.2 Gen5 PCIe 固態硬碟">
+                                <option value="4490">鎧俠KIOXIA Exceria PLUS G4 1TB/M.2 PCIe Gen5/讀：10000M/寫：7900M/TLC
+                                    &lt;$4490&gt;</option>
+                                <option value="7490">鎧俠KIOXIA Exceria PLUS G4 2TB/M.2 PCIe Gen5/讀：10000M/寫：8200M/TLC
+                                    &lt;$7490&gt;</option>
+                                <option value="4380">威剛ADATA LENGEND 970 PRO 1TB/M.2 PCIe Gen5/讀：13000M/寫：9500M/含散熱風扇不可拆
+                                    &lt;$4380&gt;</option>
+                                <option value="4380">威剛ADATA LENGEND 970 PRO 2TB/M.2 PCIe
+                                    Gen5/讀：14000M/寫：10000M/含散熱風扇不可拆 &lt;$6659&gt;</option>
+                                <option value="4090">微星MSI SPATIUM M560 1TB/M.2 PCIe Gen5/讀：10200M/寫：8400M/TLC
+                                    &lt;$4090&gt;</option>
+                                <option value="6590">微星MSI SPATIUM M560 2TB/M.2 PCIe Gen5/讀：10300M/寫：8700M/TLC
+                                    &lt;$6590&gt;</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="hdd">傳統硬碟 HDD</label></td>
+                    <td>
+                        <select id="hdd" class="select_css">
+                            <optgroup label="3.5吋 SATA3 傳統碟">
+                                <option value="2030">TOSHIBA【P300】2TB/256M/7200轉 &lt;$2030&gt;</option>
+                                <option value="3210">TOSHIBA【P300】4TB/128M/5400轉 &lt;$3210&gt;</option>
+                                <option value="1690">Seagate【新梭魚】1TB/256M/7200轉 &lt;$1690&gt;</option>
+                                <option value="3270">Seagate【新梭魚】4TB/256M/5400轉 &lt;$3270&gt;</option>
+                                <option value="1999">WD【藍標】2TB/256M/7200轉 &lt;$1999&gt;</option>
+                                <option value="3190">WD【藍標】4TB/256M/5400轉 &lt;$3190&gt;</option>
+                            </optgroup>
+                            <optgroup label="3.5吋 SATA3 監控碟">
+                                <option value="2030">TOSHIBA【S300】2TB/128M/5400轉 &lt;$2030&gt;</option>
+                                <option value="3210">TOSHIBA【S300】4TB/256M/5400轉 &lt;$3210&gt;</option>
+                                <option value="2190">Seagate【監控鷹】2TB/256M/5400轉 &lt;$2190&gt;</option>
+                                <option value="7970">Seagate【監控鷹】8TB/256M/7200轉 &lt;$7970&gt;</option>
+                                <option value="7190">WD【紫標PRO】8TB/256M/7200轉 &lt;$7190&gt;</option>
+                                <option value="8950">WD【紫標PRO】10TB/256M/7200轉 &lt;$8950&gt;</option>
+                            </optgroup>
+                            <optgroup label="3.5吋 SATA3 NAS碟">
+                                <option value="4490">TOSHIBA【NAS碟】4TB/512M/7200轉 &lt;$4490&gt;</option>
+                                <option value="14700">TOSHIBA【NAS碟】18TB/512M/7200轉 &lt;$14700&gt;</option>
+                                <option value="16300">TOSHIBA【NAS碟】20TB/512M/7200轉 &lt;$16300&gt;</option>
+                                <option value="2190">Seagate IronWolf【那嘶狼】2TB/256M/5400轉 &lt;$2190&gt;</option>
+                                <option value="7970">Seagate IronWolf【那嘶狼】8TB/256M/5400轉 &lt;$7970&gt;</option>
+                                <option value="2990">WD【紅標PLUS】2TB/64M/5400轉 &lt;$2990&gt;</option>
+                                <option value="7800">WD【紅標PLUS】10TB/256M/5400轉 &lt;$7800&gt;</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="gpu">顯示卡</label></td>
+                    <td>
+                        <select id="gpu" class="select_css">
+                            <optgroup label="GeForce RTX 3060-12G">
+                                <option value="8990">華碩DUAL-RTX3060/1837MHz/20cm/雙風扇 &lt;$8990&gt;</option>
+                                <option value="8990">微星RTX3060 VENTUS 2X OC/1807MHz/23.5cm/雙風扇 &lt;$8990&gt;</option>
+                            </optgroup>
+                            <optgroup label="GeForce RTX 4060-8G">
+                                <option value="10490">索泰ZOTAC GAMING RTX 4060 TWIN Edge OC White/2490MHz/22.1cm
+                                    &lt;$10490&gt;</option>
+                                <option value="10990">技嘉RTX 4060 EAGLE OC ICE/2505MHz/27.2cm &lt;$10990&gt;</option>
+                            </optgroup>
+                            <optgroup label="GeForce RTX 4060ti-8G">
+                                <option value="12990">技嘉RTX4060ti WINDFORCE OC 8G/2550MHz/20cm/雙風扇 &lt;$12990&gt;
+                                </option>
+                                <option value="13990">華碩PRIME-RTX4060ti-O8G/2610MHz/27cm/三風扇 &lt;$13990&gt;</option>
+                                <option value="13990">微星RTX4060ti-VENTUS-3X-OC-8G/2580MHz/31cm/三風扇 &lt;$13990&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="GeForce RTX 5070-12G">
+                                <option value="23990">技嘉RTX5070 GAMING OC 12G/2625MHz/32.7cm/三風扇 &lt;$23990&gt;</option>
+                                <option value="27990">微星RTX5070 12G VANGUARD SOC LAUNCH EDTION/2655MHz/33.7cm/三風扇
+                                    &lt;$27990&gt;</option>
+                            </optgroup>
+                            <optgroup label="GeForce RTX 5070ti-16G">
+                                <option value="26990">技嘉RTX5070ti WINDFORCE SFF 16G/2452MHz/31cm/三風扇 &lt;$26990&gt;
+                                </option>
+                                <option value="32990">華碩PRIME-RTX5070ti-O16G/2527MHz/31cm/三風扇 &lt;$32990&gt;</option>
+                                <option value="35990">微星RTX5070ti 16G VANGUARD SOC/2602MHz/36cm/三風扇 &lt;$35990&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="AMD Radeon RX9070-16G">
+                                <option value="19900">Acer Nitro RX9070 16G OC/2700MHz/30cm/三風扇 &lt;$19900&gt;</option>
+                                <option value="22990">撼訊RX9070 16G-E/OC 紅魔/2700MHz/36cm/三風扇 &lt;$22990&gt;</option>
+                                <option value="23490">華擎Radeon RX9070 Challenger 16G/2520MHz/29cm/三風扇 &lt;$23490&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="AMD RX9070XT-16G">
+                                <option value="22900">Acer Nitro RX9070XT 16G OC/3100MHz/30cm/三風扇 &lt;$22900&gt;
+                                </option>
+                                <option value="25990">撼訊RX9070XT 16G-E/OC 紅魔/3060MHz/36cm/三風扇 &lt;$25990&gt;</option>
+                                <option value="27990">華擎Radeon RX9070XT Taichi 16G OC/310MHz/33cm/三風扇 &lt;$27990&gt;
+                                </option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="psu">電源供應器</label></td>
+                    <td>
+                        <select id="psu" class="select_css">
+                            <optgroup label="MONTECH 君主">
+                                <option value="2190">MONTECH 君主 Century 創世紀 550W/金牌/ATX/全模組/全日系 &lt;$2190&gt;</option>
+                                <option value="2590">MONTECH 君主 Century 創世紀 650W/金牌/ATX/全模組/全日系 &lt;$2590&gt;</option>
+                                <option value="4790">MOMTECH 君主 TITAN PLA 750W/白金/ATX3.1/PCIe5.1/智能停轉/全模組/全日系
+                                    &lt;$4790&&gt;</option>
+                                <option value="4590">MOMTECH 君主 TITAN PLA 850W/白金/ATX3.1/PCIe5.1/智能停轉/全模組/全日系
+                                    &lt;$4590&gt;</option>
+                                <option value="5290">MOMTECH 君主 TITAN PLA 1000W/白金/ATX3.1/PCIe5.1/智能停轉/全模組/全日系
+                                    &lt;$5290&gt;</option>
+                                <option value="5990">MOMTECH 君主 TITAN PLA 1200W/白金/ATX3.1/PCIe5.1/智能停轉/全模組/全日系
+                                    &lt;$5590&gt;</option>
+                            </optgroup>
+                            <optgroup label="FSP 全漢">
+                                <option value="3890">FSP 全漢 VITA GM 850W/金牌/ATX3.1/PCIE5.1/全模組/主日系 &lt;$3890&gt;
+                                </option>
+                                <option value="4790">FSP 全漢 HYDRO PTM X PRO 1000W/白金/ATX3.0/PCIe5.1/全模組/主日系
+                                    &lt;$4790&gt;</option>
+                                <option value="5190">FSP 全漢 HYDRO PTM X PRO 1200W/白金/ATX3.0/PCIe5.1/全模組/主日系
+                                    &lt;$4790&gt;</option>
+                            </optgroup>
+                            <optgroup label="SeaSonic 海韻">
+                                <option value="2690">海韻Focus GX 650W/金牌/ATX/全模組 &lt;$2690&gt;</option>
+                                <option value="2990">海韻Focus GX 750W/金牌/ATX/全模組 &lt;$2990&gt;</option>
+                                <option value="4690">海韻VERTEX GX 850W/金牌/ATX3.1/PCIe5.0/全模組 &lt;$4690&gt;</option>
+                                <option value="6490">海韻VERTEX PX 1000W/白金/ATX3.0/PCIe5.0/全模組 &lt;$6490&gt;</option>
+                                <option value="8390">海韻VERTEX PX 1200W/白金/ATX3.0/PCIe5.0/全模組 &lt;$8390&gt;</option>
+                            </optgroup>
+                            <optgroup label="NZXT 恩傑">
+                                <option value="4290">NZXT 恩傑 C850/金牌/ATX3.1/PCIe5.1/智慧停轉/全模組/全日系 &lt;$4290&gt;</option>
+                                <option value="5490">NZXT 恩傑 C1000/金牌/ATX3.1/PCIe5.1/智慧停轉/全模組/全日系 &lt;$5490&gt;
+                                </option>
+                                <option value="6690">NZXT 恩傑 C1200/金牌/ATX3.1/PCIe5.1/智慧停轉/全模組/全日系 &lt;$6490&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="Super Flower 振華">
+                                <option value="4390">振華LEADEX VII PRO 850W/白金/ATX3.1/PCIe5.1/全模組/全日系 &lt;$4390&gt;
+                                </option>
+                                <option value="4990">振華LEADEX VII PRO 1000W/白金/ATX3.1/PCIe5.1/全模組/全日系 &lt;$4990&gt;
+                                </option>
+                                <option value="6690">振華LEADEX VII 1300W/金牌/ATX3.0/PCIe5.0/全模組/全日系 &lt;$6690&gt;
+                                </option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="radiator">空冷散熱器</label></td>
+                    <td>
+                        <select id="radiator" class="select_css">
+                            <optgroup label="Jonsbo 喬思伯">
+                                <option value="699">Jonsbo 喬思伯 CR-1400 V2/4導管/9cm風扇*1/碳纖維+無限鏡上蓋/ARGB風扇/TDP180W/高133mm
+                                    &lt;$699&gt;</option>
+                                <option value="699">Jonsbo 喬思伯 CR-1000 V2
+                                    PRO/6導管/12cm風扇*1/碳纖維+無限鏡上蓋/ARGB風扇/TDP230W/高157mm &lt;$799&gt;</option>
+                                <option value="699">Jonsbo 喬思伯 CR-3000/7導管/12cm風扇*2/上蓋燈光/雙塔雙扇/TDP260W/高160mm
+                                    &lt;$1390&gt;</option>
+                            </optgroup>
+                            <optgroup label="Thermalright 利民">
+                                <option value="690">Thermalright 利民 AK120 SE/5導管/12cm風扇*1/高148mm &lt;$690&gt;</option>
+                                <option value="990">Thermalright 利民 BA120/6導管/TL-C12C風扇*1/高154mm &lt;$990&gt;</option>
+                                <option value="1350">Thermalright 利民 PA120 絕雙刺客/6導管/12cm風扇*2/雙塔雙扇/高157mm &lt;$1350&gt;
+                                </option>
+                                <option value="1490">Thermalright 利民 PS120/7導管/12cm風扇*2/陽極黑上蓋/雙塔雙扇/高157mm &lt;$1490&gt;
+                                </option>
+                                <option value="2290">Thermalright 利民 FC140 白化版/5導管/12cm+14cm PWM風扇/雙塔雙扇/高160mm
+                                    &lt;$2290&gt;</option>
+                            </optgroup>
+                            <optgroup label="Scythe 鐮刀">
+                                <option value="990">Scythe 鐮刀 SCKTT-3000 虎徹叁/4導管/12cm風扇*1/高154mm &lt;$990&gt;</option>
+                                <option value="1090">Scythe 鐮刀 SCMG-6000 無限六/6導管/12cm風扇(狂風丸風扇)/黑化/偏移設計/高154mm
+                                    &lt;$1090&gt;</option>
+                                <option value="1590">Scythe 鐮刀 SCFM-3000 風魔三/6導管/12cm風扇*2/高154mm &lt;$1590&gt;</option>
+                            </optgroup>
+                            <optgroup label="Noctua 貓頭鷹">
+                                <option value="2345">Noctua 貓頭鷹 NH-U9S 散熱器/5導管/NF-A9 PWM風扇*1/高125mm &lt;$2345&gt;
+                                </option>
+                                <option value="3885">Noctua 貓頭鷹 NH-U12A/7導管/NF-A12 PWM風扇*2/非對稱/單塔雙扇/高158mm &lt;$3885&gt;
+                                </option>
+                                <option value="5300">Noctua 貓頭鷹 NH-D15 G2 標準版/8導管/NF-A14x25r G2風扇*2/雙塔雙扇/高168mm
+                                    &lt;$5300&gt;</option>
+                            </optgroup>
+                            <optgroup label="DEEPCOOL 九州風神">
+                                <option value="590">DEEPCOOL 九州風神 AG400/4導管/12cm風扇*1/高150mm &lt;$590&gt;</option>
+                                <option value="690">DEEPCOOL 九州風神 AG500/5導管/12cm風扇*1/高155mm &lt;$690&gt;</option>
+                                <option value="1290">DEEPCOOL 九州風神 AG620/6導管/12cm風扇*2/雙塔雙扇/高157mm &lt;$1290&gt;</option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="cold_radiator">水冷散熱器</label></td>
+                    <td>
+                        <select id="cold_radiator" class="select_css">
+                            <optgroup label="Thermalright 利民">
+                                <option value="3690">Thermalright 利民 Frozen Warframe 360
+                                    ARGB/360mm/2.4"水冷頭+可轉向/支援GIF/12cm風扇*3 &lt;$3690&gt;</option>
+                            </optgroup>
+                            <optgroup label="技嘉">
+                                <option value="3490">技嘉 AORUS WATERFORCE II 240 鷹魂二代/240mm/可旋轉水冷頭/12cm風扇*2/磁吸風扇
+                                    &lt;$3490&gt;</option>
+                                <option value="3990">技嘉 AORUS WATERFORCE II 360 鷹魂二代/360mm/可旋轉水冷頭/12cm風扇*3/磁吸風扇
+                                    &lt;$3990&gt;</option>
+                            </optgroup>
+                            <optgroup label="微星">
+                                <option value="2990">微星 MAG CORELIQUID A13 360/360mm/可更換式上蓋/預裝風扇/12cm風扇*3/ &lt;$2990&gt;
+                                </option>
+                                <option value="4290">微星 MAG CORELIQUID E240 白/240mm/可旋轉水冷頭/ARGB冷頭+風扇/12cm風扇*2/
+                                    &lt;$4290&gt;</option>
+                            </optgroup>
+                            <optgroup label="華碩">
+                                <option value="6390">華碩ROG STRIX LC III 360 ARGB
+                                    飛龍三代/360mm/可旋轉ARGB水冷頭/Asetek7代V2/12cm風扇*3 &lt;$6390&gt;</option>
+                                <option value="6590">華碩ROG STRIX LC III 360 ARGB
+                                    白龍三代/360mm/可旋轉ARGB水冷頭/Asetek7代V2/12cm風扇*3 &lt;$6590&gt;</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="case">機殼 CASE</label></td>
+                    <td>
+                        <select id="case" class="select_css">
+                            <optgroup label="MONTECH 君主">
+                                <option value="1590">MONTECH 君主 XR 黑 全景玻璃機殼/ATX/Type-C/內建風扇側2後1/無A柱/顯卡420mm/塔散175mm
+                                    &lt;$1590&gt;</option>
+                                <option value="1890">MONTECH 君主 AIR 903 MAX 黑
+                                    玻璃透側機殼/E-ATX/Type-C/內建風扇前3後1/顯卡400mm/塔散180mm &lt;$1890&gt;</option>
+                                <option value="3990">MONTECH 君主 KING 95 PRO 黑
+                                    全景玻璃透側機殼/ATX/Type-C/內建風扇側2下3後1/曲面玻璃/ARGB燈條/雙倉設計/雙前面板/顯卡420mm/塔散175mm &lt;$3990&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="darkFlash 大飛">
+                                <option value="1350">darkFlash DRX70 黑
+                                    玻璃透側機殼/ATX/Type-C/內建風扇前3後1/磁吸面板/內附顯卡支架/ARGB燈光/顯卡350mm/塔散180mm &lt;$1350&gt;</option>
+                                <option value="2190">darkFlash MOTI 鏡之島 黑
+                                    全景玻璃機殼/M-ATX/Type-C/內建風扇側2後1/無A柱/顯卡390mm/塔散170mm &lt;$2190&gt;</option>
+                            </optgroup>
+                            <optgroup label="LIAN LI 聯力">
+                                <option value="2700">聯力Lancool 216 ARGB 黑
+                                    玻璃透側機殼/E-ATX/Type-C/內附前防塵濾網/內建風扇前2後1/顯卡392mm/塔散180mm/水冷360mm &lt;$2700&gt;</option>
+                            </optgroup>
+                            <optgroup label="BitFenix 火鳥">
+                                <option value="1390">火鳥 BitFenix Nova Mesh 諾瓦星M 黑
+                                    玻璃透側機殼/M-ATX/Type-C/內建風扇前2後1/顯卡345mm/塔散160mm/水冷280mm &lt;$1390&gt;</option>
+                                <option value="1490">火鳥 BitFenix Flow Extreme 風魅影 2024C 黑
+                                    玻璃透側機殼/ATX/Type-C/支援背插主板/內建風扇前3後1/顯卡434mm/塔散170mm &lt;$1490&gt;</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="keyboard">鍵盤</label></td>
+                    <td>
+                        <select id="keyboard" class="select_css">
+                            <optgroup label="羅技">
+                                <option value="1190">Logitech 羅技G213 PRODIGY RGB遊戲鍵盤/有線/RGB/防潑/媒體控制鍵/中文 &lt;$1190&gt;</option>
+                                <option value="3990">Logitech 羅技G813 機械式遊戲鍵盤/有線/矮軸GL/青軸/RGB/中文 &lt;$3990&gt;</option>
+                                <option value="6490">Logitech 羅技G PRO X 60% 無線三模電競鍵盤/桃紅/無線-藍芽/GX光學軸/LIGHTSPEED/RGB/中文 &lt;$6490&gt;</option>
+                            </optgroup>
+                            <optgroup label="cherry 櫻桃">
+                                <option value="1890">櫻桃CHERRY MX Board 1.1 TKL RGB MX2A 有線電競鍵盤/白色/有線/紅軸/87鍵/80%/無鋼板設計/RGB/中文 &lt;$1890&gt;</option>
+                                <option value="2990">櫻桃CHERRY MX Board 2.0S RGB機械式鍵盤/黑色/有線/cherry青軸/RGB/中文 &lt;$2990&gt;</option>
+                                <option value="3490">櫻桃CHERRY MX Board 3.1S MX2A RGB機械式鍵盤/黑正刻/有線/靜音紅軸/鋁製底殼/RGB/中文 &lt;$3490&gt;</option>
+                            </optgroup>
+                            <optgroup label="EVGA 艾維克">
+                                <option value="3290">EVGA Z15 機械式鍵盤/有線/銀軸(靜音)/中文 &lt;$3290&gt;</option>
+                            </optgroup>
+                            <optgroup label="irocks 艾芮克">
+                                <option value="1090">i-Rocks K81R 無限剪刀腳鍵盤/黑色/無線/薄膜式/中文 &lt;$1090&gt;</option>
+                                <option value="2690">i-Rocks K75M 黑色上蓋單色背光機械式鍵盤/黑色/有線/cherry茶軸/懸浮式/白光/中文 &lt;$2690&gt;</option>
+                                <option value="3290">i-Rocks K59M 分離式人體工學機械鍵盤/黑色/有線/cherry茶軸/RGB/中文 &lt;$4590&gt;</option>
+                            </optgroup>
+                            <optgroup label="雷蛇 Razer">
+                                <option value="2090">RAZER 雷蛇BlackWidow V3短軸機械式鍵盤/黑色/有線/綠軸/RGB/英文 &lt;$2090&gt;</option>
+                                <option value="4490">RAZER 雷蛇BlackWidow V4幻彩版機械式鍵盤/黑色/有線/綠軸/鋁製結構//RGB/中文 &lt;$4490&gt;</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="mouse">滑鼠</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <optgroup label="華碩">
+                                <option value="1090">華碩Marshmallow MD100 雙模無線滑鼠/燕麥棕/抗菌表層/56g &lt;$1090&gt;</option>
+                                <option value="1690">華碩ROG Strix Impact Ⅲ Wireless 雙模滑鼠(黑)/無線-藍芽36000Dpi/Omni接收器/RGB
+                                    &lt;$1690&gt;</option>
+                            </optgroup>
+                            <optgroup label="羅技">
+                                <option value="888">羅技G304 Lightspeed 無線遊戲滑鼠/黑色/無線/12000dpi/6鍵自訂 &lt;$888&gt;</option>
+                                <option value="1990">羅技G502 Lightspeed 無線電競滑鼠(白)/無線/25600dpi/砝碼/RGB/飛輪滾輪 &lt;$1990&gt;
+                                </option>
+                                <option value="3390">羅技G PRO 2 Lightspeed 無線滑鼠(白)/USB-C充電線/32000dpi混和微動/RGB/Hero2感應器
+                                    &lt;$3390&gt;</option>
+                            </optgroup>
+                            <optgroup label="Razer">
+                                <option value="1088">Razer Orochi V2 八岐大蛇超輕量無線雙模滑鼠(黑)/2.4G+藍芽/18000dpi/60g &lt;$1088&gt;
+                                </option>
+                                <option value="3690">Razer DeathAdder V3 Pro 煉獄奎蛇雙模滑鼠(黑)/有線-無線/30000dpi/63g/第三代按鍵軸(限量)
+                                    &lt;$3690&gt;</option>
+                            </optgroup>
+                            <optgroup label="Zowie">
+                                <option value="1490">Zowie S1-C光學滑鼠(黑)/有線/3200dpi/右手專用/適合趴握和抓握/傘繩線/中尺寸 &lt;$1490&gt;
+                                </option>
+                                <option value="4990">Zowie S2-DW 4K無線電競滑鼠/3200dpi/對稱型設計/獨家無線基地台/小尺寸 &lt;$4990&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="irocks">
+                                <option value="1290">irocks M29r 三模滑鼠(黑)/有線-無線-藍芽/5000dpi/靜音按鍵/專屬軟體設定/人體工學 &lt;$1290&gt;
+                                </option>
+                                <option value="1990">irocks M31r 三模滑鼠(粉)/有線-無線-藍芽/26000dpi/Kailh GM8.0微動/66g/PAW3395
+                                    &lt;$1990&gt;</option>
+                                <option value="2290">irocks M49r 三模滑鼠(白)/有線-無線-藍芽/26000dpi/趴鼠專用手型/56g/PAW3395
+                                    &lt;$2290&gt;</option>
+                            </optgroup>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="vga" class="">顯示器/螢幕</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="speaker">音響/喇叭</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="software">作業系統&軟體</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="numero">🐔</td>
+                    <td class="item"><label for="accessories">機殼配件</label></td>
+                    <td>
+                        <select id="" class="select_css">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+            </table>
+        </div>
+        <div>
+            <img src="./Image/Casechick_color.png" alt="" width="450px">
+        </div>
     </main>
+    <div class="total">
+        <p>共挑選了<span>0</span>樣商品</p>
+        <p>總價：<span id="total-price">0</span> 元</p>
+    </div>
     <footer>
         Copyright © 2025 LaoG. All rights reserved.
     </footer>
     <script>
-        
+        function updateTotalPrice() {
+            let cpuPrice = parseInt(document.getElementById("cpu").value);
+            let gpuPrice = parseInt(document.getElementById("gpu").value);
+            document.getElementById("total-price").textContent = cpuPrice + gpuPrice;
+        }
+
+        document.getElementById("cpu").addEventListener("change", updateTotalPrice);
+        document.getElementById("gpu").addEventListener("change", updateTotalPrice);
+
+        updateTotalPrice();
     </script>
 
 </body>
