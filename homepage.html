@@ -7,6 +7,172 @@
     <title>GigaRoost 組雞窩</title>
     <link rel="ICON" href="./Logo/gigaroost_logo_onlyhead.png">
     <link rel="stylesheet" href="./GigaRoost.css">
+    <style>
+        /* 主頁第一張照片的區塊 */
+        .main1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: rgb(248, 248, 248);
+        }
+
+        blockquote {
+            font-size: 50px;
+            line-height: 2;
+        }
+
+        .main1 button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 30px;
+            border: 5px groove rgb(66, 120, 226);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 主頁第二部分：幻燈片區塊 */
+        .main2 {
+            position: relative;
+            width: 1080px;
+            height: 450px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 12px;
+
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            transition: transform 0.5s ease;
+        }
+
+        /* 按鈕區域 */
+        .switch_button {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .switchBtn {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 40px;
+            padding: 10px 5px;
+            cursor: pointer;
+        }
+
+        .switchBtn:hover {
+            background-color: rgba(95, 95, 95, 0.5);
+        }
+
+        /* 幻燈片的動畫 */
+        @keyframes slideInRight {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOutLeft {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOutRight {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
+
+        .slide-in-right-active {
+            animation: slideInRight 0.5s forwards;
+        }
+
+        .slide-out-left-active {
+            animation: slideOutLeft 0.5s forwards;
+        }
+
+        .slide-in-left-active {
+            animation: slideInLeft 0.5s forwards;
+        }
+
+        .slide-out-right-active {
+            animation: slideOutRight 0.5s forwards;
+        }
+
+        .news {
+            /* 消息區塊 */
+            position: relative;
+        }
+
+        .newsTitle {
+            /* 最新消息標題 */
+            position: absolute;
+            top: 20px;
+            margin: 2.5vw;
+        }
+
+        .main3 {
+            /* 主頁第三部分的區塊 */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .main3 div {
+            width: 400px;
+            text-align: center;
+            line-height: 2vw;
+        }
+
+        .main3 img {
+            width: 80%;
+            border: 5px ridge white;
+            border-radius: 3px;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,17 +193,22 @@
     <div id="loginModal" class="loginwindow_block">
         <div class="loginwindow">
             <span class="close" onclick="closeLogin()">&times;</span>
-            <br>
             <h2>會員登入</h2>
-            帳號：<input type="text" placeholder="信箱或用戶名"><br>
-            密碼：<input type="text" placeholder="包含大小寫"><br>
-            <button>登入</button>
+            <form action="">
+                <label for="member_account">帳號：</label>
+                <input type="text" placeholder="信箱或用戶名" id="member_account"><br>
+                <label for="member_password">密碼：</label>
+                <input type="password" placeholder="包含大小寫" id="member_password"><br>
+                <input type="submit" name="" value="登入" class="loginbutton">
+            </form>
             <p style="font-size: 15px;">沒有會員？<a href="./register.html">點此註冊</a></p>
         </div>
     </div>
 
     <br><br><br>
+
     <main>
+        <!-- 主視覺區塊 -->
         <section class="main1">
             <img src="./Image/casechick.png" alt="" class="casechick">
             <div class="main1_1">
@@ -49,20 +220,25 @@
         </section>
 
         <!-- 幻燈片區塊 -->
-        <section class="main2">
 
-            <div class="slider">
-                <img id="slide" src="./images/slide1.jpg" alt="幻燈片">
+        <div style="background-color: rgb(233, 233, 246);">
+            <div class="news">
+                <h2 class="newsTitle">📢最新消息</h2>
+                <section class="main2">
+                    <div class="slider">
+                        <img id="slide1" src="./Image/slide1.png" alt="幻燈片 1">
+                        <img id="slide2" src="./Image/slide2.jpg" alt="幻燈片 2" style="display: none;">
+                    </div>
+                    <div class="switch_button">
+                        <button class="switchBtn" onclick="nextImage()">❮</button>
+                        <button class="switchBtn" onclick="backImage()">❯</button>
+                    </div>
+                </section>
             </div>
-
-            <div class="switch_nav"> <!--切換上一張及下一張的按鈕-->
-                <button class="switchBtn" onclick="nextBtn()">❮</button>
-                <button class="switchBtn" onclick="backBtn()">❯</button>
-            </div>
-        </section>
+        </div>
 
         <!-- 熱門搭配區塊 -->
-        <h2 style="margin: 3vw;">熱門搭配</h2>
+        <h2 style="margin: 3vw;">🔥熱門搭配</h2>
         <section class="main3">
             <div>
                 <img src="./Image/9800x3d.png" alt="">
@@ -75,7 +251,7 @@
                 <p>主流機殼之冠，中塔新境界，硬體無極限！<br>專為風冷或水冷而生的中塔式機殼<br>寬大機殼，可兼容NVIDIA 4090顯示卡且兼容直立</p>
             </div>
             <div>
-                <img src="./Image/5070.png" alt="">
+                <img src="./Image/5070S.png" alt="">
                 <h3>NVIDIA GeForce RTX 5070系列</h3>
                 <p>GeForce RTX 5070顯卡系列，作為具備卓越的光線追蹤技術和AI運算能力的一張顯卡，合適作為遊戲與繪圖顯卡用途，為您帶來無與倫比的視覺體驗。</p>
             </div>
@@ -87,8 +263,71 @@
         Copyright © 2025 GigaRoost. All rights reserved.
     </footer>
 
-    <script type="" src="./script.js">
+    <script>
+        // 會員登入視窗
+        function openLogin() {
+            document.getElementById("loginModal").style.display = "block";
+        } // 顯示登入視窗
 
+        function closeLogin() {
+            document.getElementById("loginModal").style.display = "none";
+        } //隱藏登入視窗
+
+        // 幻燈片
+        const images = [
+            './Image/slide1.png',
+            './Image/slide2.jpg',
+            './Image/slide3.jpg',
+            './Image/slide4.png',
+        ];
+
+        let current = 0;
+        const slide1 = document.getElementById('slide1');
+        const slide2 = document.getElementById('slide2');
+
+        function showSlide(index, direction) {
+            slide2.src = images[index];
+            slide2.style.display = 'block';
+
+            // 根據滑動方向設定動畫
+            if (direction === 'next') {
+                slide2.style.animation = 'slideInRight 0.5s forwards';
+                slide1.style.animation = 'slideOutLeft 0.5s forwards';
+            } else {
+                slide2.style.animation = 'slideInLeft 0.5s forwards';
+                slide1.style.animation = 'slideOutRight 0.5s forwards';
+            }
+
+            // 等待動畫結束，才切換圖片
+            setTimeout(() => {
+                slide1.src = slide2.src;
+                slide2.style.display = 'none';
+                // 清除舊的動畫效果，避免重複觸發
+                slide1.style.animation = '';
+                slide2.style.animation = '';
+            }, 500); // 500毫秒後切換
+        }
+
+        function nextImage() {
+            current = (current + 1) % images.length;
+            showSlide(current, 'next');
+        }
+
+        function backImage() {
+            current = (current - 1 + images.length) % images.length;
+            showSlide(current, 'prev');
+        }
+
+        // 自動播放
+        let autoPlay = setInterval(nextImage, 3000);
+
+        // 點擊按鈕時重啟計時器
+        document.querySelectorAll('.switchBtn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                clearInterval(autoPlay);
+                autoPlay = setInterval(nextImage, 3000);
+            });
+        });
     </script>
 
 </body>

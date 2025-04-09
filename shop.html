@@ -27,11 +27,14 @@
     <div id="loginModal" class="loginwindow_block">
         <div class="loginwindow">
             <span class="close" onclick="closeLogin()">&times;</span>
-            <br>
             <h2>會員登入</h2>
-            帳號：<input type="text" placeholder="信箱或用戶名"><br>
-            密碼：<input type="text" placeholder="包含大小寫"><br>
-            <button>登入</button>
+            <form action="">
+                <label for="member_account">帳號：</label>
+                <input type="text" placeholder="信箱或用戶名" id="member_account"><br>
+                <label for="member_password">密碼：</label>
+                <input type="password" placeholder="包含大小寫" id="member_password"><br>
+                <input type="submit" name="" value="登入"  class="loginbutton">
+            </form>
             <p style="font-size: 15px;">沒有會員？<a href="./register.html">點此註冊</a></p>
         </div>
     </div>
@@ -51,3 +54,4 @@
 </body>
 
 </html>
+
