@@ -44,6 +44,18 @@ header li {
     align-items: center;
 }
 
+header button {
+    /* 導覽列登入/註冊的按鈕 */
+    all: unset;
+    cursor: pointer;
+    color: rgb(134, 111, 111);
+}
+
+header button:hover {
+    background-color: rgb(230, 233, 230);
+    text-decoration: underline;
+}
+
 .shopcart {
     /* 導覽列購物車的圖案 */
     width: 30px;
@@ -53,19 +65,71 @@ header li {
     padding: 0 0 9px 0;
 }
 
-.homepage_nav{
+.homepage_nav {
     /* 首頁的導覽列連結 */
     color: rgb(119, 162, 213);
 }
 
-.diy_nav{
+.diy_nav {
     /* 配單網站的導覽列連結 */
     color: rgb(119, 162, 213);
 }
 
-.shop_nav{
+.shop_nav {
     /* 商品網站的導覽列連結 */
     color: rgb(119, 162, 213);
+}
+
+.loginwindow_block {
+    /* 預設隱藏的彈出式登入視窗的區塊 */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明背景 */
+    z-index: 999;
+}
+
+.loginwindow {
+    /* 彈出式登入視窗本體 */
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 2.5vw;
+    font-size: 20px;
+}
+
+.loginwindow button {
+    /* 登入按鈕 */
+    font-size: 20px;
+    padding: 3px;
+    width: 80px;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+}
+
+.loginwindow button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.loginwindow input {
+    /* 輸入框 */
+    margin: 20px 0 20px 0;
+    font-size: 20px;
+}
+
+.close {
+    /* 叉叉關閉鍵 */
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .main1 {
@@ -83,6 +147,21 @@ blockquote {
     line-height: 2;
 }
 
+.main1 button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 .main1 p {
     border: 5px groove rgb(66, 120, 226);
     border-radius: 10px;
@@ -93,24 +172,60 @@ blockquote {
     font-size: 30px;
 }
 
-.mai1 p:hover{
+.mai1 p:hover {
     background-color: gray;
 }
 
-.main3 {
-    /* 主頁第三部分的區塊 */
-display: flex;
-justify-content: space-around;
+.main2 {
+    /* 主頁第二部分的區塊 */
+    position: relative;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 12px;
 }
 
-.main3 div{
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+  }
+
+.switch_nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+
+.switchBtn {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+.main3 {
+    /* 主頁第三部分的區塊 */
+    display: flex;
+    justify-content: space-around;
+}
+
+.main3 div {
     width: 400px;
     text-align: center;
     line-height: 2vw;
 }
 
 
-.main3 img{
+.main3 img {
     width: 80%;
     border: 5px ridge white;
     border-radius: 3px;
@@ -159,13 +274,36 @@ td {
     align-items: center;
 }
 
-.total{
+.area p {
+    line-height: 2.5vw;
+    text-align: center;
+}
+
+.area button {
+    /* 配單頁main的按鈕 */
+    position: relative;
+    left: 8.5vw;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.area button:hover {
+    background-color: #0056b3;
+}
+
+.total {
     /* 配單頁下方統計列 */
     display: flex;
     justify-content: space-between;
     padding-left: 100px;
     background-color: rgb(221, 214, 214);
-    border-radius: 10px 10px 0 0 ;
+    border-radius: 10px 10px 0 0;
     position: fixed;
     bottom: 0;
     left: 50%;

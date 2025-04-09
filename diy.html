@@ -17,11 +17,25 @@
                 <li><a href="./homepage.html"><b>首頁</b></a></li>
                 <li><a href="#" class="diy_nav"><b>線上配單</b></a></li>
                 <li><a href="./shop.html"><b>零件市集</b></a></li>
-                <li><a href="#"><b>登入 / 註冊</b></a></li>
-                <li><a href="#"><img src="./Image/ICON/shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
+                <li><button onclick="openLogin()"><b>登入 / 註冊</b></button></li>
+                <li><a href="#"><img src="./Image/ICON/icons8-shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- 預設隱藏的登入畫面 -->
+    <div id="loginModal" class="loginwindow_block">
+        <div class="loginwindow">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <br>
+            <h2>會員登入</h2>
+            帳號：<input type="text" placeholder="信箱或用戶名"><br>
+            密碼：<input type="text" placeholder="包含大小寫"><br>
+            <button>登入</button>
+            <p style="font-size: 15px;">沒有會員？<a href="./register.html">點此註冊</a></p>
+        </div>
+    </div>
+
     <br><br><br>
     <main class="area">
         <div>
@@ -109,7 +123,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🥚</td>
                     <td class="item"><label for="cpu">中央處理器 CPU</label></td>
                     <td>
                         <select id="cpu" class="select_css">
@@ -150,7 +164,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🥚</td>
                     <td class="item"><label for="mb">主機板</label></td>
                     <td>
                         <select id="mb" class="select_css">
@@ -226,7 +240,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🥚</td>
                     <td class="item"><label for="ram">記憶體 RAM</label></td>
                     <td>
                         <select id="ram" class="select_css">
@@ -298,7 +312,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🥚</td>
                     <td class="item"><label for="ssd">固態硬碟 SSD</label></td>
                     <td>
                         <select id="ssd" class="select_css">
@@ -357,7 +371,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🥚</td>
                     <td class="item"><label for="hdd">傳統硬碟 HDD</label></td>
                     <td>
                         <select id="hdd" class="select_css">
@@ -392,7 +406,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🥚</td>
                     <td class="item"><label for="gpu">顯示卡</label></td>
                     <td>
                         <select id="gpu" class="select_css">
@@ -443,7 +457,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🔥</td>
                     <td class="item"><label for="psu">電源供應器</label></td>
                     <td>
                         <select id="psu" class="select_css">
@@ -495,7 +509,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🧊</td>
                     <td class="item"><label for="radiator">空冷散熱器</label></td>
                     <td>
                         <select id="radiator" class="select_css">
@@ -541,7 +555,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🧊</td>
                     <td class="item"><label for="cold_radiator">水冷散熱器</label></td>
                     <td>
                         <select id="cold_radiator" class="select_css">
@@ -573,7 +587,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🐣</td>
                     <td class="item"><label for="case">機殼 CASE</label></td>
                     <td>
                         <select id="case" class="select_css">
@@ -608,31 +622,39 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🐤</td>
                     <td class="item"><label for="keyboard">鍵盤</label></td>
                     <td>
                         <select id="keyboard" class="select_css">
                             <optgroup label="羅技">
-                                <option value="1190">Logitech 羅技G213 PRODIGY RGB遊戲鍵盤/有線/RGB/防潑/媒體控制鍵/中文 &lt;$1190&gt;</option>
+                                <option value="1190">Logitech 羅技G213 PRODIGY RGB遊戲鍵盤/有線/RGB/防潑/媒體控制鍵/中文 &lt;$1190&gt;
+                                </option>
                                 <option value="3990">Logitech 羅技G813 機械式遊戲鍵盤/有線/矮軸GL/青軸/RGB/中文 &lt;$3990&gt;</option>
-                                <option value="6490">Logitech 羅技G PRO X 60% 無線三模電競鍵盤/桃紅/無線-藍芽/GX光學軸/LIGHTSPEED/RGB/中文 &lt;$6490&gt;</option>
+                                <option value="6490">Logitech 羅技G PRO X 60% 無線三模電競鍵盤/桃紅/無線-藍芽/GX光學軸/LIGHTSPEED/RGB/中文
+                                    &lt;$6490&gt;</option>
                             </optgroup>
                             <optgroup label="cherry 櫻桃">
-                                <option value="1890">櫻桃CHERRY MX Board 1.1 TKL RGB MX2A 有線電競鍵盤/白色/有線/紅軸/87鍵/80%/無鋼板設計/RGB/中文 &lt;$1890&gt;</option>
-                                <option value="2990">櫻桃CHERRY MX Board 2.0S RGB機械式鍵盤/黑色/有線/cherry青軸/RGB/中文 &lt;$2990&gt;</option>
-                                <option value="3490">櫻桃CHERRY MX Board 3.1S MX2A RGB機械式鍵盤/黑正刻/有線/靜音紅軸/鋁製底殼/RGB/中文 &lt;$3490&gt;</option>
+                                <option value="1890">櫻桃CHERRY MX Board 1.1 TKL RGB MX2A
+                                    有線電競鍵盤/白色/有線/紅軸/87鍵/80%/無鋼板設計/RGB/中文 &lt;$1890&gt;</option>
+                                <option value="2990">櫻桃CHERRY MX Board 2.0S RGB機械式鍵盤/黑色/有線/cherry青軸/RGB/中文 &lt;$2990&gt;
+                                </option>
+                                <option value="3490">櫻桃CHERRY MX Board 3.1S MX2A RGB機械式鍵盤/黑正刻/有線/靜音紅軸/鋁製底殼/RGB/中文
+                                    &lt;$3490&gt;</option>
                             </optgroup>
                             <optgroup label="EVGA 艾維克">
                                 <option value="3290">EVGA Z15 機械式鍵盤/有線/銀軸(靜音)/中文 &lt;$3290&gt;</option>
                             </optgroup>
                             <optgroup label="irocks 艾芮克">
                                 <option value="1090">i-Rocks K81R 無限剪刀腳鍵盤/黑色/無線/薄膜式/中文 &lt;$1090&gt;</option>
-                                <option value="2690">i-Rocks K75M 黑色上蓋單色背光機械式鍵盤/黑色/有線/cherry茶軸/懸浮式/白光/中文 &lt;$2690&gt;</option>
-                                <option value="3290">i-Rocks K59M 分離式人體工學機械鍵盤/黑色/有線/cherry茶軸/RGB/中文 &lt;$4590&gt;</option>
+                                <option value="2690">i-Rocks K75M 黑色上蓋單色背光機械式鍵盤/黑色/有線/cherry茶軸/懸浮式/白光/中文 &lt;$2690&gt;
+                                </option>
+                                <option value="3290">i-Rocks K59M 分離式人體工學機械鍵盤/黑色/有線/cherry茶軸/RGB/中文 &lt;$4590&gt;
+                                </option>
                             </optgroup>
                             <optgroup label="雷蛇 Razer">
                                 <option value="2090">RAZER 雷蛇BlackWidow V3短軸機械式鍵盤/黑色/有線/綠軸/RGB/英文 &lt;$2090&gt;</option>
-                                <option value="4490">RAZER 雷蛇BlackWidow V4幻彩版機械式鍵盤/黑色/有線/綠軸/鋁製結構//RGB/中文 &lt;$4490&gt;</option>
+                                <option value="4490">RAZER 雷蛇BlackWidow V4幻彩版機械式鍵盤/黑色/有線/綠軸/鋁製結構//RGB/中文 &lt;$4490&gt;
+                                </option>
                             </optgroup>
                         </select>
                     </td>
@@ -640,10 +662,10 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🐤</td>
                     <td class="item"><label for="mouse">滑鼠</label></td>
                     <td>
-                        <select id="" class="select_css">
+                        <select id="mouse" class="select_css">
                             <optgroup label="華碩">
                                 <option value="1090">華碩Marshmallow MD100 雙模無線滑鼠/燕麥棕/抗菌表層/56g &lt;$1090&gt;</option>
                                 <option value="1690">華碩ROG Strix Impact Ⅲ Wireless 雙模滑鼠(黑)/無線-藍芽36000Dpi/Omni接收器/RGB
@@ -683,44 +705,132 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🐤</td>
                     <td class="item"><label for="vga" class="">顯示器/螢幕</label></td>
                     <td>
-                        <select id="" class="select_css">
-                            <option value=""></option>
+                        <select id="vga" class="select_css">
+                            <optgroup label="24吋">
+                                <option value="2488">Acer KA242Y GO 液晶螢幕/HDMI/D-Sub/IPS/1ms/120Hz/FreeSync/內建喇叭
+                                    &lt;$2488&gt;</option>
+                                <option value="2488">PHILIPS 飛利浦 241V8LAB
+                                    液晶螢幕/HDMI/D-Sub/VA/1ms/100Hz/Adaptive-Sync/不閃屏/低藍光/內建喇叭 &lt;$2488&gt;</option>
+                                <option value="3988">華碩TUF VU249CFE-M EyE Care
+                                    護眼螢幕/HDMI/Type-C(15W)/IPS/1ms/100Hz/Adaptive-Sync/DisplayWidget Center/藍光護眼
+                                    &lt;$3988&gt;</option>
+                                <option value="2588">MSI PRO MP2412W 白 液晶螢幕/DP/HDMI/VA/1ms/100Hz/防閃爍/低藍光/無喇叭
+                                    &lt;$2588&gt;</option>
+                            </optgroup>
+                            <optgroup label="27吋">
+                                <option value="3999">Acer ED273H S3 電競螢幕/DP/HDMI/VA/曲面/1ms/180Hz/FreeSync/內建喇叭
+                                    &lt;$3999&gt;</option>
+                                <option value="6999">Acer XV272U F3 電競螢幕/DP/HDMI/IPS/2K/0.5ms/300Hz/HDR400/FreeSync/內建喇叭
+                                    &lt;$6999&gt;</option>
+                                <option value="3888">華碩TUF VG279Q3A 電競螢幕/DP/HDMI/IPS/1ms/180Hz/FreeSync/內建喇叭
+                                    &lt;$3888&gt;</option>
+                                <option value="5680">華碩TUF VG27AQ3A 電競螢幕/DP/HDMI/Fast
+                                    IPS/2K/1ms/180Hz/FreeSync/G-Sync/內建喇叭 &lt;$5680&gt;</option>
+                                <option value="4290">MSI MAG 275F 電競螢幕/DP/HDMI/Rapid/IPS/0.5ms/180Hz/Adaptive-Sync/無喇叭
+                                    &lt;$4290&gt;</option>
+                                <option value="5990">MSI MAG 275QF 電競螢幕/DP/HDMI/Rapid/IPS/2K/180Hz/Adaptive-Sync/無喇叭
+                                    &lt;$5990&gt;</option>
+                                <option value="7490">GIGABYTE M27QA ICE 白色 電競螢幕/DP/HDMI/SS
+                                    IPS/2K/1ms/180Hz/HDR400/FreeSync/KVM/可升降/無喇叭 &lt;$7490&gt;</option>
+                                <option value="9490">GIGABYTE GS27U 電競螢幕/DP/HDMI/SS
+                                    IPS/4K/1ms/160Hz/HDR400/FreeSync/低藍光/不閃屏 &lt;$9490&gt;</option>
+                            </optgroup>
+                            <optgroup label="32吋">
+                                <option value="7490">三星 Odyssey G5 S32CG552EC
+                                    電競螢幕/DP/HDMI/VA/曲面/2K/165Hz/FreeSync/HDR10/低藍光/不閃屏/無喇叭 &lt;$7490&gt;</option>
+                                <option value="11111">華碩ROG Strix XG32WCMS 電競螢幕/DP/HDMI/Type-C/Fast
+                                    VA/2K/1ms/280Hz/FreeSync/G-Sync/HDR400/無喇叭 &lt;$11111&gt;</option>
+                                <option value="17888">華碩ROG Strix XG32UQ 電競螢幕/DP/HDMI/Fast
+                                    IPS/4K/1ms/160Hz/FreeSync/G-Sync/HDR600/無喇叭 &lt;$17888&gt;</option>
+                                <option value="29900">MSI MPG 321URX
+                                    電競螢幕/DP/HDMI/Type-C/(90w)/QD-OLED/4K/0.03ms/240Hz/FreeSync/HDR BLACK400/無喇叭
+                                    &lt;$29900&gt;</option>
+                                <option value="32900">AORUS FO32U2P
+                                    電競螢幕/DP2.1/HDMI/Type-C(65w)/QD-OLED/4K/0.03ms/240Hz/HDR400/FreeSync/KVM/可升降/可旋轉/內建喇叭
+                                    &lt;$32900&gt;</option>
+                            </optgroup>
                         </select>
                     </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🐤</td>
                     <td class="item"><label for="speaker">音響/喇叭</label></td>
                     <td>
-                        <select id="" class="select_css">
-                            <option value=""></option>
+                        <select id="speaker" class="select_css">
+                            <optgroup label="羅技">
+                                <option value="1790">羅技Z313 2.1聲道喇叭/有線/50w Rms &lt;$1790&gt;</option>
+                                <option value="3321">羅技Z407 藍芽喇叭/無線藍芽5.0/80w Rms &lt;$3321&gt;</option>
+                                <option value="5990">羅技G560 電競喇叭/有線/藍芽/120w Rms/RGB/環繞音效 &lt;$5990&gt;</option>
+                            </optgroup>
+                            <optgroup label="雷蛇">
+                                <option value="2988">Razer Leviathan V2 X SoundBar 利維坦巨獸喇叭/Type-C供電/藍芽5.0/RGB
+                                    &lt;$2988&gt;</option>
+                                <option value="4490">Razer Nommo V2 X 天狼星喇叭/有線-藍芽5.0/2個3吋全音域驅動單體/虛擬7.1 &lt;$4490&gt;
+                                </option>
+                                <option value="7690">Razer Nommo V2 天狼星喇叭/有線-藍芽5.3/2個3吋全音域驅動單體/虛擬7.1/1個5.5吋重低音/RGB
+                                    &lt;$7690&gt;</option>
+                            </optgroup>
                         </select>
                     </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🍗</td>
                     <td class="item"><label for="software">作業系統&軟體</label></td>
                     <td>
-                        <select id="" class="select_css">
-                            <option value=""></option>
+                        <select id="software" class="select_css">
+                            <optgroup label="作業系統">
+                                <option value="4390">微軟Windows 11 Home 家用中文隨機版 64位元 &lt;$4390&gt;</option>
+                                <option value="6790">微軟Windows 11 Pro 專業中文彩盒版 64位元 &lt;$6790&gt;</option>
+                            </optgroup>
+                            <optgroup label="文書軟體">
+                                <option value="3090">Microsoft Office 365 個人版中文無光碟一年訂閱(PKC)+1TB雲端空間 &lt;$3090&gt;
+                                </option>
+                                <option value="4590">Microsoft Office 2024 Home and Student
+                                    家用中文版/含Word、Excel、PowerPoint/Win10、MAC共用 &lt;$4590&gt;</option>
+                                <option value="8390">Microsoft Office 2024 Home and Business
+                                    家用及中小企業中文版/含Word、Excel、PowerPoint/Win10、MAC共用 &lt;$8390&gt;</option>
+                            </optgroup>
+                            <optgroup label="防毒軟體">
+                                <option value="499">Norton Antivirus Plus 諾頓防毒加強版 1年/1台裝置 &lt;$499&gt;</option>
+                                <option value="1198">Norton 360 for Gamers 諾頓360防毒電競版
+                                    1年/3台裝置/安全VPN保護/消除FPS延遲/降低系統資源/勒索軟體防護 &lt;$1198&gt;</option>
+                            </optgroup>
                         </select>
                     </td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="numero">🐔</td>
+                    <td class="numero">🍗</td>
                     <td class="item"><label for="accessories">機殼配件</label></td>
                     <td>
-                        <select id="" class="select_css">
-                            <option value=""></option>
+                        <select id="accessories" class="select_css">
+                            <optgroup label="顯卡支架">
+                                <option value="490">酷碼VGA Holder 顯示卡支撐架 &lt;$490&gt;</option>
+                                <option value="790">微星MSI MPG ARGB GRAPHICS CARD STAND 顯示卡支撐架 &lt;$790&gt;</option>
+                                <option value="1290">華碩ROG Herculx Graphics Card Holder 海克力士 顯示卡支撐架 &lt;$1290&gt;
+                                </option>
+                            </optgroup>
+                            <optgroup label="顯卡套件">
+                                <option value="1099">微星MSI MAG PCIE3.0 X16 Riser Cable 90度延長線(200mm) &lt;$1099&gt;
+                                </option>
+                                <option value="1690">MONTECH 君主 VGM 直立顯卡套件 黑/通用型/含PCIE4.0延長線/200mm &lt;$1690&gt;
+                                </option>
+                                <option value="2590">酷碼 MASTERACCESSORY 通用型垂直顯卡支架套件V3 &lt;$2590&gt;</option>
+                                <option value="2790">NZXT 直立顯卡套件 黑/含PCIE4.0延長線/多片式架構/90度轉向插槽 &lt;$2790&gt;</option>
+                            </optgroup>
+                            <optgroup label="CPU防彎扣具">
+                                <option value="220">Thermalright 利民 Intel 1700 陽極黑 防彎扣具V2 (Intel12 Intel13) LGA1700-BCF
+                                    BLACK V2 &lt;$220&gt;</option>
+                                <option value="220">Thermalright 利民 AM5 黑色 CPU保護套 V2 &lt;$220&gt;</option>
+                            </optgroup>
                         </select>
                     </td>
                     <td></td>
@@ -731,6 +841,9 @@
         </div>
         <div>
             <img src="./Image/Casechick_color.png" alt="" width="450px">
+            <br>
+            <p>點擊下方結帳！</p>
+            <button type="submit">我要孵這台機！🥚</button>
         </div>
     </main>
     <div class="total">
@@ -738,9 +851,10 @@
         <p>總價：<span id="total-price">0</span> 元</p>
     </div>
     <footer>
-        Copyright © 2025 LaoG. All rights reserved.
+        Copyright © 2025 GigaRoost. All rights reserved.
     </footer>
-    <script>
+
+    <script type="" src="./script.js">
         function updateTotalPrice() {
             let cpuPrice = parseInt(document.getElementById("cpu").value);
             let gpuPrice = parseInt(document.getElementById("gpu").value);

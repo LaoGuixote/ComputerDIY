@@ -17,11 +17,25 @@
                 <li><a href="#" class="homepage_nav"><b>首頁</b></a></li>
                 <li><a href="./diy.html"><b>線上配單</b></a></li>
                 <li><a href="./shop.html"><b>零件市集</b></a></li>
-                <li><a href="#"><b>登入 / 註冊</b></a></li>
-                <li><a href="#"><img src="./Image/ICON/shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
+                <li><button onclick="openLogin()"><b>登入 / 註冊</b></button></li>
+                <li><a href="#"><img src="./Image/ICON/icons8-shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- 預設隱藏的登入畫面 -->
+    <div id="loginModal" class="loginwindow_block">
+        <div class="loginwindow">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <br>
+            <h2>會員登入</h2>
+            帳號：<input type="text" placeholder="信箱或用戶名"><br>
+            密碼：<input type="text" placeholder="包含大小寫"><br>
+            <button>登入</button>
+            <p style="font-size: 15px;">沒有會員？<a href="./register.html">點此註冊</a></p>
+        </div>
+    </div>
+
     <br><br><br>
     <main>
         <section class="main1">
@@ -29,40 +43,51 @@
             <div class="main1_1">
                 <blockquote><b>"穩定輸出，<br>　　高效棲息！"</b></blockquote>
                 <a href="./diy.html" style="text-decoration: none;">
-                    <p>立即開始組「雞」</p>
+                    <button>立即開始組「雞」</button>
                 </a>
             </div>
         </section>
-        <section>
-            <div>
 
+        <!-- 幻燈片區塊 -->
+        <section class="main2">
+
+            <div class="slider">
+                <img id="slide" src="./images/slide1.jpg" alt="幻燈片">
+            </div>
+
+            <div class="switch_nav"> <!--切換上一張及下一張的按鈕-->
+                <button class="switchBtn" onclick="nextBtn()">❮</button>
+                <button class="switchBtn" onclick="backBtn()">❯</button>
             </div>
         </section>
-        <div>
-            <h2 style="margin: 3vw;">熱門搭配</h2>
-            <section class="main3">
-                <div>
-                    <img src="./Image/9800x3d.png" alt="">
-                    <h3>AMD Ryzen™ 7 9800X3D</h3>
-                    <p>AMD Ryzen™ 7 9800X3D 處理器讓您掌握終極優勢，遊戲中徹底宰制。第 2 代 AMD 3D V-Cache™ 技術實現低延遲，享受更快速的遊戲體驗。</p>
-                </div>
-                <div>
-                    <img src="./Image/air 903 max.png" alt="">
-                    <h3>MONTECH AIR 903 MAX</h3>
-                    <p>主流機殼之冠，中塔新境界，硬體無極限！<br>專為風冷或水冷而生的中塔式機殼<br>寬大機殼，可兼容NVIDIA 4090顯示卡且兼容直立</p>
-                </div>
-                <div>
-                    <img src="./Image/5070.png" alt="">
-                    <h3>NVIDIA GeForce RTX 5070系列</h3>
-                    <p>GeForce RTX 5070顯卡系列，作為具備卓越的光線追蹤技術和AI運算能力的一張顯卡，合適作為遊戲與繪圖顯卡用途，為您帶來無與倫比的視覺體驗。</p>
-                </div>
-            </section>
-        </div>
+
+        <!-- 熱門搭配區塊 -->
+        <h2 style="margin: 3vw;">熱門搭配</h2>
+        <section class="main3">
+            <div>
+                <img src="./Image/9800x3d.png" alt="">
+                <h3>AMD Ryzen™ 7 9800X3D</h3>
+                <p>AMD Ryzen™ 7 9800X3D 處理器讓您掌握終極優勢，遊戲中徹底宰制。第 2 代 AMD 3D V-Cache™ 技術實現低延遲，享受更快速的遊戲體驗。</p>
+            </div>
+            <div>
+                <img src="./Image/air 903 max.png" alt="">
+                <h3>MONTECH AIR 903 MAX</h3>
+                <p>主流機殼之冠，中塔新境界，硬體無極限！<br>專為風冷或水冷而生的中塔式機殼<br>寬大機殼，可兼容NVIDIA 4090顯示卡且兼容直立</p>
+            </div>
+            <div>
+                <img src="./Image/5070.png" alt="">
+                <h3>NVIDIA GeForce RTX 5070系列</h3>
+                <p>GeForce RTX 5070顯卡系列，作為具備卓越的光線追蹤技術和AI運算能力的一張顯卡，合適作為遊戲與繪圖顯卡用途，為您帶來無與倫比的視覺體驗。</p>
+            </div>
+        </section>
     </main>
+
+    <!-- 頁尾 -->
     <footer>
-        Copyright © 2025 LaoG. All rights reserved.
+        Copyright © 2025 GigaRoost. All rights reserved.
     </footer>
-    <script>
+
+    <script type="" src="./script.js">
 
     </script>
 
