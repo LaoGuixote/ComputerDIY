@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigaRoost 配單總覽</title>
+    <link rel="ICON" href="./Logo/gigaroost_logo_onlyhead.png">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            /* 導覽列 */
+            display: flex;
+            position: fixed;
+            width: 100%;
+            background-color: rgb(230, 233, 230);
+            line-height: 30px;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            /* LOGO的圖片 */
+            margin-left: 60px;
+        }
+
+        header a {
+            /* 導覽列的連結 */
+            color: rgb(134, 111, 111);
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+            color: rgb(119, 162, 213);
+        }
+
+        header ul {
+            position: absolute;
+            right: 5vw;
+            top: 0;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        header li {
+            display: flex;
+            align-items: center;
+        }
+
+        header button {
+            /* 導覽列登入/註冊的按鈕 */
+            all: unset;
+            cursor: pointer;
+            color: rgb(134, 111, 111);
+        }
+
+        header button:hover {
+            background-color: rgb(230, 233, 230);
+            text-decoration: underline;
+            color: rgb(119, 162, 213);
+        }
+
+        .shopcart {
+            /* 導覽列購物車的圖案 */
+            width: 30px;
+            height: auto;
+            vertical-align: middle;
+            max-height: 30px;
+            padding: 0 0 9px 0;
+        }
+
+        .homepage_nav {
+            /* 首頁的導覽列連結 */
+            color: rgb(119, 162, 213);
+        }
+
+        .diy_nav {
+            /* 配單網站的導覽列連結 */
+            color: rgb(119, 162, 213);
+        }
+
+        .shop_nav {
+            /* 商品網站的導覽列連結 */
+            color: rgb(119, 162, 213);
+        }
+
+        .loginwindow_block {
+            /* 預設隱藏的彈出式登入視窗的區塊 */
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* 半透明背景 */
+            z-index: 999;
+        }
+
+        .loginwindow {
+            /* 彈出式登入視窗本體 */
+            background-color: white;
+            width: 500px;
+            height: 300px;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 2.5vw;
+            font-size: 20px;
+        }
+
+
+        .loginbutton {
+            /* 登入按鈕 */
+            font-size: 20px;
+            cursor: pointer;
+            width: 80px;
+        }
+
+        .loginwindow input {
+            /* 輸入框 */
+            margin: 20px 0 20px 0;
+            font-size: 20px;
+        }
+
+        .close {
+            /* 叉叉關閉鍵 */
+            float: right;
+            font-size: 24px;
+            cursor: pointer;
+            padding-top: -999px;
+        }
+
+        footer {
+            display: flex;
+            margin-top: 1000px;
+            line-height: 5vw;
+            background-color: rgb(60, 56, 56);
+            color: aliceblue;
+            justify-content: center;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e0e0f8;
+        }
+
+        tfoot td {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><img src="./Logo/logo.png" alt="" height="60px"></h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="homepage_nav"><b>首頁</b></a></li>
+                <li><a href="./diy.html"><b>線上配單</b></a></li>
+                <li><a href="./shop.html"><b>零件市集</b></a></li>
+                <li><button onclick="openLogin()"><b>登入 / 註冊</b></button></li>
+                <li><a href="#"><img src="./Image/ICON/icons8-shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 預設隱藏的登入畫面 -->
+    <div id="loginModal" class="loginwindow_block">
+        <div class="loginwindow">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>會員登入</h2>
+            <form action="">
+                <label for="member_account">帳號：</label>
+                <input type="text" placeholder="信箱或用戶名" id="member_account"><br>
+                <label for="member_password">密碼：</label>
+                <input type="password" placeholder="包含大小寫" id="member_password"><br>
+                <input type="submit" name="" value="登入" class="loginbutton">
+            </form>
+            <p style="font-size: 15px;">沒有會員？<a href="./register.html">點此註冊</a></p>
+        </div>
+    </div>
+    <br><br><br><br>
+    <h1>您的配單總覽</h1>
+
+    <!-- 顯示表格的地方 -->
+    <table>
+        <thead>
+            <tr>
+                <th>配件類別</th>
+                <th>商品名稱</th>
+                <th>數量</th>
+                <th>價格</th>
+            </tr>
+        </thead>
+        <tbody id="selectionTableBody">
+            <!-- JavaScript 會動態產生每一列 -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" style="text-align:right;">總金額：</td>
+                <td id="totalPrice">$0</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <footer>
+        Copyright © 2025 GigaRoost. All rights reserved.
+    </footer>
+
+    <script>
+
+        function openLogin() {
+            document.getElementById("loginModal").style.display = "block";
+        }   // 顯示登入視窗
+
+        function closeLogin() {
+            document.getElementById("loginModal").style.display = "none";
+        }   //隱藏登入視窗
+
+
+        // 從 localStorage 讀取選擇的資料
+    const selections = JSON.parse(localStorage.getItem('diySelections')) || {};
+
+const tbody = document.getElementById('selectionTableBody'); // 取得表格內容
+let total = 0;  // 用來儲存總金額
+
+// 配件類別名稱對應
+const labels = {
+    setpc: '套裝主機',
+    notebook: '筆記型電腦',
+    cpu: '中央處理器 CPU',
+    mb: '主機板 MB',
+    ram: '記憶體 RAM',
+    ssd: '固態硬碟 SSD',
+    hdd: '傳統硬碟 HDD',
+    gpu: '顯示卡 GPU',
+    psu: '電源供應器 PSU',
+    radiator: '空冷散熱器',
+    cold_radiator: '水冷散熱器',
+    case: '機殼 CASE',
+    keyboard: '鍵盤',
+    mouse: '滑鼠',
+    vga: '顯示器/螢幕',
+    speaker: '音響/喇叭',
+    software: '作業系統&軟體',
+    accessories: '機殼配件'
+};
+
+// 將每一個選擇的商品顯示到表格
+for (const key in selections) {
+    const item = selections[key];
+
+    // 如果沒有選擇的商品，就跳過
+    if (!item.price || !item.quantity) continue;
+
+    const tr = document.createElement('tr'); // 建立表格列
+
+    // 配件類別欄位
+    const tdLabel = document.createElement('td');
+    tdLabel.textContent = labels[key] || key;
+
+    // 商品名稱欄位
+    const tdName = document.createElement('td');
+    tdName.textContent = item.name;
+
+    // 數量欄位
+    const tdQuantity = document.createElement('td');
+    tdQuantity.textContent = item.quantity;
+
+    // 價格欄位
+    const tdPrice = document.createElement('td');
+    const priceNum = parseInt(item.price) * parseInt(item.quantity); // 計算總價格
+    tdPrice.textContent = `$${priceNum.toLocaleString()}`;
+
+    // 加總總金額
+    total += priceNum;
+
+    // 把每格加進列中
+    tr.appendChild(tdLabel);
+    tr.appendChild(tdName);
+    tr.appendChild(tdQuantity);
+    tr.appendChild(tdPrice);
+
+    // 把這列加到表格內容 tbody
+    tbody.appendChild(tr);
+}
+
+// 顯示總金額
+document.getElementById('totalPrice').textContent = `$${total.toLocaleString()}`;
+</script>
+
+</body>
+
+</html>

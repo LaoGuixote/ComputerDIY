@@ -1009,7 +1009,7 @@
             <img src="./Image/Casechick_color.png" alt="" width="450px">
             <br>
             <p>點擊下方結帳！</p>
-            <button type="button" onclick="resetSelections()" class="button1">我要孵這台機！🥚</button><br><br>
+            <button type="button" onclick="saveSelections()" class="button1">我要孵這台機！🥚</button><br><br>
             <button type="button" onclick="resetSelections()" class="button2">我不要這台機！🔪</button>
         </div>
     </main>
@@ -1021,7 +1021,23 @@
         Copyright © 2025 GigaRoost. All rights reserved.
     </footer>
 
-    <script type="" src="./script.js"></script>
+    <script type="" src="./script.js">
+
+let selections = {};
+
+// 儲存數量資料
+const quantity = document.getElementById("quantity").value; // 假設你的數量輸入框 id 是 quantity
+
+selections[key] = {
+    name: item.name,
+    price: item.price,
+    quantity: quantity // 保存數量
+};
+
+// 儲存至 localStorage
+localStorage.setItem('diySelections', JSON.stringify(selections));
+
+    </script>
 
 </body>
 

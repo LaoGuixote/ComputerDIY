@@ -110,3 +110,40 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTotalItemsDisplay();  // 更新商品數量顯示
     updateTotalPrice();  // 更新總價格顯示
 });
+
+
+
+
+
+
+
+
+function saveSelections() {
+    const selections = {};  // 用來儲存選擇的商品和數量
+
+    // 所有 select 元素的 id（依你 html 中的 select id 命名）
+    const parts = ['setpc', 'notebook', 'cpu', 'mb', 'ram', 'ssd', 'hdd', 'gpu', 'psu', 'radiator', 'cold_radiator', 'case', 'keyboard', 'mouse', 'vga', 'speaker', 'software', 'accessories'];
+
+    parts.forEach(id => {
+        const select = document.getElementById(id);  // 找到對應的 select 元素
+        const selectedOption = select.options[select.selectedIndex];  // 取得選中的項目
+        const name = selectedOption.textContent;  // 商品名稱
+        const price = selectedOption.value;  // 商品價格
+        const quantity = select.closest('tr').querySelector('.quantity').value;  // 取得數量
+
+        // 只有選擇了商品才會儲存
+        if (price && quantity > 0) {
+            selections[id] = {
+                name: name,
+                price: price,
+                quantity: quantity
+            };
+        }
+    });
+
+    // 儲存選擇資料到 localStorage
+    localStorage.setItem('diySelections', JSON.stringify(selections));
+
+    // 跳轉到結果頁面
+    window.location.href = 'result.html';
+}
