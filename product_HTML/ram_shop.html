@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigaRoost 線上商城</title>
+    <link rel="ICON" href="../Logo/gigaroost_logo_onlyhead.png">
+    <link rel="stylesheet" href="../GigaRoost.css">
+</head>
+
+<body>
+    <header>
+        <h1><img src="../Logo/logo.png" alt="" height="60px"></h1>
+        <nav>
+            <ul>
+                <li><a href="../homepage.html"><b>首頁</b></a></li>
+                <li><a href="../diy.html"><b>線上配單</b></a></li>
+                <li><a href="#" class="shop_nav"><b>零件市集</b></a></li>
+                <li><button onclick="openLogin()"><b>登入 / 註冊</b></button></li>
+                <li><a href="#"><img src="../Image/ICON/icons8-shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 預設隱藏的登入畫面 -->
+    <div id="loginModal" class="loginwindow_block">
+        <div class="loginwindow">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>會員登入</h2>
+            <form action="">
+                <label for="member_account">帳號：</label>
+                <input type="text" placeholder="信箱或用戶名" id="member_account"><br>
+                <label for="member_password">密碼：</label>
+                <input type="password" placeholder="包含大小寫" id="member_password"><br>
+                <input type="submit" name="" value="登入" class="loginbutton">
+            </form>
+            <p style="font-size: 15px;">沒有會員？<a href="../register.html">點此註冊</a></p>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <main class="shop_main">
+        <section class="product_menu">
+            <img src="../Image/chick&partcar.png" alt="" class="chickshopcar">
+            <div>
+                <ul class="product_list">
+                    <a href="../shop.html"><li>🐔套裝主機</li></a>
+                    <a href="./notebook_shop.html"><li>🐔筆記型電腦</li></a>
+                    <hr width="100px">
+                    <a href="./cpu_shop.html"><li>🥚中央處理器</li></a>
+                    <a href="./mb_shop.html"><li>🥚主機板</li></a>
+                    <a href="#" style="color: blue;"><li>🥚記憶體</li></a>
+                    <a href="./ssd_shop.html"><li>🥚固態硬碟</li></a>
+                    <a href="./hdd_shop.html"><li>🥚傳統硬碟</li></a>
+                    <a href="./gpu_shop.html"><li>🥚顯示卡</li></a>
+                    <a href="./psu_shop.html"><li>🥚電源供應器</li></a>
+                    <a href="./radiator_shop.html"><li>🥚空冷散熱器</li></a>
+                    <a href="./cold_radiator_shop.html"><li>🥚水冷散熱器</li></a>
+                    <a href="./case_shop.html"><li>🐣機殼</li></a>
+                    <hr width="100px">
+                    <a href="./keyboard_shop.html"><li>🐤鍵盤</li></a>
+                    <a href="./mouse_shop.html"><li>🐤滑鼠</li></a>
+                    <a href="./vga_shop.html"><li>🐤顯示器</li></a>
+                    <a href="./speaker_shop.html"><li>🐤音響/喇叭</li></a>
+                    <hr width="100px">
+                    <a href="./software_shop.html"><li>🍗系統&軟體</li></a>
+                    <a href="./accessories_shop.html"><li>🍗機殼配件</li></a>
+                </ul>
+            </div>
+        </section>
+
+        <section class="product">
+            <div>
+                <img src="./product/pc/asus h-s500te.png" alt="" width="250px" height="250px">
+                <p>美光Crucial DDR4-3200 8G(CL22)</p>
+                <p>$499</p>
+            </div>
+            <div>
+                <img src="./product/pc/asus G16CHR-7147000130_2.jpg" alt="" width="250px" height="250px">
+                <p>美光Crucial DDR4-3200 16G(CL22)</p>
+                <p>$899</p>
+            </div>
+            <div>
+                <img src="./product/pc/msi infinite s3.jpg" alt="" width="250px" height="250px">
+                <p>金士頓 16GB DDR4-3200 16G(CL16)</p>
+                <p>$890</p>
+            </div>
+            <div>
+                <img src="./product/pc/msi infinite s3.jpg" alt="" width="250px">
+                <p>威剛ADATA XPG D10 DDR4-3200 16G-黑(CL16)</p>
+                <p>$949</p>
+            </div>
+            <div>
+                <img src="./product/pc/DELL Inspiron.png" alt="" width="250px">
+                <p>科賦KLEVV BOLT X DDR4-3200 32G(16G*2)(CL16)</p>
+                <p>$1799</p>
+            </div>
+            <div>
+                <img src="./product/pc/DELL Inspironi5-14400.png" alt="" width="250px">
+                <p>十銓TEAM T-CREATE EXPERT DDR4-3600 32G(16G*2)(CL18)</p>
+                <p>$1799</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i7-13700K.jpg" alt="" width="250px">
+                <p>十銓TEAM T-FORCE VULCAN Z DDR4-3600 32G(16G*2)(CL18)</p>
+                <p>$1899</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>威剛ADATA XPG D50 RGB DDR4-3200 16G(8G*2)-銀灰(CL16)</p>
+                <p>$1299</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>威剛ADATA XPG D50 RGB DDR4-3200 32G(16G*2)-銀灰(CL16)</p>
+                <p>$2249</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>威剛ADATA XPG LANCER BLADE DDR5-5600 16G-黑(CL46/支援XMP&EXPO)</p>
+                <p>$1299</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>威剛ADATA XPG LANCER BLADE DDR5-6000 16G-黑(CL48/支援XMP&EXPO)</p>
+                <p>$1349</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>必恩威PNY 16GB DDR5-6000(CL36/支援XMP&EXPO)</p>
+                <p>$3299</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>必恩威PNY 32GB DDR5-6000(CL36/支援XMP&EXPO)</p>
+                <p>$6399</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>Acer HT200 DDR5-6000 32G(16G*2)-銀(CL30/支援XMP&EXPO)</p>
+                <p>$2990</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>Acer HT200 DDR5-6000 64G(32G*2)-黑(CL30/支援XMP&EXPO)</p>
+                <p>$5880</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>十銓TEAM T-CREATE EXPERT DDR5-6000 32G(16G*2)-黑(CL30/支援XMP&EXPO)</p>
+                <p>$2999</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>十銓TEAM T-FORCE DELTA DDR5-6000 32G(16G*2)-黑(CL30/支援XMP&EXPO)</p>
+                <p>$3199</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>科賦KLEVV BOLT V DDR5-6400 32G(16G*2)(CL32)</p>
+                <p>$3199</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>必恩威 PNY XLR8 Gaming DDR5-6000 32G(16G*2)(CL30)</p>
+                <p>$2999</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>美光Crucial DDR5-5600 32G(16G*2)(CL46/支援XMP&EXPO)</p>
+                <p>$2399</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>美光Crucial PRO DDR5-6000 32G(16G*2)(白散熱片)(CL36/支援XMP&EXPO)</p>
+                <p>$2499</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>美光Crucial PRO DDR5-5600 96G(48G*2)(黑散熱片)(CL46/支援XMP&EXPO)</p>
+                <p>$7199</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>Micron Crucial NB DDR4-3200 8G 美光筆電記憶體/適用第9代以上CPU/原生顆粒/終身保固</p>
+                <p>$499</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>Micron Crucial NB DDR4-3200 16G 美光筆電記憶體/適用第9代以上CPU/原生顆粒/終身保固</p>
+                <p>$888</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>TEAM ELITE NB DDR4-3200 8G 十銓筆電記憶體/終身保固</p>
+                <p>$499</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>TEAM ELITE NB DDR4-3200 16G 十銓筆電記憶體/終身保固</p>
+                <p>$888</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>acer NB DDR5-5600 16G 筆電記憶體/終身保固/原廠認證</p>
+                <p>$1199</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>Micron Crucial NB DDR5-4800 8G 美光筆電記憶體/內建PMIC電源管理晶片/終身保固</p>
+                <p>$699</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>Micron Crucial NB DDR5-5600 8G 美光筆電記憶體/內建PMIC電源管理晶片/終身保固</p>
+                <p>$729</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>TEAM ELITE NB DDR5-4800 8G 十銓筆電記憶體/終身保固/原廠認證</p>
+                <p>$699</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>TEAM ELITE NB DDR5-4800 16G 十銓筆電記憶體/終身保固/原廠認證</p>
+                <p>$1199</p>
+            </div>
+           
+        </section>
+
+
+    </main>
+
+    <footer>
+        Copyright © 2025 GigaRoost. All rights reserved.
+    </footer>
+
+    <script type="" src="../script.js">
+
+    </script>
+
+</body>
+
+</html>

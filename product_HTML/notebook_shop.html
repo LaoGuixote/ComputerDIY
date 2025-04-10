@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigaRoost 線上商城</title>
+    <link rel="ICON" href="../Logo/gigaroost_logo_onlyhead.png">
+    <link rel="stylesheet" href="../GigaRoost.css">
+</head>
+
+<body>
+    <header>
+        <h1><img src="../Logo/logo.png" alt="" height="60px"></h1>
+        <nav>
+            <ul>
+                <li><a href="../homepage.html"><b>首頁</b></a></li>
+                <li><a href="../diy.html"><b>線上配單</b></a></li>
+                <li><a href="#" class="shop_nav"><b>零件市集</b></a></li>
+                <li><button onclick="openLogin()"><b>登入 / 註冊</b></button></li>
+                <li><a href="#"><img src="../Image/ICON/icons8-shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 預設隱藏的登入畫面 -->
+    <div id="loginModal" class="loginwindow_block">
+        <div class="loginwindow">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>會員登入</h2>
+            <form action="">
+                <label for="member_account">帳號：</label>
+                <input type="text" placeholder="信箱或用戶名" id="member_account"><br>
+                <label for="member_password">密碼：</label>
+                <input type="password" placeholder="包含大小寫" id="member_password"><br>
+                <input type="submit" name="" value="登入" class="loginbutton">
+            </form>
+            <p style="font-size: 15px;">沒有會員？<a href="../register.html">點此註冊</a></p>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <main class="shop_main">
+        <section class="product_menu">
+            <img src="../Image/chick&partcar.png" alt="" class="chickshopcar">
+            <div>
+                <ul class="product_list">
+                    <a href="../shop.html"><li>🐔套裝主機</li></a>
+                    <a href="#" style="color: blue;"><li>🐔筆記型電腦</li></a>
+                    <hr width="100px">
+                    <a href="./cpu_shop.html"><li>🥚中央處理器</li></a>
+                    <a href="./mb_shop.html"><li>🥚主機板</li></a>
+                    <a href="./ram_shop.html"><li>🥚記憶體</li></a>
+                    <a href="./ssd_shop.html"><li>🥚固態硬碟</li></a>
+                    <a href="./hdd_shop.html"><li>🥚傳統硬碟</li></a>
+                    <a href="./gpu_shop.html"><li>🥚顯示卡</li></a>
+                    <a href="./psu_shop.html"><li>🥚電源供應器</li></a>
+                    <a href="./radiator_shop.html"><li>🥚空冷散熱器</li></a>
+                    <a href="./cold_radiator_shop.html"><li>🥚水冷散熱器</li></a>
+                    <a href="./case_shop.html"><li>🐣機殼</li></a>
+                    <hr width="100px">
+                    <a href="./keyboard_shop.html"><li>🐤鍵盤</li></a>
+                    <a href="./mouse_shop.html"><li>🐤滑鼠</li></a>
+                    <a href="./vga_shop.html"><li>🐤顯示器</li></a>
+                    <a href="./speaker_shop.html"><li>🐤音響/喇叭</li></a>
+                    <hr width="100px">
+                    <a href="./software_shop.html"><li>🍗系統&軟體</li></a>
+                    <a href="./accessories_shop.html"><li>🍗機殼配件</li></a>
+                </ul>
+            </div>
+        </section>
+
+        <section class="product">
+            <div>
+                <img src="./product/pc/asus h-s500te.png" alt="" width="250px" height="250px">
+                <p>DELL Inspiron i5-1334U/8G/512G/14吋 藍 14-5440-R1508LTW</p>
+                <p>$21990</p>
+            </div>
+            <div>
+                <img src="./product/pc/asus G16CHR-7147000130_2.jpg" alt="" width="250px" height="250px">
+                <p>ACER Swift 14/Qualcomm X1E-78-100/16G/1T/14吋 灰 SF14-11T-X5F7 (觸控)</p>
+                <p>$45900</p>
+            </div>
+            <div>
+                <img src="./product/pc/msi infinite s3.jpg" alt="" width="250px" height="250px">
+                <p>HP OMEN Transcend Ultra 9/RTX4070/32G/1T/14吋 幻影白 14-fb0096TX輕盈專業</p>
+                <p>$74900</p>
+            </div>
+            <div>
+                <img src="./product/pc/msi infinite s3.jpg" alt="" width="250px">
+                <p>Lenovo LOQ/i5-13450HX/RTX4060/16G/512G/15吋 灰 83DV00FDTW</p>
+                <p>$30990</p>
+            </div>
+            <div>
+                <img src="./product/pc/DELL Inspiron.png" alt="" width="250px">
+                <p>華碩TUF R5-7535HS/RTX4060/16G/512G/15吋 灰 FA507NV-0042B7535HS</p>
+                <p>$31999</p>
+            </div>
+            <div>
+                <img src="./product/pc/DELL Inspironi5-14400.png" alt="" width="250px">
+                <p>微星Katana R7-8845HS/RTX4060/16G/512G/15吋 黑 A15 AI B8VF-433TW</p>
+                <p>$34500</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i7-13700K.jpg" alt="" width="250px">
+                <p>DELL Inspiron i7-13620H/16G/1T/16吋 藍 16-7640R-R2608LTW</p>
+                <p>$36990</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>ACER Helios Neo i7-14700HX/RTX4060/16G/512G/16吋 黑 PHN16-72-76MR</p>
+                <p>$45900</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>HP OMEN Gaming i9-14900HX/RTX4080/32G/2T/16吋 秘影黑 16-wf1176TX</p>
+                <p>$93990</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>HP Laptop i5-1334U/16G/512G/17吋 星河銀 17-cn3010TU</p>
+                <p>$23900</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>華碩TUF R7-7435HS/RTX4060/16G/512G/17吋 御鐵灰 FA707NVR-0022B7435HS</p>
+                <p>$33999</p>
+            </div>
+            <div>
+                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <p>LG Gram Ultra 7-155H/32G/1T/17吋 灰 17Z90S-G AD79C2</p>
+                <p>$49900</p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        Copyright © 2025 GigaRoost. All rights reserved.
+    </footer>
+
+    <script type="" src="../script.js">
+
+    </script>
+
+</body>
+
+</html>

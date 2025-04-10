@@ -12,13 +12,13 @@ header {
     line-height: 30px;
     align-items: center;
     justify-content: space-between;
-    z-index: 1000; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     /* LOGO的圖片 */
-    margin-left: 60px; 
+    margin-left: 60px;
 }
 
 header a {
@@ -29,6 +29,7 @@ header a {
 
 header a:hover {
     text-decoration: underline;
+    color: rgb(119, 162, 213);
 }
 
 header ul {
@@ -56,6 +57,7 @@ header button {
 header button:hover {
     background-color: rgb(230, 233, 230);
     text-decoration: underline;
+    color: rgb(119, 162, 213);
 }
 
 .shopcart {
@@ -156,12 +158,22 @@ td {
     margin: 4px;
 }
 
+.quantity {
+    font-size: 20px;
+    width: 35px;
+    margin: 4px;
+}
+
 .item {
     width: 190px;
 }
 
 .numero {
     width: 30px;
+}
+
+.price {
+    width: 60px;
 }
 
 .area {
@@ -177,13 +189,26 @@ td {
     text-align: center;
 }
 
-.area button {
+.button1 {
     /* 配單頁main的按鈕 */
     position: relative;
     left: 140px;
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button2{
+    position: relative;
+    left: 140px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 16px 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 8px;
@@ -209,4 +234,50 @@ td {
     width: 900px;
     padding-right: 50px;
     line-height: 40px;
+}
+
+/* 零件市集頁 */
+.chickshopcar{
+    width: 200px;
+    margin: 20px 0 0 -30px;
+}
+
+.product_menu{
+    margin-left: 100px;
+    flex: 1   ;
+}
+
+.product_list{
+    list-style: none;
+    line-height: 3vw;
+    margin: 20px;
+}
+
+.product_list a{
+    color: rgb(222, 6, 96);
+    text-decoration: none;
+}
+
+.product_list a:hover{
+    text-decoration: underline;
+}
+
+.shop_main{
+    display: flex;
+
+}
+
+.product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 20px 20px 20px 70px;
+}
+
+.product div{
+    width: 270px;
+    flex-wrap: no;
+    text-align: left;
+    line-height: 2vw;
+    margin: 10px 50px;
 }

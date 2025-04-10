@@ -33,7 +33,7 @@
                 <input type="text" placeholder="信箱或用戶名" id="member_account"><br>
                 <label for="member_password">密碼：</label>
                 <input type="password" placeholder="包含大小寫" id="member_password"><br>
-                <input type="submit" name="" value="登入"  class="loginbutton">
+                <input type="submit" name="" value="登入" class="loginbutton">
             </form>
             <p style="font-size: 15px;">沒有會員？<a href="./register.html">點此註冊</a></p>
         </div>
@@ -53,7 +53,8 @@
                     <td class="numero">🐔</td>
                     <td class="item"><label for="setpc">套裝主機</label></td>
                     <td>
-                        <select id="setpc" class="select_css">
+                        <select id="setpc" class="select_css" onchange="updatePrice('setpc','price_setpc');">
+                            <option value="" disabled selected>總共8個商品</option>
                             <optgroup label="華碩ASUS主機">
                                 <option value="15990">ASUS【H-S500TE-313100032W】i3-13100/8G/512G/WIN11/300W電供
                                     &lt;$15990&gt;</option>
@@ -80,14 +81,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('setpc', 'price_setpc');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_setpc" class="price">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🐔</td>
                     <td class="item"><label for="notebook">筆記型電腦</label></td>
                     <td>
-                        <select id="notebook" class="select_css">
+                        <select id="notebook" class="select_css" onchange="updatePrice('notebook','price_notebook');">
+                            <option value="" disabled selected>總共12個商品</option>
                             <optgroup label="14吋">
                                 <option value="21990">DELL Inspiron i5-1334U/8G/512G/14吋 藍 14-5440-R1508LTW
                                     &lt;$21990&gt;</option>
@@ -122,15 +132,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('notebook', 'price_notebook');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_notebook">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🥚</td>
                     <td class="item"><label for="cpu">中央處理器 CPU</label></td>
                     <td>
-                        <select id="cpu" class="select_css">
-                            <option value="" disabled selected>總共幾個</option>
+                        <select id="cpu" class="select_css" onchange="updatePrice('cpu','price_cpu');">
+                            <option value="" disabled selected>總共19個商品</option>
                             <optgroup label="Intel 12代 1700腳位">
                                 <option value="3450">Intel i5-12400F &lt;$3450&gt;</option>
                                 <option value="8450">Intel i7-12700KF &lt;$8450&gt;</option>
@@ -163,14 +181,23 @@
 
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('cpu', 'price_cpu');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_cpu">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🥚</td>
                     <td class="item"><label for="mb">主機板</label></td>
                     <td>
-                        <select id="mb" class="select_css">
+                        <select id="mb" class="select_css" onchange="updatePrice('mb','price_mb');">
+                            <option value="" disabled selected>總共25個商品</option>
                             <optgroup label="Intel B760 1700腳位(DDR4) 12~14代皆支援">
                                 <option value="4090">華碩PRIME B760M-A WIFI D4-CSM(M-ATX/LAN 2.5Gb+無線)10相 &lt;$4090&gt;
                                 </option>
@@ -239,14 +266,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('mb', 'price_mb');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_mb">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🥚</td>
                     <td class="item"><label for="ram">記憶體 RAM</label></td>
                     <td>
-                        <select id="ram" class="select_css">
+                        <select id="ram" class="select_css" onchange="updatePrice('ram','price_ram');">
+                            <option value="" disabled selected>總共31個商品</option>
                             <optgroup label="桌上型記憶體DDR4">
                                 <option value="499">美光Crucial DDR4-3200 8G(CL22) &lt;$499&gt;</option>
                                 <option value="899">美光Crucial DDR4-3200 16G(CL22) &lt;$899&gt;</option>
@@ -273,9 +309,9 @@
                                 <option value="6399">必恩威PNY 32GB DDR5-6000(CL36/支援XMP&EXPO) &lt;$6399&gt;</option>
                             </optgroup>
                             <optgroup label="桌上型記憶體DDR5 多通道">
-                                <option value="2990"> Acer HT200 DDR5-6000 32G(16G*2)-銀(CL30/支援XMP&EXPO) &lt;$2990&gt;
+                                <option value="2990">Acer HT200 DDR5-6000 32G(16G*2)-銀(CL30/支援XMP&EXPO) &lt;$2990&gt;
                                 </option>
-                                <option value="5880"> Acer HT200 DDR5-6000 64G(32G*2)-黑(CL30/支援XMP&EXPO) &lt;$5880&gt;
+                                <option value="5880">Acer HT200 DDR5-6000 64G(32G*2)-黑(CL30/支援XMP&EXPO) &lt;$5880&gt;
                                 </option>
                                 <option value="2999">十銓TEAM T-CREATE EXPERT DDR5-6000 32G(16G*2)-黑(CL30/支援XMP&EXPO)
                                     &lt;$2999&gt;</option>
@@ -311,14 +347,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('ram', 'price_ram');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_ram">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🥚</td>
                     <td class="item"><label for="ssd">固態硬碟 SSD</label></td>
                     <td>
-                        <select id="ssd" class="select_css">
+                        <select id="ssd" class="select_css" onchange="updatePrice('ssd','price_ssd');">
+                            <option value="" disabled selected>總共23個商品</option>
                             <optgroup label="SSD SATA 固態硬碟">
                                 <option value="999">宏碁acer RE100 512GB/2.5吋 SATA/讀：562M/寫：529M/TLC &lt;$999&gt;</option>
                                 <option value="1690">宏碁acer RE100 1TB/2.5吋 SATA/讀：562M/寫：529M/TLC &lt;$1690&gt;</option>
@@ -370,14 +415,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('ssd', 'price_ssd');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_ssd">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🥚</td>
                     <td class="item"><label for="hdd">傳統硬碟 HDD</label></td>
                     <td>
-                        <select id="hdd" class="select_css">
+                        <select id="hdd" class="select_css" onchange="updatePrice('hdd','price_hdd');">
+                            <option value="" disabled selected>總共19個商品</option>
                             <optgroup label="3.5吋 SATA3 傳統碟">
                                 <option value="2030">TOSHIBA【P300】2TB/256M/7200轉 &lt;$2030&gt;</option>
                                 <option value="3210">TOSHIBA【P300】4TB/128M/5400轉 &lt;$3210&gt;</option>
@@ -405,14 +459,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('hdd', 'price_hdd');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_hdd">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🥚</td>
                     <td class="item"><label for="gpu">顯示卡</label></td>
                     <td>
-                        <select id="gpu" class="select_css">
+                        <select id="gpu" class="select_css" onchange="updatePrice('gpu','price_gpu');">
+                            <option value="" disabled selected>總共18個商品</option>
                             <optgroup label="GeForce RTX 3060-12G">
                                 <option value="8990">華碩DUAL-RTX3060/1837MHz/20cm/雙風扇 &lt;$8990&gt;</option>
                                 <option value="8990">微星RTX3060 VENTUS 2X OC/1807MHz/23.5cm/雙風扇 &lt;$8990&gt;</option>
@@ -456,14 +519,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('gpu', 'price_gpu');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_gpu">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🔥</td>
                     <td class="item"><label for="psu">電源供應器</label></td>
                     <td>
-                        <select id="psu" class="select_css">
+                        <select id="psu" class="select_css" onchange="updatePrice('psu','price_psu');">
+                            <option value="" disabled selected>總共20個商品</option>
                             <optgroup label="MONTECH 君主">
                                 <option value="2190">MONTECH 君主 Century 創世紀 550W/金牌/ATX/全模組/全日系 &lt;$2190&gt;</option>
                                 <option value="2590">MONTECH 君主 Century 創世紀 650W/金牌/ATX/全模組/全日系 &lt;$2590&gt;</option>
@@ -508,14 +580,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('psu', 'price_psu');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_psu">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🧊</td>
                     <td class="item"><label for="radiator">空冷散熱器</label></td>
                     <td>
-                        <select id="radiator" class="select_css">
+                        <select id="radiator" class="select_css" onchange="updatePrice('radiator','price_radiator');">
+                            <option value="" disabled selected>總共17個商品</option>
                             <optgroup label="Jonsbo 喬思伯">
                                 <option value="699">Jonsbo 喬思伯 CR-1400 V2/4導管/9cm風扇*1/碳纖維+無限鏡上蓋/ARGB風扇/TDP180W/高133mm
                                     &lt;$699&gt;</option>
@@ -554,14 +635,24 @@
                                 <option value="1290">DEEPCOOL 九州風神 AG620/6導管/12cm風扇*2/雙塔雙扇/高157mm &lt;$1290&gt;</option>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('radiator', 'price_radiator');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_radiator">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🧊</td>
                     <td class="item"><label for="cold_radiator">水冷散熱器</label></td>
                     <td>
-                        <select id="cold_radiator" class="select_css">
+                        <select id="cold_radiator" class="select_css"
+                            onchange="updatePrice('cold_radiator','price_cold_radiator');">
+                            <option value="" disabled selected>總共7個商品</option>
                             <optgroup label="Thermalright 利民">
                                 <option value="3690">Thermalright 利民 Frozen Warframe 360
                                     ARGB/360mm/2.4"水冷頭+可轉向/支援GIF/12cm風扇*3 &lt;$3690&gt;</option>
@@ -586,14 +677,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('cold_radiator', 'price_cold_radiator');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_cold_radiator">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🐣</td>
                     <td class="item"><label for="case">機殼 CASE</label></td>
                     <td>
-                        <select id="case" class="select_css">
+                        <select id="case" class="select_css" onchange="updatePrice('case','price_case');">
+                            <option value="" disabled selected>總共8個商品</option>
                             <optgroup label="MONTECH 君主">
                                 <option value="1590">MONTECH 君主 XR 黑 全景玻璃機殼/ATX/Type-C/內建風扇側2後1/無A柱/顯卡420mm/塔散175mm
                                     &lt;$1590&gt;</option>
@@ -621,14 +721,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('case', 'price_case');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_case">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🐤</td>
                     <td class="item"><label for="keyboard">鍵盤</label></td>
                     <td>
-                        <select id="keyboard" class="select_css">
+                        <select id="keyboard" class="select_css" onchange="updatePrice('keyboard','price_keyboard');">
+                            <option value="" disabled selected>總共12個商品</option>
                             <optgroup label="羅技">
                                 <option value="1190">Logitech 羅技G213 PRODIGY RGB遊戲鍵盤/有線/RGB/防潑/媒體控制鍵/中文 &lt;$1190&gt;
                                 </option>
@@ -661,14 +770,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('keyboard', 'price_keyboard');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_keyboard">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🐤</td>
                     <td class="item"><label for="mouse">滑鼠</label></td>
                     <td>
-                        <select id="mouse" class="select_css">
+                        <select id="mouse" class="select_css" onchange="updatePrice('mouse','price_mouse');">
+                            <option value="" disabled selected>總共12個商品</option>
                             <optgroup label="華碩">
                                 <option value="1090">華碩Marshmallow MD100 雙模無線滑鼠/燕麥棕/抗菌表層/56g &lt;$1090&gt;</option>
                                 <option value="1690">華碩ROG Strix Impact Ⅲ Wireless 雙模滑鼠(黑)/無線-藍芽36000Dpi/Omni接收器/RGB
@@ -704,14 +822,23 @@
                             <option value=""></option>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('mouse', 'price_mouse');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_mouse">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🐤</td>
                     <td class="item"><label for="vga" class="">顯示器/螢幕</label></td>
                     <td>
-                        <select id="vga" class="select_css">
+                        <select id="vga" class="select_css" onchange="updatePrice('vga','price_vga');">
+                            <option value="" disabled selected>總共17個商品</option>
                             <optgroup label="24吋">
                                 <option value="2488">Acer KA242Y GO 液晶螢幕/HDMI/D-Sub/IPS/1ms/120Hz/FreeSync/內建喇叭
                                     &lt;$2488&gt;</option>
@@ -757,14 +884,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('vga', 'price_vga');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_vga">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🐤</td>
                     <td class="item"><label for="speaker">音響/喇叭</label></td>
                     <td>
-                        <select id="speaker" class="select_css">
+                        <select id="speaker" class="select_css" onchange="updatePrice('speaker','price_speaker');">
+                            <option value="" disabled selected>總共6個商品</option>
                             <optgroup label="羅技">
                                 <option value="1790">羅技Z313 2.1聲道喇叭/有線/50w Rms &lt;$1790&gt;</option>
                                 <option value="3321">羅技Z407 藍芽喇叭/無線藍芽5.0/80w Rms &lt;$3321&gt;</option>
@@ -780,14 +916,23 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('speaker', 'price_speaker');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_speaker">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🍗</td>
                     <td class="item"><label for="software">作業系統&軟體</label></td>
                     <td>
-                        <select id="software" class="select_css">
+                        <select id="software" class="select_css" onchange="updatePrice('software','price_software');">
+                            <option value="" disabled selected>總共7個商品</option>
                             <optgroup label="作業系統">
                                 <option value="4390">微軟Windows 11 Home 家用中文隨機版 64位元 &lt;$4390&gt;</option>
                                 <option value="6790">微軟Windows 11 Pro 專業中文彩盒版 64位元 &lt;$6790&gt;</option>
@@ -807,14 +952,24 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('software', 'price_software');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_software">$0</td>
                 </tr>
                 <tr>
                     <td class="numero">🍗</td>
                     <td class="item"><label for="accessories">機殼配件</label></td>
                     <td>
-                        <select id="accessories" class="select_css">
+                        <select id="accessories" class="select_css"
+                            onchange="updatePrice('accessories','price_accessories');">
+                            <option value="" disabled selected>總共9個商品</option>
                             <optgroup label="顯卡支架">
                                 <option value="490">酷碼VGA Holder 顯示卡支撐架 &lt;$490&gt;</option>
                                 <option value="790">微星MSI MPG ARGB GRAPHICS CARD STAND 顯示卡支撐架 &lt;$790&gt;</option>
@@ -836,39 +991,37 @@
                             </optgroup>
                         </select>
                     </td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <select name="" id="" class="quantity" onchange="updatePrice('accessories', 'price_accessories');">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </td>
+                    <td id="price_accessories">$0</td>
                 </tr>
-                <tr>
+
             </table>
         </div>
         <div>
             <img src="./Image/Casechick_color.png" alt="" width="450px">
             <br>
             <p>點擊下方結帳！</p>
-            <button type="submit">我要孵這台機！🥚</button>
+            <button type="button" onclick="resetSelections()" class="button1">我要孵這台機！🥚</button><br><br>
+            <button type="button" onclick="resetSelections()" class="button2">我不要這台機！🔪</button>
         </div>
     </main>
     <div class="total">
-        <p>共挑選了<span>0</span>樣商品</p>
-        <p>總價：<span id="total-price">0</span> 元</p>
+        <p>共挑選了<span id="total_buy">0</span>個商品</p>
+        <p>總價：<span id="total_price">$0</span> 元</p>
     </div>
     <footer>
         Copyright © 2025 GigaRoost. All rights reserved.
     </footer>
 
-    <script type="" src="./script.js">
-        function updateTotalPrice() {
-            let cpuPrice = parseInt(document.getElementById("cpu").value);
-            let gpuPrice = parseInt(document.getElementById("gpu").value);
-            document.getElementById("total-price").textContent = cpuPrice + gpuPrice;
-        }
-
-        document.getElementById("cpu").addEventListener("change", updateTotalPrice);
-        document.getElementById("gpu").addEventListener("change", updateTotalPrice);
-
-        updateTotalPrice();
-    </script>
+    <script type="" src="./script.js"></script>
 
 </body>
 
