@@ -32,10 +32,30 @@
                 <label for="member_account">帳號：</label>
                 <input type="text" placeholder="信箱或用戶名" id="member_account"><br>
                 <label for="member_password">密碼：</label>
-                <input type="password" placeholder="包含大小寫" id="member_password"><br>
+                <input type="password" placeholder="大小寫需相符" id="member_password"><br>
                 <input type="submit" name="" value="登入" class="loginbutton">
             </form>
-            <p style="font-size: 15px;">沒有會員？<a href="../register.html">點此註冊</a></p>
+            <p style="font-size: 15px;">沒有會員？　<button class="registerbutton" onclick="openRegister() ,closeLogin()">點此註冊</button></p>
+        </div>
+    </div>
+
+      <!-- 預設隱藏的註冊介面 -->
+    <div id="registerModal" class="registerwindow_block">
+        <div class="registerwindow">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2 style="text-align: center; margin-bottom: -30px;">註冊會員</h2><br>
+            <form action="">
+                <label for="member_name">請輸入用戶名：</label>
+                <input type="text" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_name" style="width: 66.5%; height: 25px;"><br>
+                <p style="font-size: 15px; margin-left: 25px;"></p>
+                <label for="member_account">請輸入信箱：</label>
+                <input type="text" placeholder="E-mail" id="member_account" style="width: 70%; height: 25px;"><br>
+                <label for="member_password">請輸入密碼：</label>
+                <input type="password" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_password" style="width: 70%; height: 25px;"><br>
+                <label for="member_password">請輸入手機：</label>
+                <input type="text" placeholder="09-XXXX" id="member_phone" style="width: 70%; height: 25px;"><br>
+                <button type="button" onclick="closeRegister(), openLogin()" class="back_loginbutton">返回登入</button>
+            </form>
         </div>
     </div>
 
@@ -73,62 +93,62 @@
 
         <section class="product">
             <div>
-                <img src="./product/pc/asus h-s500te.png" alt="" width="250px" height="250px">
+                <img src="../product/notebook/DELL Inspiron i5-1334U.png" alt="" width="250px" height="250px">
                 <p>DELL Inspiron i5-1334U/8G/512G/14吋 藍 14-5440-R1508LTW</p>
                 <p>$21990</p>
             </div>
             <div>
-                <img src="./product/pc/asus G16CHR-7147000130_2.jpg" alt="" width="250px" height="250px">
+                <img src="../product/notebook/l000003_1738913294.jpg" alt="" width="250px" height="250px">
                 <p>ACER Swift 14/Qualcomm X1E-78-100/16G/1T/14吋 灰 SF14-11T-X5F7 (觸控)</p>
                 <p>$45900</p>
             </div>
             <div>
-                <img src="./product/pc/msi infinite s3.jpg" alt="" width="250px" height="250px">
+                <img src="../product/notebook/HP OMEN Transcend 幻影白 14-fb0096TX.jpg" alt="" width="250px" height="250px">
                 <p>HP OMEN Transcend Ultra 9/RTX4070/32G/1T/14吋 幻影白 14-fb0096TX輕盈專業</p>
                 <p>$74900</p>
             </div>
             <div>
-                <img src="./product/pc/msi infinite s3.jpg" alt="" width="250px">
+                <img src="../product/notebook/Lenovo LOQ 83DV00FDTW.jpg" alt="" width="250px">
                 <p>Lenovo LOQ/i5-13450HX/RTX4060/16G/512G/15吋 灰 83DV00FDTW</p>
                 <p>$30990</p>
             </div>
             <div>
-                <img src="./product/pc/DELL Inspiron.png" alt="" width="250px">
+                <img src="../product/notebook/華碩TUF 灰 FA507NV.jpg" alt="" width="250px">
                 <p>華碩TUF R5-7535HS/RTX4060/16G/512G/15吋 灰 FA507NV-0042B7535HS</p>
                 <p>$31999</p>
             </div>
             <div>
-                <img src="./product/pc/DELL Inspironi5-14400.png" alt="" width="250px">
+                <img src="../product/notebook/微星Katana AI B8VF-433TW.jpg" alt="" width="250px">
                 <p>微星Katana R7-8845HS/RTX4060/16G/512G/15吋 黑 A15 AI B8VF-433TW</p>
                 <p>$34500</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i7-13700K.jpg" alt="" width="250px">
+                <img src="../product/notebook/DELL Inspiron 藍 16-7640R-R2608LTW.jpg" alt="" width="250px">
                 <p>DELL Inspiron i7-13620H/16G/1T/16吋 藍 16-7640R-R2608LTW</p>
                 <p>$36990</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/notebook/ACER Helios Neo 黑 PHN16-72-76MR.jpg" alt="" width="250px">
                 <p>ACER Helios Neo i7-14700HX/RTX4060/16G/512G/16吋 黑 PHN16-72-76MR</p>
                 <p>$45900</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/notebook/HP OMEN Gaming秘影黑 16-wf1176TX.jpg" alt="" width="250px">
                 <p>HP OMEN Gaming i9-14900HX/RTX4080/32G/2T/16吋 秘影黑 16-wf1176TX</p>
                 <p>$93990</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/notebook/HP Laptop 星河銀 17-cn3010TU.jpg" alt="" width="250px">
                 <p>HP Laptop i5-1334U/16G/512G/17吋 星河銀 17-cn3010TU</p>
                 <p>$23900</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/notebook/華碩TUF 御鐵灰 FA707NVR.jpg" alt="" width="250px">
                 <p>華碩TUF R7-7435HS/RTX4060/16G/512G/17吋 御鐵灰 FA707NVR-0022B7435HS</p>
                 <p>$33999</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/notebook/LG Gram 灰 17Z90S-G AD79C2.jpg" alt="" width="250px">
                 <p>LG Gram Ultra 7-155H/32G/1T/17吋 灰 17Z90S-G AD79C2</p>
                 <p>$49900</p>
             </div>

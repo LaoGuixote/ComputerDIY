@@ -7,6 +7,15 @@ function closeLogin() {
     document.getElementById("loginModal").style.display = "none";
 }   //隱藏登入視窗
 
+//註冊視窗
+function openRegister() {
+    document.getElementById("registerModal").style.display = "block";
+}//顯示註冊視窗
+
+function closeRegister() {
+    document.getElementById("registerModal").style.display = "none";
+} //隱藏註冊視窗
+
 // 配單網頁用JS
 // 選擇商品後更新價格在小計
 let totalPrice = 0;  // 總價格初始為 0
@@ -51,7 +60,7 @@ function updatePrice(selectId, priceId) {
     }
 
     // 更新商品數量
-    updateTotalItemsDisplay();  
+    updateTotalItemsDisplay();
 
     // 更新顯示總價格與商品數量
     updateTotalPrice();  // 調用更新總價格的函式

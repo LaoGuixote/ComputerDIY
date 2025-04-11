@@ -132,6 +132,56 @@ header button:hover {
     padding-top: -999px;
 }
 
+.registerbutton {
+    /* 點我註冊的按鈕 */
+    all: unset;
+    cursor: pointer;
+}
+
+.registerbutton:hover {
+    background-color: rgb(255, 255, 255);
+    text-decoration: underline;
+    color: rgb(111, 111, 111);
+}
+
+.registerwindow_block {
+    /* 預設隱藏的彈出式註冊視窗的區塊 */
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明背景 */
+    z-index: 999;
+}
+
+.registerwindow {
+    /* 註冊視窗本體 */
+    background-color: white;
+    width: 600px;
+    height: 350px;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 2.5em;
+    font-size: 20px;
+}
+
+.back_loginbutton {
+    /* 返回登入的按鈕 */
+    all: unset;
+    cursor: pointer;
+}
+
+.back_loginbutton:hover {
+    background-color: rgb(255, 255, 255);
+    text-decoration: underline;
+    color: rgb(111, 111, 111);
+}
+
 footer {
     display: flex;
     line-height: 5vw;
@@ -203,7 +253,7 @@ td {
     transition: background-color 0.3s;
 }
 
-.button2{
+.button2 {
     position: relative;
     left: 140px;
     background-color: #007bff;
@@ -237,44 +287,44 @@ td {
 }
 
 /* 零件市集頁 */
-.chickshopcar{
+.chickshopcar {
     width: 200px;
     margin: 20px 0 0 -30px;
 }
 
-.product_menu{
+.product_menu {
     margin-left: 100px;
-    flex: 1   ;
+    flex: 1;
 }
 
-.product_list{
+.product_list {
     list-style: none;
     line-height: 3vw;
     margin: 20px;
 }
 
-.product_list a{
+.product_list a {
     color: rgb(222, 6, 96);
     text-decoration: none;
 }
 
-.product_list a:hover{
+.product_list a:hover {
     text-decoration: underline;
 }
 
-.shop_main{
+.shop_main {
     display: flex;
 
 }
 
-.product{
+.product {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     margin: 20px 20px 20px 70px;
 }
 
-.product div{
+.product div {
     width: 270px;
     flex-wrap: no;
     text-align: left;

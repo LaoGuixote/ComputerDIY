@@ -78,21 +78,6 @@
             padding: 0 0 9px 0;
         }
 
-        .homepage_nav {
-            /* 首頁的導覽列連結 */
-            color: rgb(119, 162, 213);
-        }
-
-        .diy_nav {
-            /* 配單網站的導覽列連結 */
-            color: rgb(119, 162, 213);
-        }
-
-        .shop_nav {
-            /* 商品網站的導覽列連結 */
-            color: rgb(119, 162, 213);
-        }
-
         .loginwindow_block {
             /* 預設隱藏的彈出式登入視窗的區塊 */
             display: none;
@@ -119,7 +104,6 @@
             font-size: 20px;
         }
 
-
         .loginbutton {
             /* 登入按鈕 */
             font-size: 20px;
@@ -141,9 +125,91 @@
             padding-top: -999px;
         }
 
+        .registerbutton {
+            /* 點我註冊的按鈕 */
+            all: unset;
+            cursor: pointer;
+        }
+
+        .registerbutton:hover {
+            background-color: rgb(255, 255, 255);
+            text-decoration: underline;
+            color: rgb(111, 111, 111);
+        }
+
+        .registerwindow_block {
+            /* 預設隱藏的彈出式註冊視窗的區塊 */
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* 半透明背景 */
+            z-index: 999;
+        }
+
+        .registerwindow {
+            /* 註冊視窗本體 */
+            background-color: white;
+            width: 600px;
+            height: 350px;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 2.5em;
+            font-size: 20px;
+        }
+
+        .back_loginbutton {
+            /* 返回登入的按鈕 */
+            all: unset;
+            cursor: pointer;
+        }
+
+        .back_loginbutton:hover {
+            background-color: rgb(255, 255, 255);
+            text-decoration: underline;
+            color: rgb(111, 111, 111);
+        }
+
+
+        .hitwindow_block {
+            /* 預設隱藏的彈出式提示視窗的區塊 */
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* 半透明背景 */
+            z-index: 999;
+        }
+
+        .hitwindow{
+             /* 彈出式提示視窗本體 */
+            background-color: white;
+            width: 500px;
+            height: 200px;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 5vw;
+            font-size: 25px;
+        }
+
+        .title {
+            line-height: 2.5em;
+            text-align: center;
+        }
+
         footer {
             display: flex;
-            margin-top: 1000px;
+            margin-top: 250px;
             line-height: 5vw;
             background-color: rgb(60, 56, 56);
             color: aliceblue;
@@ -155,6 +221,7 @@
             border-collapse: collapse;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 15%;
         }
 
         th,
@@ -171,6 +238,27 @@
         tfoot td {
             font-weight: bold;
         }
+
+        .div_select {
+            border: 2px black solid;
+            width: 500px;
+            font-size: 18px;
+            padding: 10px;
+            line-height: 1.75em;
+        }
+
+        .paybutton {
+            font-size: 25px;
+            width: 10%;
+            background-color: rgb(173, 237, 173);
+            border-radius: 5px;
+            border: groove;
+        }
+
+        .paybutton:hover {
+            background-color: rgb(187, 249, 190);
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -179,7 +267,7 @@
         <h1><img src="./Logo/logo.png" alt="" height="60px"></h1>
         <nav>
             <ul>
-                <li><a href="#" class="homepage_nav"><b>首頁</b></a></li>
+                <li><a href="./homepage.html"><b>首頁</b></a></li>
                 <li><a href="./diy.html"><b>線上配單</b></a></li>
                 <li><a href="./shop.html"><b>零件市集</b></a></li>
                 <li><button onclick="openLogin()"><b>登入 / 註冊</b></button></li>
@@ -197,14 +285,48 @@
                 <label for="member_account">帳號：</label>
                 <input type="text" placeholder="信箱或用戶名" id="member_account"><br>
                 <label for="member_password">密碼：</label>
-                <input type="password" placeholder="包含大小寫" id="member_password"><br>
+                <input type="password" placeholder="大小寫需相符" id="member_password"><br>
                 <input type="submit" name="" value="登入" class="loginbutton">
             </form>
-            <p style="font-size: 15px;">沒有會員？<a href="./register.html">點此註冊</a></p>
+            <p style="font-size: 15px;">沒有會員？　<button class="registerbutton"
+                    onclick="openRegister() ,closeLogin()">點此註冊</button></p>
         </div>
     </div>
+
+    <!-- 預設隱藏的註冊介面 -->
+    <div id="registerModal" class="registerwindow_block">
+        <div class="registerwindow">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2 style="text-align: center; margin-bottom: -30px;">註冊會員</h2><br>
+            <form action="">
+                <label for="member_name">請輸入用戶名：</label>
+                <input type="text" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_name"
+                    style="width: 66.5%; height: 25px;"><br>
+                <p style="font-size: 15px; margin-left: 25px;"></p>
+                <label for="member_account">請輸入信箱：</label>
+                <input type="text" placeholder="E-mail" id="member_account" style="width: 70%; height: 25px;"><br>
+                <label for="member_password">請輸入密碼：</label>
+                <input type="password" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_password"
+                    style="width: 70%; height: 25px;"><br>
+                <label for="member_password">請輸入手機：</label>
+                <input type="text" placeholder="09-XXXX" id="member_phone" style="width: 70%; height: 25px;"><br>
+                <button type="button" onclick="closeRegister(), openLogin()" class="back_loginbutton">返回登入</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 預設隱藏的提示畫面 -->
+    <div id="hitModal" class="hitwindow_block">
+        <div class="hitwindow">
+            <h1>恭喜下單完成！</h1>
+            <p>請好好珍惜你的🐔</p>
+            <a href="./homepage.html">返回首頁</a>
+        </div>
+    </div>
+
     <br><br><br><br>
-    <h1>您的配單總覽</h1>
+
+    <h1 class="title">這是您即將孵出來的機</h1>
 
     <!-- 顯示表格的地方 -->
     <table>
@@ -212,7 +334,7 @@
             <tr>
                 <th>配件類別</th>
                 <th>商品名稱</th>
-                <th>數量</th>
+                <th style="width: 35px;">數量</th>
                 <th>價格</th>
             </tr>
         </thead>
@@ -226,6 +348,43 @@
             </tr>
         </tfoot>
     </table>
+
+    <section style="display: flex; margin: 30px; justify-content: center;">
+
+        <div>
+            <h1 style="line-height: 2.5em;">選擇取機方式</h1>
+            <div class="div_select">
+                <form action="">
+                    <div style="display: flex;">
+                        <div>
+                            <input type="checkbox" name="" id="">需幫我組裝<br>
+                            <input type="radio" name="how-to-get" id="shop"><label for="shop">到店取機</label><br>
+                            <input type="radio" name="how-to-get" id="send"><label for="send">宅配到府</label>
+                            <p>收 / 取件人資料</p>
+                            <p>姓名：<input type="text"></p>
+                            <p>信箱：<input type="email"></p>
+                            <p>電話：<input type="phone"></p>
+                            <p>聯絡地址：<input type="text"></p>
+                        </div>
+                        <div>
+                            <img src="./Logo/gigaroost_logo.png" alt="" style="width: 230px;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <h1 style="line-height: 2.5em;">選擇付款方式：</h1>
+            <div class="div_select">
+                <form action="">
+                    <input type="radio" name="how-to-pay" id="money"><label for="money">現金付款</label><br>
+                    <input type="radio" name="how-to-pay" id="creditcard"><label for="creditcard">信用卡付款　　　　　</label>
+                    <span>信用卡卡號：<input type="text"></span>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div style="text-align: center;">
+        <button type="button" class="paybutton" onclick="showHit()">確定結帳</button>
+    </div>
 
     <footer>
         Copyright © 2025 GigaRoost. All rights reserved.
@@ -241,77 +400,89 @@
             document.getElementById("loginModal").style.display = "none";
         }   //隱藏登入視窗
 
+        //註冊視窗
+        function openRegister() {
+            document.getElementById("registerModal").style.display = "block";
+        }//顯示註冊視窗
+
+        function closeRegister() {
+            document.getElementById("registerModal").style.display = "none";
+        } //隱藏註冊視窗
+
+        function showHit() {
+            document.getElementById("hitModal").style.display = "block";
+        }
 
         // 從 localStorage 讀取選擇的資料
-    const selections = JSON.parse(localStorage.getItem('diySelections')) || {};
+        const selections = JSON.parse(localStorage.getItem('diySelections')) || {};
 
-const tbody = document.getElementById('selectionTableBody'); // 取得表格內容
-let total = 0;  // 用來儲存總金額
+        const tbody = document.getElementById('selectionTableBody'); // 取得表格內容
+        let total = 0;  // 用來儲存總金額
 
-// 配件類別名稱對應
-const labels = {
-    setpc: '套裝主機',
-    notebook: '筆記型電腦',
-    cpu: '中央處理器 CPU',
-    mb: '主機板 MB',
-    ram: '記憶體 RAM',
-    ssd: '固態硬碟 SSD',
-    hdd: '傳統硬碟 HDD',
-    gpu: '顯示卡 GPU',
-    psu: '電源供應器 PSU',
-    radiator: '空冷散熱器',
-    cold_radiator: '水冷散熱器',
-    case: '機殼 CASE',
-    keyboard: '鍵盤',
-    mouse: '滑鼠',
-    vga: '顯示器/螢幕',
-    speaker: '音響/喇叭',
-    software: '作業系統&軟體',
-    accessories: '機殼配件'
-};
+        // 配件類別名稱對應
+        const labels = {
+            setpc: '套裝主機',
+            notebook: '筆記型電腦',
+            cpu: '中央處理器 CPU',
+            mb: '主機板 MB',
+            ram: '記憶體 RAM',
+            ssd: '固態硬碟 SSD',
+            hdd: '傳統硬碟 HDD',
+            gpu: '顯示卡 GPU',
+            psu: '電源供應器 PSU',
+            radiator: '空冷散熱器',
+            cold_radiator: '水冷散熱器',
+            case: '機殼 CASE',
+            keyboard: '鍵盤',
+            mouse: '滑鼠',
+            vga: '顯示器/螢幕',
+            speaker: '音響/喇叭',
+            software: '作業系統&軟體',
+            accessories: '機殼配件'
+        };
 
-// 將每一個選擇的商品顯示到表格
-for (const key in selections) {
-    const item = selections[key];
+        // 將每一個選擇的商品顯示到表格
+        for (const key in selections) {
+            const item = selections[key];
 
-    // 如果沒有選擇的商品，就跳過
-    if (!item.price || !item.quantity) continue;
+            // 如果沒有選擇的商品，就跳過
+            if (!item.price || !item.quantity) continue;
 
-    const tr = document.createElement('tr'); // 建立表格列
+            const tr = document.createElement('tr'); // 建立表格列
 
-    // 配件類別欄位
-    const tdLabel = document.createElement('td');
-    tdLabel.textContent = labels[key] || key;
+            // 配件類別欄位
+            const tdLabel = document.createElement('td');
+            tdLabel.textContent = labels[key] || key;
 
-    // 商品名稱欄位
-    const tdName = document.createElement('td');
-    tdName.textContent = item.name;
+            // 商品名稱欄位
+            const tdName = document.createElement('td');
+            tdName.textContent = item.name;
 
-    // 數量欄位
-    const tdQuantity = document.createElement('td');
-    tdQuantity.textContent = item.quantity;
+            // 數量欄位
+            const tdQuantity = document.createElement('td');
+            tdQuantity.textContent = item.quantity;
 
-    // 價格欄位
-    const tdPrice = document.createElement('td');
-    const priceNum = parseInt(item.price) * parseInt(item.quantity); // 計算總價格
-    tdPrice.textContent = `$${priceNum.toLocaleString()}`;
+            // 價格欄位
+            const tdPrice = document.createElement('td');
+            const priceNum = parseInt(item.price) * parseInt(item.quantity); // 計算總價格
+            tdPrice.textContent = `$${priceNum.toLocaleString()}`;
 
-    // 加總總金額
-    total += priceNum;
+            // 加總總金額
+            total += priceNum;
 
-    // 把每格加進列中
-    tr.appendChild(tdLabel);
-    tr.appendChild(tdName);
-    tr.appendChild(tdQuantity);
-    tr.appendChild(tdPrice);
+            // 把每格加進列中
+            tr.appendChild(tdLabel);
+            tr.appendChild(tdName);
+            tr.appendChild(tdQuantity);
+            tr.appendChild(tdPrice);
 
-    // 把這列加到表格內容 tbody
-    tbody.appendChild(tr);
-}
+            // 把這列加到表格內容 tbody
+            tbody.appendChild(tr);
+        }
 
-// 顯示總金額
-document.getElementById('totalPrice').textContent = `$${total.toLocaleString()}`;
-</script>
+        // 顯示總金額
+        document.getElementById('totalPrice').textContent = `$${total.toLocaleString()}`;
+    </script>
 
 </body>
 

@@ -7,6 +7,8 @@
     <title>GigaRoost 線上商城</title>
     <link rel="ICON" href="../Logo/gigaroost_logo_onlyhead.png">
     <link rel="stylesheet" href="../GigaRoost.css">
+
+
 </head>
 
 <body>
@@ -18,7 +20,8 @@
                 <li><a href="../diy.html"><b>線上配單</b></a></li>
                 <li><a href="#" class="shop_nav"><b>零件市集</b></a></li>
                 <li><button onclick="openLogin()"><b>登入 / 註冊</b></button></li>
-                <li><a href="#"><img src="../Image/ICON/icons8-shopping-cart-64.png" alt="購物車" class="shopcart"></a></li>
+                <li><a href="#"><img src="../Image/ICON/icons8-shopping-cart-64.png" alt="購物車" class="shopcart"></a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -32,12 +35,38 @@
                 <label for="member_account">帳號：</label>
                 <input type="text" placeholder="信箱或用戶名" id="member_account"><br>
                 <label for="member_password">密碼：</label>
-                <input type="password" placeholder="包含大小寫" id="member_password"><br>
+                <input type="password" placeholder="大小寫需相符" id="member_password"><br>
                 <input type="submit" name="" value="登入" class="loginbutton">
             </form>
-            <p style="font-size: 15px;">沒有會員？<a href="../register.html">點此註冊</a></p>
+            <p style="font-size: 15px;">沒有會員？　<button class="registerbutton"
+                    onclick="openRegister() ,closeLogin()">點此註冊</button></p>
         </div>
     </div>
+
+    <!-- 預設隱藏的註冊介面 -->
+    <div id="registerModal" class="registerwindow_block">
+        <div class="registerwindow">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2 style="text-align: center; margin-bottom: -30px;">註冊會員</h2><br>
+            <form action="">
+                <label for="member_name">請輸入用戶名：</label>
+                <input type="text" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_name"
+                    style="width: 66.5%; height: 25px;"><br>
+                <p style="font-size: 15px; margin-left: 25px;"></p>
+                <label for="member_account">請輸入信箱：</label>
+                <input type="text" placeholder="E-mail" id="member_account" style="width: 70%; height: 25px;"><br>
+                <label for="member_password">請輸入密碼：</label>
+                <input type="password" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_password"
+                    style="width: 70%; height: 25px;"><br>
+                <label for="member_password">請輸入手機：</label>
+                <input type="text" placeholder="09-XXXX" id="member_phone" style="width: 70%; height: 25px;"><br>
+                <button type="button" onclick="closeRegister(), openLogin()" class="back_loginbutton">返回登入</button>
+            </form>
+        </div>
+    </div>
+
+
+
 
     <br><br><br>
 
@@ -46,124 +75,160 @@
             <img src="../Image/chick&partcar.png" alt="" class="chickshopcar">
             <div>
                 <ul class="product_list">
-                    <a href="../shop.html"><li>🐔套裝主機</li></a>
-                    <a href="./notebook_shop.html"><li>🐔筆記型電腦</li></a>
+                    <a href="../shop.html">
+                        <li>🐔套裝主機</li>
+                    </a>
+                    <a href="./notebook_shop.html">
+                        <li>🐔筆記型電腦</li>
+                    </a>
                     <hr width="100px">
-                    <a href="#" style="color: blue;"><li>🥚中央處理器</li></a>
-                    <a href="./mb_shop.html"><li>🥚主機板</li></a>
-                    <a href="./ram_shop.html"><li>🥚記憶體</li></a>
-                    <a href="./ssd_shop.html"><li>🥚固態硬碟</li></a>
-                    <a href="./hdd_shop.html"><li>🥚傳統硬碟</li></a>
-                    <a href="./gpu_shop.html"><li>🥚顯示卡</li></a>
-                    <a href="./psu_shop.html"><li>🥚電源供應器</li></a>
-                    <a href="./radiator_shop.html"><li>🥚空冷散熱器</li></a>
-                    <a href="./cold_radiator_shop.html"><li>🥚水冷散熱器</li></a>
-                    <a href="./case_shop.html"><li>🐣機殼</li></a>
+                    <a href="#" style="color: blue;">
+                        <li>🥚中央處理器</li>
+                    </a>
+                    <a href="./mb_shop.html">
+                        <li>🥚主機板</li>
+                    </a>
+                    <a href="./ram_shop.html">
+                        <li>🥚記憶體</li>
+                    </a>
+                    <a href="./ssd_shop.html">
+                        <li>🥚固態硬碟</li>
+                    </a>
+                    <a href="./hdd_shop.html">
+                        <li>🥚傳統硬碟</li>
+                    </a>
+                    <a href="./gpu_shop.html">
+                        <li>🥚顯示卡</li>
+                    </a>
+                    <a href="./psu_shop.html">
+                        <li>🥚電源供應器</li>
+                    </a>
+                    <a href="./radiator_shop.html">
+                        <li>🥚空冷散熱器</li>
+                    </a>
+                    <a href="./cold_radiator_shop.html">
+                        <li>🥚水冷散熱器</li>
+                    </a>
+                    <a href="./case_shop.html">
+                        <li>🐣機殼</li>
+                    </a>
                     <hr width="100px">
-                    <a href="./keyboard_shop.html"><li>🐤鍵盤</li></a>
-                    <a href="./mouse_shop.html"><li>🐤滑鼠</li></a>
-                    <a href="./vga_shop.html"><li>🐤顯示器</li></a>
-                    <a href="./speaker_shop.html"><li>🐤音響/喇叭</li></a>
+                    <a href="./keyboard_shop.html">
+                        <li>🐤鍵盤</li>
+                    </a>
+                    <a href="./mouse_shop.html">
+                        <li>🐤滑鼠</li>
+                    </a>
+                    <a href="./vga_shop.html">
+                        <li>🐤顯示器</li>
+                    </a>
+                    <a href="./speaker_shop.html">
+                        <li>🐤音響/喇叭</li>
+                    </a>
                     <hr width="100px">
-                    <a href="./software_shop.html"><li>🍗系統&軟體</li></a>
-                    <a href="./accessories_shop.html"><li>🍗機殼配件</li></a>
+                    <a href="./software_shop.html">
+                        <li>🍗系統&軟體</li>
+                    </a>
+                    <a href="./accessories_shop.html">
+                        <li>🍗機殼配件</li>
+                    </a>
                 </ul>
             </div>
         </section>
 
         <section class="product">
             <div>
-                <img src="./product/pc/asus h-s500te.png" alt="" width="250px" height="250px">
+                <img src="../product/cpu/Intel i5-12400F.jpg" alt="" width="250px" height="250px">
                 <p>Intel i5-12400F</p>
-                <p>$3450</p>
+                <span>$3450</span>
             </div>
             <div>
-                <img src="./product/pc/asus G16CHR-7147000130_2.jpg" alt="" width="250px" height="250px">
-                <p>Intel i7-12700KF</p>
+                <img src="../product/cpu/i5-12700kf.jpg" alt="" width="250px" height="250px">
+                <p class="product_name">Intel i7-12700KF</p>
                 <p>$8450</p>
             </div>
             <div>
-                <img src="./product/pc/msi infinite s3.jpg" alt="" width="250px" height="250px">
+                <img src="../product/cpu/i5-14400.jpg" alt="" width="250px" height="250px">
                 <p>Intel i5-14400</p>
                 <p>$5850</p>
             </div>
             <div>
-                <img src="./product/pc/msi infinite s3.jpg" alt="" width="250px">
+                <img src="../product/cpu/i5-14700k.jpg" alt="" width="250px">
                 <p>Intel i7-14700K</p>
                 <p>$12300</p>
             </div>
             <div>
-                <img src="./product/pc/DELL Inspiron.png" alt="" width="250px">
+                <img src="../product/cpu/Intel i9-14900K.jpg" alt="" width="250px">
                 <p>Intel i9-14900K</p>
                 <p>$16400</p>
             </div>
             <div>
-                <img src="./product/pc/DELL Inspironi5-14400.png" alt="" width="250px">
+                <img src="../product/cpu/Intel Core Ultra 5 235.jpg" alt="" width="250px">
                 <p>Intel Core Ultra 5 235</p>
                 <p>$9300</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i7-13700K.jpg" alt="" width="250px">
+                <img src="../product/cpu/Intel Core Ultra 5 245K.jpg" alt="" width="250px">
                 <p>Intel Core Ultra 5 245K</p>
                 <p>$9999</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/cpu/Intel Core Ultra 7 265K.jpg" alt="" width="250px">
                 <p>Intel Core Ultra 7 265K</p>
                 <p>$13500</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/cpu/Intel Core Ultra 9 285K.jpg" alt="" width="250px">
                 <p>Intel Core Ultra 9 285K</p>
                 <p>$19600</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/cpu/AMD R5 3400G.jpg" alt="" width="250px">
                 <p>AMD R5 3400G</p>
                 <p>$2450</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/cpu/AMD R5 5600X.jpg" alt="" width="250px">
                 <p>AMD R5 5600X</p>
                 <p>$5690</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/cpu/AMD R5 7500F.jpg" alt="" width="250px">
                 <p>AMD R5 7500F</p>
                 <p>$5250</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/cpu/AMD R7 7700.jpg" alt="" width="250px">
                 <p>AMD R7 7700</p>
                 <p>$7390</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/cpu/AMD R7 7800X3D.jpg" alt="" width="250px">
                 <p>AMD R7 7800X3D</p>
                 <p>$14550</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/cpu/AMD R7 7950X3D.jpg" alt="" width="250px">
                 <p>AMD R7 7950X3D</p>
                 <p>$22950</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
-                <p>AMD R9 9600X</p>
+                <img src="../product/cpu/R5-9600x.jpg" alt="" width="250px">
+                <p>AMD R5 9600X</p>
                 <p>$8850</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
-                <p>AMD R9 9700X</p>
+                <img src="../product/cpu/AMD R9 9700X.jpg" alt="" width="250px">
+                <p>AMD R7 9700X</p>
                 <p>$11950</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
-                <p>AMD R9 9800X3D</p>
+                <img src="../product/cpu/AMD R9 9800X3D.jpg" alt="" width="250px">
+                <p>AMD R7 9800X3D</p>
                 <p>$16950</p>
             </div>
             <div>
-                <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px">
+                <img src="../product/cpu/AMD R9 9950X3D.jpg" alt="" width="250px">
                 <p>AMD R9 9950X3D</p>
                 <p>$25250</p>
             </div>
@@ -176,9 +241,8 @@
         Copyright © 2025 GigaRoost. All rights reserved.
     </footer>
 
-    <script type="" src="../script.js">
 
-    </script>
+    <script type="" src="../script.js"></script>
 
 </body>
 

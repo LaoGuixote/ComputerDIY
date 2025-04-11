@@ -32,10 +32,30 @@
                 <label for="member_account">帳號：</label>
                 <input type="text" placeholder="信箱或用戶名" id="member_account"><br>
                 <label for="member_password">密碼：</label>
-                <input type="password" placeholder="包含大小寫" id="member_password"><br>
+                <input type="password" placeholder="大小寫需相符" id="member_password"><br>
                 <input type="submit" name="" value="登入" class="loginbutton">
             </form>
-            <p style="font-size: 15px;">沒有會員？<a href="../register.html">點此註冊</a></p>
+            <p style="font-size: 15px;">沒有會員？　<button class="registerbutton" onclick="openRegister() ,closeLogin()">點此註冊</button></p>
+        </div>
+    </div>
+
+      <!-- 預設隱藏的註冊介面 -->
+    <div id="registerModal" class="registerwindow_block">
+        <div class="registerwindow">
+            <span class="close" onclick="closeRegister()">&times;</span>
+            <h2 style="text-align: center; margin-bottom: -30px;">註冊會員</h2><br>
+            <form action="">
+                <label for="member_name">請輸入用戶名：</label>
+                <input type="text" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_name" style="width: 66.5%; height: 25px;"><br>
+                <p style="font-size: 15px; margin-left: 25px;"></p>
+                <label for="member_account">請輸入信箱：</label>
+                <input type="text" placeholder="E-mail" id="member_account" style="width: 70%; height: 25px;"><br>
+                <label for="member_password">請輸入密碼：</label>
+                <input type="password" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_password" style="width: 70%; height: 25px;"><br>
+                <label for="member_password">請輸入手機：</label>
+                <input type="text" placeholder="09-XXXX" id="member_phone" style="width: 70%; height: 25px;"><br>
+                <button type="button" onclick="closeRegister(), openLogin()" class="back_loginbutton">返回登入</button>
+            </form>
         </div>
     </div>
 
