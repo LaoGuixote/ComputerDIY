@@ -1,0 +1,11 @@
+.product img:hover{
+    height: 300px;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.product img{
+    border: 3px rgb(172, 172, 172) inset;
+    width: 250px;
+    height: 250px;
+}

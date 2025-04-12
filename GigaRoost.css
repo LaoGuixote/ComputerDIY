@@ -30,6 +30,8 @@ header a {
 header a:hover {
     text-decoration: underline;
     color: rgb(119, 162, 213);
+    font-size: 18px;
+    transition: 0.2s;
 }
 
 header ul {
@@ -58,6 +60,8 @@ header button:hover {
     background-color: rgb(230, 233, 230);
     text-decoration: underline;
     color: rgb(119, 162, 213);
+    font-size: 18px;
+    transition: 0.2s;
 }
 
 .shopcart {
@@ -127,7 +131,7 @@ header button:hover {
 .close {
     /* 叉叉關閉鍵 */
     float: right;
-    font-size: 24px;
+    font-size: 35px;
     cursor: pointer;
     padding-top: -999px;
 }
@@ -310,6 +314,8 @@ td {
 
 .product_list a:hover {
     text-decoration: underline;
+    font-size: 20px;
+    transition: 0.2s;
 }
 
 .shop_main {
