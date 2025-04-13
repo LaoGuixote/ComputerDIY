@@ -251,7 +251,8 @@ td {
     color: white;
     padding: 10px 20px;
     font-size: 16px;
-    border: none;
+    border: 2px ridge blue;
+    box-shadow: 1px 1px black;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -264,7 +265,8 @@ td {
     color: white;
     padding: 10px 16px 10px 20px;
     font-size: 16px;
-    border: none;
+    border: 2px ridge blue;
+    box-shadow: 1px 1px black;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;

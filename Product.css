@@ -9,6 +9,10 @@
     transform: scale(1.2); /* 滑鼠移上去放大 1.1 倍 */
 }
 
+.product button:hover{
+    cursor: pointer;
+}
+
 .cart_block {
     /* 購物車區塊 */
     position: fixed;
