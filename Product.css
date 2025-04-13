@@ -1,11 +1,68 @@
-.product img:hover{
-    height: 300px;
-    width: 300px;
-    transition: 0.3s;
+/* 商品的圖片的大小及移到上面時會放大 */
+.product img {
+    border: 3px rgb(172, 172, 172) inset;
+    transition: transform 0.3s ease; /* 加入動畫效果 */
+    transform-origin: center center; /* 以圖片中心為放大點 */
 }
 
-.product img{
-    border: 3px rgb(172, 172, 172) inset;
-    width: 250px;
-    height: 250px;
+.product img:hover {
+    transform: scale(1.2); /* 滑鼠移上去放大 1.1 倍 */
+}
+
+.cart_block {
+    /* 購物車區塊 */
+    position: fixed;
+    top: 70px;
+    right: 30px;
+    width: 300px;
+    background-color: white;
+    border: 3px ridge #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    /* 預設隱藏 */
+}
+
+.cart_block ul {
+    /* 購物車的清單 */
+    list-style: none;
+    line-height: 3vh;
+}
+
+.checkout_btn {
+    /* 結帳按鈕 */
+    margin-left: 35%;
+    width: 5vw;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px black;
+    background-color: rgb(211, 214, 255);
+    cursor: pointer;
+}
+
+.checkout_btn:hover{
+    background-color: rgb(189, 192, 228);
+} 
+
+.cart_block p {
+    /* 總額文字 */
+    line-height: 5vh;
+    text-align: right;
+}
+
+.remove-btn {
+    /* 移除購物車裡商品的叉叉 */
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.2s;
+}
+
+.remove-btn:hover {
+    color: darkred;
 }

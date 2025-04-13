@@ -26,6 +26,14 @@
         </nav>
     </header>
 
+    <!-- 購物車下拉區塊 -->
+    <div id="cart_block" class="cart_block">
+        <ul id="cart_items"></ul>
+        <hr>
+        <p id="cart_total">總金額：$0</p>
+        <button onclick="goToCheckout()" class="checkout_btn">結帳</button>
+    </div>
+
     <!-- 預設隱藏的登入畫面 -->
     <div id="loginModal" class="loginwindow_block">
         <div class="loginwindow">
@@ -140,97 +148,116 @@
             <div>
                 <img src="../product/cpu/Intel i5-12400F.jpg" alt="" width="250px" height="250px">
                 <p>Intel i5-12400F</p>
-                <span>$3450</span>
+                <p style="display: flex; justify-content: space-between;">$3450<button class="add-to-cart-btn"
+                    data-name="Intel i5-12400F" data-price="3450">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/i5-12700kf.jpg" alt="" width="250px" height="250px">
                 <p class="product_name">Intel i7-12700KF</p>
-                <p>$8450</p>
+                <p style="display: flex; justify-content: space-between;">$8450<button class="add-to-cart-btn"
+                    data-name="Intel i7-12700KF" data-price="8450">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/i5-14400.jpg" alt="" width="250px" height="250px">
                 <p>Intel i5-14400</p>
-                <p>$5850</p>
+                <p style="display: flex; justify-content: space-between;">$5850<button class="add-to-cart-btn"
+                    data-name="Intel i5-14400" data-price="5850">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/i5-14700k.jpg" alt="" width="250px">
                 <p>Intel i7-14700K</p>
-                <p>$12300</p>
+                <p style="display: flex; justify-content: space-between;">$12300<button class="add-to-cart-btn"
+                    data-name="Intel i7-14700K" data-price="12300">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/Intel i9-14900K.jpg" alt="" width="250px">
                 <p>Intel i9-14900K</p>
-                <p>$16400</p>
+                <p style="display: flex; justify-content: space-between;">$16400<button class="add-to-cart-btn"
+                    data-name="Intel i9-14900K" data-price="16400">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/Intel Core Ultra 5 235.jpg" alt="" width="250px">
                 <p>Intel Core Ultra 5 235</p>
-                <p>$9300</p>
+                <p style="display: flex; justify-content: space-between;">$9300<button class="add-to-cart-btn"
+                    data-name="Intel Core Ultra 5 235" data-price="9300">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/Intel Core Ultra 5 245K.jpg" alt="" width="250px">
                 <p>Intel Core Ultra 5 245K</p>
-                <p>$9999</p>
+                <p style="display: flex; justify-content: space-between;">$9999<button class="add-to-cart-btn"
+                    data-name="Intel Core Ultra 5 245K" data-price="9999">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/Intel Core Ultra 7 265K.jpg" alt="" width="250px">
                 <p>Intel Core Ultra 7 265K</p>
-                <p>$13500</p>
+                <p style="display: flex; justify-content: space-between;">$13500<button class="add-to-cart-btn"
+                    data-name="Intel Core Ultra 7 265K" data-price="13500">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/Intel Core Ultra 9 285K.jpg" alt="" width="250px">
                 <p>Intel Core Ultra 9 285K</p>
-                <p>$19600</p>
+                <p style="display: flex; justify-content: space-between;">$19600<button class="add-to-cart-btn"
+                    data-name="Intel Core Ultra 9 285K" data-price="19600">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/AMD R5 3400G.jpg" alt="" width="250px">
                 <p>AMD R5 3400G</p>
-                <p>$2450</p>
+                <p style="display: flex; justify-content: space-between;">$2450<button class="add-to-cart-btn"
+                    data-name="AMD R5 3400G" data-price="2450">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/AMD R5 5600X.jpg" alt="" width="250px">
                 <p>AMD R5 5600X</p>
-                <p>$5690</p>
+                <p style="display: flex; justify-content: space-between;">$5690<button class="add-to-cart-btn"
+                    data-name="AMD R5 5600X" data-price="5690">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/AMD R5 7500F.jpg" alt="" width="250px">
                 <p>AMD R5 7500F</p>
-                <p>$5250</p>
+                <p style="display: flex; justify-content: space-between;">$5250<button class="add-to-cart-btn"
+                    data-name="AMD R5 7500F" data-price="5250">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/AMD R7 7700.jpg" alt="" width="250px">
                 <p>AMD R7 7700</p>
-                <p>$7390</p>
+                <p style="display: flex; justify-content: space-between;">$7390<button class="add-to-cart-btn"
+                    data-name="AMD R7 7700" data-price="7390">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/AMD R7 7800X3D.jpg" alt="" width="250px">
                 <p>AMD R7 7800X3D</p>
-                <p>$14550</p>
+                <p style="display: flex; justify-content: space-between;">$14550<button class="add-to-cart-btn"
+                    data-name="AMD R7 7800X3D" data-price="14550">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/AMD R7 7950X3D.jpg" alt="" width="250px">
                 <p>AMD R7 7950X3D</p>
-                <p>$22950</p>
+                <p style="display: flex; justify-content: space-between;">$22950<button class="add-to-cart-btn"
+                    data-name="AMD R7 7950X3D" data-price="22950">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/R5-9600x.jpg" alt="" width="250px">
                 <p>AMD R5 9600X</p>
-                <p>$8850</p>
+                <p style="display: flex; justify-content: space-between;">$8850<button class="add-to-cart-btn"
+                    data-name="AMD R5 9600X" data-price="8850">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/AMD R9 9700X.jpg" alt="" width="250px">
                 <p>AMD R7 9700X</p>
-                <p>$11950</p>
+                <p style="display: flex; justify-content: space-between;">$11950<button class="add-to-cart-btn"
+                    data-name="AMD R7 9700X" data-price="11950">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/AMD R9 9800X3D.jpg" alt="" width="250px">
                 <p>AMD R7 9800X3D</p>
-                <p>$16950</p>
+                <p style="display: flex; justify-content: space-between;">$16950<button class="add-to-cart-btn"
+                    data-name="AMD R7 9800X3D" data-price="16950">加入購物車</button></p>
             </div>
             <div>
                 <img src="../product/cpu/AMD R9 9950X3D.jpg" alt="" width="250px">
                 <p>AMD R9 9950X3D</p>
-                <p>$25250</p>
+                <p style="display: flex; justify-content: space-between;">$25250<button class="add-to-cart-btn"
+                    data-name="AMD R9 9950X3D" data-price="25250">加入購物車</button></p>
             </div>
         </section>
 
@@ -244,6 +271,80 @@
 
     <script type="" src="../script.js"></script>
 
+    <script>
+        // 建立一個空陣列，用來儲存加入購物車的商品
+        const cart = [];
+
+        // 取得購物車下拉區塊的元素
+        const cartBlock = document.getElementById('cart_block');
+        // 取得用來放商品清單的 <ul>
+        const cartItems = document.getElementById('cart_items');
+        // 取得顯示總金額的 <p>
+        const cartTotal = document.getElementById('cart_total');
+
+        // 找到所有 class 為 add-to-cart-btn 的按鈕，並為它們加上點擊事件
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // 從按鈕的 data-* 屬性取得商品名稱與價格
+                const name = button.dataset.name;
+                const price = parseInt(button.dataset.price);
+
+                // 將商品物件加入購物車陣列
+                cart.push({ name, price });
+
+                // 更新右上角購物車的 UI
+                updateCartUI();
+            });
+        });
+
+        // 點擊右上角購物車圖示時，顯示或隱藏購物車下拉區塊
+        document.querySelector('.shopcart').addEventListener('click', (e) => {
+            e.preventDefault(); // 防止 a 標籤跳轉
+            // 切換顯示狀態
+            cartBlock.style.display = cartBlock.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // 更新購物車內容與總金額的畫面
+        function updateCartUI() {
+    cartItems.innerHTML = ''; // 清空購物車顯示區域
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.style.display = 'flex';
+        li.style.justifyContent = 'space-between';
+        li.style.alignItems = 'center';
+
+        // 顯示商品名稱與價格
+        const text = document.createElement('span');
+        text.textContent = `${item.name} - $${item.price}`;
+        li.appendChild(text);
+
+        // 建立刪除按鈕
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = '❌';
+        removeBtn.className = 'remove-btn';
+        removeBtn.style.marginLeft = '10px';
+        removeBtn.onclick = () => {
+            cart.splice(index, 1); // 移除該商品
+            updateCartUI(); // 更新畫面
+        };
+        li.appendChild(removeBtn);
+
+        cartItems.appendChild(li);
+        total += item.price;
+    });
+
+    cartTotal.textContent = `總金額：$${total}`;
+    localStorage.setItem('cart', JSON.stringify(cart)); // 儲存到 localStorage
+}
+
+    // 點擊結帳按鈕時，跳轉到結帳頁面
+    function goToCheckout() {
+        window.location.href = '../checkout.html'; // 導向 checkout.html
+    }
+    </script>
+    
 </body>
 
 </html>

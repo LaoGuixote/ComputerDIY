@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GigaRoost 配單總覽</title>
+    <title>GigaRoost 購物車結帳</title>
     <link rel="ICON" href="./Logo/gigaroost_logo_onlyhead.png">
+    <link rel="stylesheet" href="./Checkout.css">
     <style>
         * {
             padding: 0;
@@ -189,8 +190,8 @@
             z-index: 999;
         }
 
-        .hitwindow{
-             /* 彈出式提示視窗本體 */
+        .hitwindow {
+            /* 彈出式提示視窗本體 */
             background-color: white;
             width: 30vw;
             height: 30vh;
@@ -245,6 +246,7 @@
             font-size: 18px;
             padding: 10px;
             line-height: 1.75em;
+            margin: 0 auto;
         }
 
         .paybutton {
@@ -253,6 +255,7 @@
             background-color: rgb(173, 237, 173);
             border-radius: 5px;
             border: groove;
+            margin: 5vh;
         }
 
         .paybutton:hover {
@@ -326,61 +329,44 @@
 
     <br><br><br><br>
 
-    <h1 class="title">這是您即將孵出來的機</h1>
-
-    <!-- 顯示表格的地方 -->
-    <table>
-        <thead>
-            <tr>
-                <th>配件類別</th>
-                <th>商品名稱</th>
-                <th style="width: 35px;">數量</th>
-                <th>價格</th>
-            </tr>
-        </thead>
-        <tbody id="selectionTableBody">
-            <!-- JavaScript 會動態產生每一列 -->
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3" style="text-align:right;">總金額：</td>
-                <td id="totalPrice">$0</td>
-            </tr>
-        </tfoot>
-    </table>
-
-    <section style="display: flex; margin: 30px; justify-content: center;">
-
-        <div>
-            <h1 style="line-height: 2.5em;">選擇取機方式</h1>
-            <div class="div_select">
-                <form action="">
-                    <div style="display: flex;">
-                        <div>
-                            <input type="checkbox" name="" id="">需幫我組裝<br>
-                            <input type="radio" name="how-to-get" id="shop"><label for="shop">到店取機</label><br>
-                            <input type="radio" name="how-to-get" id="send"><label for="send">宅配到府</label>
-                            <p>收 / 取件人資料</p>
-                            <p>姓名：<input type="text"></p>
-                            <p>信箱：<input type="email"></p>
-                            <p>電話：<input type="phone"></p>
-                            <p>聯絡地址：<input type="text"></p>
-                        </div>
-                        <div>
-                            <img src="./Logo/gigaroost_logo.png" alt="" style="width: 230px;">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <h1 style="line-height: 2.5em;">選擇付款方式：</h1>
-            <div class="div_select">
-                <form action="">
-                    <input type="radio" name="how-to-pay" id="money"><label for="money">現金付款</label><br>
-                    <input type="radio" name="how-to-pay" id="creditcard"><label for="creditcard">信用卡付款　　　　　</label>
-                    <span>信用卡卡號：<input type="text"></span>
-                </form>
-            </div>
+    <h1 style="margin-left:46% ">您的購物車</h1>
+    <div class="cart_checkout">
+        <div style="border: 2px solid black; text-align: center; width: 500px;" >
+            <ul id="checkout-items"></ul>
+            <hr>
+            <p id="checkout-total">總金額：$0</p>
         </div>
+    </div>
+
+    <div>
+        <h1 style="line-height: 2.5em; margin-left:40% ">選擇取機方式</h1>
+        <div class="div_select">
+            <form action="">
+                <div style="display: flex;">
+                    <div>
+                        <input type="radio" name="how-to-get" id="shop"><label for="shop">門市取貨</label><br>
+                        <input type="radio" name="how-to-get" id="send"><label for="send">宅配到府</label>
+                        <p>收 / 取件人資料</p>
+                        <p>姓名：<input type="text"></p>
+                        <p>信箱：<input type="email"></p>
+                        <p>電話：<input type="phone"></p>
+                        <p>聯絡地址：<input type="text"></p>
+                    </div>
+                    <div>
+                        <img src="./Logo/gigaroost_logo.png" alt="" style="width: 230px;">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <h1 style="line-height: 2.5em; margin-left:40% ">選擇付款方式：</h1>
+        <div class="div_select">
+            <form action="">
+                <input type="radio" name="how-to-pay" id="money"><label for="money">現金付款</label><br>
+                <input type="radio" name="how-to-pay" id="creditcard"><label for="creditcard">信用卡付款　　　　　</label>
+                <span>信用卡卡號：<input type="text"></span>
+            </form>
+        </div>
+    </div>
     </section>
     <div style="text-align: center;">
         <button type="button" class="paybutton" onclick="showHit()">確定結帳</button>
@@ -413,77 +399,20 @@
             document.getElementById("hitModal").style.display = "block";
         }
 
-        // 從 localStorage 讀取選擇的資料
-        const selections = JSON.parse(localStorage.getItem('diySelections')) || {};
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const checkoutItems = document.getElementById('checkout-items');
+        const checkoutTotal = document.getElementById('checkout-total');
 
-        const tbody = document.getElementById('selectionTableBody'); // 取得表格內容
-        let total = 0;  // 用來儲存總金額
+        let total = 0;
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - $${item.price}`;
+            checkoutItems.appendChild(li);
+            total += item.price;
+        });
 
-        // 配件類別名稱對應
-        const labels = {
-            setpc: '套裝主機',
-            notebook: '筆記型電腦',
-            cpu: '中央處理器 CPU',
-            mb: '主機板 MB',
-            ram: '記憶體 RAM',
-            ssd: '固態硬碟 SSD',
-            hdd: '傳統硬碟 HDD',
-            gpu: '顯示卡 GPU',
-            psu: '電源供應器 PSU',
-            radiator: '空冷散熱器',
-            cold_radiator: '水冷散熱器',
-            case: '機殼 CASE',
-            keyboard: '鍵盤',
-            mouse: '滑鼠',
-            vga: '顯示器/螢幕',
-            speaker: '音響/喇叭',
-            software: '作業系統&軟體',
-            accessories: '機殼配件'
-        };
-
-        // 將每一個選擇的商品顯示到表格
-        for (const key in selections) {
-            const item = selections[key];
-
-            // 如果沒有選擇的商品，就跳過
-            if (!item.price || !item.quantity) continue;
-
-            const tr = document.createElement('tr'); // 建立表格列
-
-            // 配件類別欄位
-            const tdLabel = document.createElement('td');
-            tdLabel.textContent = labels[key] || key;
-
-            // 商品名稱欄位
-            const tdName = document.createElement('td');
-            tdName.textContent = item.name;
-
-            // 數量欄位
-            const tdQuantity = document.createElement('td');
-            tdQuantity.textContent = item.quantity;
-
-            // 價格欄位
-            const tdPrice = document.createElement('td');
-            const priceNum = parseInt(item.price) * parseInt(item.quantity); // 計算總價格
-            tdPrice.textContent = `$${priceNum.toLocaleString()}`;
-
-            // 加總總金額
-            total += priceNum;
-
-            // 把每格加進列中
-            tr.appendChild(tdLabel);
-            tr.appendChild(tdName);
-            tr.appendChild(tdQuantity);
-            tr.appendChild(tdPrice);
-
-            // 把這列加到表格內容 tbody
-            tbody.appendChild(tr);
-        }
-
-        // 顯示總金額
-        document.getElementById('totalPrice').textContent = `$${total.toLocaleString()}`;
+        checkoutTotal.textContent = `總金額：$${total}`;
     </script>
-
 </body>
 
 </html>

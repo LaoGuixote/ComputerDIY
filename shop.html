@@ -24,6 +24,15 @@
         </nav>
     </header>
 
+
+    <!-- 購物車下拉區塊 -->
+    <div id="cart_block" class="cart_block">
+        <ul id="cart_items"></ul>
+        <hr>
+        <p id="cart_total">總金額：$0</p>
+        <button onclick="goToCheckout()" class="checkout_btn">結帳</button>
+    </div>
+
     <!-- 預設隱藏的登入畫面 -->
     <div id="loginModal" class="loginwindow_block">
         <div class="loginwindow">
@@ -36,23 +45,26 @@
                 <input type="password" placeholder="大小寫需相符" id="member_password"><br>
                 <input type="submit" name="" value="登入" class="loginbutton">
             </form>
-            <p style="font-size: 15px;">沒有會員？　<button class="registerbutton" onclick="openRegister() ,closeLogin()">點此註冊</button></p>
+            <p style="font-size: 15px;">沒有會員？　<button class="registerbutton"
+                    onclick="openRegister() ,closeLogin()">點此註冊</button></p>
         </div>
     </div>
 
-      <!-- 預設隱藏的註冊介面 -->
+    <!-- 預設隱藏的註冊介面 -->
     <div id="registerModal" class="registerwindow_block">
         <div class="registerwindow">
             <span class="close" onclick="closeRegister()">&times;</span>
             <h2 style="text-align: center; margin-bottom: -30px;">註冊會員</h2><br>
             <form action="">
                 <label for="member_name">請輸入用戶名：</label>
-                <input type="text" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_name" style="width: 66.5%; height: 25px;"><br>
+                <input type="text" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_name"
+                    style="width: 66.5%; height: 25px;"><br>
                 <p style="font-size: 15px; margin-left: 25px;"></p>
                 <label for="member_account">請輸入信箱：</label>
                 <input type="text" placeholder="E-mail" id="member_account" style="width: 70%; height: 25px;"><br>
                 <label for="member_password">請輸入密碼：</label>
-                <input type="password" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_password" style="width: 70%; height: 25px;"><br>
+                <input type="password" placeholder="需包含一個或以上的大小寫英文，大小寫需相符" id="member_password"
+                    style="width: 70%; height: 25px;"><br>
                 <label for="member_password">請輸入手機：</label>
                 <input type="text" placeholder="09-XXXX" id="member_phone" style="width: 70%; height: 25px;"><br>
                 <button type="button" onclick="closeRegister(), openLogin()" class="back_loginbutton">返回登入</button>
@@ -67,27 +79,63 @@
             <img src="./Image/chick&partcar.png" alt="" class="chickshopcar">
             <div>
                 <ul class="product_list">
-                    <a href="#" style="color: blue;"><li>🐔套裝主機</li></a>
-                    <a href="./product_HTML/notebook_shop.html"><li>🐔筆記型電腦</li></a>
+                    <a href="#" style="color: blue;">
+                        <li>🐔套裝主機</li>
+                    </a>
+                    <a href="./product_HTML/notebook_shop.html">
+                        <li>🐔筆記型電腦</li>
+                    </a>
                     <hr width="100px">
-                    <a href="./product_HTML/cpu_shop.html"><li>🥚中央處理器</li></a>
-                    <a href="./product_HTML/mb_shop.html"><li>🥚主機板</li></a>
-                    <a href="./product_HTML/ram_shop.html"><li>🥚記憶體</li></a>
-                    <a href="./product_HTML/ssd_shop.html"><li>🥚固態硬碟</li></a>
-                    <a href="./product_HTML/hdd_shop.html"><li>🥚傳統硬碟</li></a>
-                    <a href="./product_HTML/gpu_shop.html"><li>🥚顯示卡</li></a>
-                    <a href="./product_HTML/psu_shop.html"><li>🥚電源供應器</li></a>
-                    <a href="./product_HTML/radiator_shop.html"><li>🥚空冷散熱器</li></a>
-                    <a href="./product_HTML/cold_radiator_shop.html"><li>🥚水冷散熱器</li></a>
-                    <a href="./product_HTML/case_shop.html"><li>🐣機殼</li></a>
+                    <a href="./product_HTML/cpu_shop.html">
+                        <li>🥚中央處理器</li>
+                    </a>
+                    <a href="./product_HTML/mb_shop.html">
+                        <li>🥚主機板</li>
+                    </a>
+                    <a href="./product_HTML/ram_shop.html">
+                        <li>🥚記憶體</li>
+                    </a>
+                    <a href="./product_HTML/ssd_shop.html">
+                        <li>🥚固態硬碟</li>
+                    </a>
+                    <a href="./product_HTML/hdd_shop.html">
+                        <li>🥚傳統硬碟</li>
+                    </a>
+                    <a href="./product_HTML/gpu_shop.html">
+                        <li>🥚顯示卡</li>
+                    </a>
+                    <a href="./product_HTML/psu_shop.html">
+                        <li>🥚電源供應器</li>
+                    </a>
+                    <a href="./product_HTML/radiator_shop.html">
+                        <li>🥚空冷散熱器</li>
+                    </a>
+                    <a href="./product_HTML/cold_radiator_shop.html">
+                        <li>🥚水冷散熱器</li>
+                    </a>
+                    <a href="./product_HTML/case_shop.html">
+                        <li>🐣機殼</li>
+                    </a>
                     <hr width="100px">
-                    <a href="./product_HTML/keyboard_shop.html"><li>🐤鍵盤</li></a>
-                    <a href="./product_HTML/mouse_shop.html"><li>🐤滑鼠</li></a>
-                    <a href="./product_HTML/vga_shop.html"><li>🐤顯示器</li></a>
-                    <a href="./product_HTML/speaker_shop.html"><li>🐤音響/喇叭</li></a>
+                    <a href="./product_HTML/keyboard_shop.html">
+                        <li>🐤鍵盤</li>
+                    </a>
+                    <a href="./product_HTML/mouse_shop.html">
+                        <li>🐤滑鼠</li>
+                    </a>
+                    <a href="./product_HTML/vga_shop.html">
+                        <li>🐤顯示器</li>
+                    </a>
+                    <a href="./product_HTML/speaker_shop.html">
+                        <li>🐤音響/喇叭</li>
+                    </a>
                     <hr width="100px">
-                    <a href="./product_HTML/software_shop.html"><li>🍗系統&軟體</li></a>
-                    <a href="./product_HTML/accessories_shop.html"><li>🍗機殼配件</li></a>
+                    <a href="./product_HTML/software_shop.html">
+                        <li>🍗系統&軟體</li>
+                    </a>
+                    <a href="./product_HTML/accessories_shop.html">
+                        <li>🍗機殼配件</li>
+                    </a>
                 </ul>
             </div>
         </section>
@@ -96,42 +144,50 @@
             <div>
                 <img src="./product/pc/asus h-s500te.png" alt="" width="250px" height="250px">
                 <p>ASUS【H-S500TE-313100032W】i3-13100/8G/512G/WIN11/300W電供</p>
-                <p>$15990</p>
+                <p style="display: flex; justify-content: space-between;">$15990<button class="add-to-cart-btn"
+                        data-name="ASUS【H-S500TE-313100032W】" data-price="15990">加入購物車</button></p>
             </div>
             <div>
                 <img src="./product/pc/asus G16CHR-7147000130_2.jpg" alt="" width="250px" height="250px">
                 <p>ASUS ROG【G16CHR-7147000130】i7-14700/16G DDR5/512G/700W電供/水冷</p>
-                <p>$$28990</p>
+                <p style="display: flex; justify-content: space-between;">$28990<button class="add-to-cart-btn"
+                    data-name="ASUS ROG【G16CHR-7147000130】" data-price="28990">加入購物車</button></p>
             </div>
             <div>
                 <img src="./product/pc/msi infinite s3.jpg" alt="" width="250px" height="250px">
                 <p>MSI Infinite S3 12B【1615TW】i5-12400F/16G/1T/WIN11/RTX 3050</p>
-                <p>$25900</p>
+                <p style="display: flex; justify-content: space-between;">$25900<button class="add-to-cart-btn"
+                        data-name="MSI Infinite S3 12B【1615TW】" data-price="25900">加入購物車</button></p>
             </div>
             <div>
                 <img src="./product/pc/msi infinite s3.jpg" alt="" width="250px" height="250px">
                 <p>MSI Infinite S3 14NUE7【2407TW】i7-14700F/32G/2T/WIN11/RTX 4070Super</p>
-                <p>$64900</p>
+                <p style="display: flex; justify-content: space-between;">$64900<button class="add-to-cart-btn"
+                        data-name="MSI Infinite S3 14NUE7【2407TW】" data-price="64900">加入購物車</button></p>
             </div>
             <div>
                 <img src="./product/pc/DELL Inspiron.png" alt="" width="250px" height="250px">
                 <p>DELL Inspiron【3030S-R1308BTW】i3-14100/8G/512G/180W/WIN11</p>
-                <p>$18800</p>
+                <p style="display: flex; justify-content: space-between;">$18800<button class="add-to-cart-btn"
+                        data-name="DELL Inspiron【3030S-R1308BTW】" data-price="18800">加入購物車</button></p>
             </div>
             <div>
                 <img src="./product/pc/DELL Inspironi5-14400.png" alt="" width="250px" height="250px">
                 <p>DELL Inspiron【3030S-R1508BTW】i5-14400/8G/512G/180W/WIN11</p>
-                <p>$$21600</p>
+                <p style="display: flex; justify-content: space-between;">$21600<button class="add-to-cart-btn"
+                        data-name="DELL Inspiron【3030S-R1508BTW】" data-price="21600">加入購物車</button></p>
             </div>
             <div>
                 <img src="./product/pc/HP-Z2G9TWR i7-13700K.jpg" alt="" width="250px" height="250px">
                 <p>HP-Z2G9TWR i7-13700K/8G/512G SSD/DVDRW/700W/WIN11 PRO</p>
-                <p>$33900</p>
+                <p style="display: flex; justify-content: space-between;">$33900<button class="add-to-cart-btn"
+                        data-name="HP-Z2G9TWR i7-13700K" data-price="33900">加入購物車</button></p>
             </div>
             <div>
                 <img src="./product/pc/HP-Z2G9TWR i9-13900K.jpg" alt="" width="250px" height="250px">
                 <p>HP-Z2G9TWR i9-13900K/16G/1TB SSD/700W/WIN11 PRO</p>
-                <p>$45900</p>
+                <p style="display: flex; justify-content: space-between;">$45900<button class="add-to-cart-btn"
+                        data-name="HP-Z2G9TWR i9-13900K" data-price="45900">加入購物車</button></p>
             </div>
         </section>
 
@@ -144,6 +200,80 @@
 
     <script type="" src="./script.js">
 
+    </script>
+
+    <script>
+        // 建立一個空陣列，用來儲存加入購物車的商品
+        const cart = [];
+
+        // 取得購物車下拉區塊的元素
+        const cartBlock = document.getElementById('cart_block');
+        // 取得用來放商品清單的 <ul>
+        const cartItems = document.getElementById('cart_items');
+        // 取得顯示總金額的 <p>
+        const cartTotal = document.getElementById('cart_total');
+
+        // 找到所有 class 為 add-to-cart-btn 的按鈕，並為它們加上點擊事件
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // 從按鈕的 data-* 屬性取得商品名稱與價格
+                const name = button.dataset.name;
+                const price = parseInt(button.dataset.price);
+
+                // 將商品物件加入購物車陣列
+                cart.push({ name, price });
+
+                // 更新右上角購物車的 UI
+                updateCartUI();
+            });
+        });
+
+        // 點擊右上角購物車圖示時，顯示或隱藏購物車下拉區塊
+        document.querySelector('.shopcart').addEventListener('click', (e) => {
+            e.preventDefault(); // 防止 a 標籤跳轉
+            // 切換顯示狀態
+            cartBlock.style.display = cartBlock.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // 更新購物車內容與總金額的畫面
+        function updateCartUI() {
+    cartItems.innerHTML = ''; // 清空購物車顯示區域
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.style.display = 'flex';
+        li.style.justifyContent = 'space-between';
+        li.style.alignItems = 'center';
+
+        // 顯示商品名稱與價格
+        const text = document.createElement('span');
+        text.textContent = `${item.name} - $${item.price}`;
+        li.appendChild(text);
+
+        // 建立刪除按鈕
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = '❌';
+        removeBtn.className = 'remove-btn';
+        removeBtn.style.marginLeft = '10px';
+        removeBtn.onclick = () => {
+            cart.splice(index, 1); // 移除該商品
+            updateCartUI(); // 更新畫面
+        };
+        li.appendChild(removeBtn);
+
+        cartItems.appendChild(li);
+        total += item.price;
+    });
+
+    cartTotal.textContent = `總金額：$${total}`;
+    localStorage.setItem('cart', JSON.stringify(cart)); // 儲存到 localStorage
+}
+
+    // 點擊結帳按鈕時，跳轉到結帳頁面
+    function goToCheckout() {
+        window.location.href = 'checkout.html'; // 導向 checkout.html
+    }
     </script>
 
 </body>

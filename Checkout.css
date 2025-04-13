@@ -1,0 +1,17 @@
+.cart_checkout {
+    width: 510px;
+    margin: 0 auto;
+}
+
+.cart_checkout div {
+    border: 2px ridge black;
+    padding: 1%;
+    font-size: 20px;
+    line-height: 4vh;
+    text-align: center;
+    width: 500px;
+}
+
+.cart_checkout ul {
+    list-style: none;
+}

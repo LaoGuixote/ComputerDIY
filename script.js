@@ -156,3 +156,5 @@ function saveSelections() {
     // 跳轉到結果頁面
     window.location.href = 'result.html';
 }
+
+
